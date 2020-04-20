@@ -1,11 +1,20 @@
+# frozen_string_literal: true
+
 class PersonService
+  attr_reader :client_service
+
+  include CrudServiceMethods
+
+  def initialize
+    @client_service = ClientService.new
+  end
+
   def build_person(params)
     person = Person.new
     person.first_name = params[:first_name]
     person.last_name = params[:last_name]
     person.client = params[:client]
     person.user = params[:user]
-    person
   end
 
   def build_person_with_user(params)
@@ -15,26 +24,29 @@ class PersonService
     person = Person.new
     person.first_name = params[:first_name]
     person.last_name = params[:last_name]
-    person.client = params[:client]
+    person.client_id = params[:client_id]
     person.user = user
     person
   end
 
   ##
   # TODO: Add documentation
+  # @param email[string] Email of the user
   #
   def create_person(params)
     person = build_person_with_user(params)
     puts "Creating person with params=#{params}"
-    raise ArgumentError.new('User must be set') if person.user.nil?
-    raise ArgumentError.new('Client must be set') if person.client.nil?
+    raise ArgumentError, 'User must be set' if person.user.nil?
+    raise ArgumentError, 'Client must be set' if person.client_id.nil?
 
     save(person)
     puts "New person created person=#{person}"
     person
   end
 
-  def save(person)
-    person.save
+  protected
+
+  def klass
+    Person
   end
 end

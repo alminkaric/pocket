@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Tools
   class DummyDataGenerator
     class << self
@@ -27,12 +29,12 @@ module Tools
               email: email,
               password: password,
               client: client
-             )
+            )
           end
         end
       end
 
-      private 
+      private
 
       def client_service
         @client_service ||= ClientService.new
