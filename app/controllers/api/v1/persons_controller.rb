@@ -3,23 +3,26 @@
 module Api
   module V1
     class PersonsController < ApiBaseController
+      include ApiHelpers
       def index
-        @people = Person.all
-        response.set_header('X-Total-Count', @people.size)
-        start_index = params[:_start].to_i
-        end_index = params[:_end].to_i
-        @output = @people.slice(start_index, end_index - start_index)
-        render json: @output, each_serializer: ::PersonSerializer
+        people = person_service.load_all
+        render_json(people)
       end
 
       def show
         person = person_service.get(params[:id])
-        render json: person, serializer: ::PersonSerializer
+        render_json(person)
       end
 
       def create
-        person = person_service.create_person(params)
-        render json: person, serializer: ::PersonSerializer
+        person = person_service.create(params)
+        render_json(person)
+      end
+
+      def update
+        person = person_service.get(params[:id])
+        person_service.save(person)
+        render_json(person)
       end
 
       private

@@ -15,6 +15,10 @@ module CrudServiceMethods
     klass.find(id)
   end
 
+  def load_all
+    klass.all
+  end
+
   def save(model)
     model.save
   end
@@ -24,6 +28,9 @@ module CrudServiceMethods
   end
 
   protected
+
+  # Represents the model class. This method must be
+  # implemented by the service.
 
   # Example - basic usage:
   #

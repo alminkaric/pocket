@@ -7,12 +7,12 @@ module Tools
         15.times do
           name = Faker::Company.name
           description = Faker::Company.catch_phrase
-          client_service.create_client(name: name, description: description)
+          client_service.create(name: name, description: description)
         end
       end
 
       def generate_client_employees
-        clients = client_service.all_clients
+        clients = client_service.load_all
         clients.each do |client|
           number_of_employees = rand(5..15)
           number_of_employees.times do
@@ -23,7 +23,7 @@ module Tools
             email = "#{first_name}.#{last_name}@#{client_name_domain}.com"
             password = Faker::Internet.password(min_length: 8)
 
-            person_service.create_person(
+            person_service.create(
               first_name: first_name,
               last_name: last_name,
               email: email,

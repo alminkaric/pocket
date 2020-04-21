@@ -7,7 +7,6 @@ ruby '2.6.6'
 
 gem 'active_model_serializers'
 gem 'devise'
-gem 'faker'
 gem 'jbuilder', '~> 2.7'
 gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 4.1'
@@ -20,6 +19,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'faker'
 end
 
 group :development do
