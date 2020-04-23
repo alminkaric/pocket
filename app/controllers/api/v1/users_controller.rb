@@ -3,7 +3,7 @@
 module Api
   module V1
     class UsersController < ApiBaseController
-      include ApiHelpers
+      include JsonRenderHelper
       def index
         users = user_service.load_all
         render_json(users)

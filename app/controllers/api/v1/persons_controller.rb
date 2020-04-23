@@ -3,7 +3,7 @@
 module Api
   module V1
     class PersonsController < ApiBaseController
-      include ApiHelpers
+      include JsonRenderHelper
       def index
         people = person_service.load_all
         render_json(people)
@@ -20,8 +20,7 @@ module Api
       end
 
       def update
-        person = person_service.get(params[:id])
-        person_service.save(person)
+        person = person_service.update(params)
         render_json(person)
       end
 

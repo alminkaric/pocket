@@ -24,6 +24,20 @@ class PersonService
     person
   end
 
+  # TODO: add doc
+  # @return [Person]
+  def update(params)
+    # @type [Person]
+    person = get(params[:id])
+
+    person.first_name = params[:first_name]
+    person.last_name = params[:last_name]
+    person.client_id = params[:client_id]
+    person.employee_id = params[:employee_id]
+
+    save(person)
+  end
+
   protected
 
   def klass

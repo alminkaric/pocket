@@ -3,7 +3,7 @@
 module Api
   module V1
     class ClientsController < ApiBaseController
-      include ApiHelpers
+      include JsonRenderHelper
       def index
         id = params[:id].to_i
         clients = if id.positive?

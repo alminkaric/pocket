@@ -2,7 +2,7 @@
 
 # TODO: add doc
 module Api
-  module ApiHelpers
+  module JsonRenderHelper
     # TODO: add doc
     # @param collection [ActiveRecord::Collection]
     # @param _start
