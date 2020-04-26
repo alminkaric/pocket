@@ -5,12 +5,7 @@ module Api
     class ClientsController < ApiBaseController
       include JsonRenderHelper
       def index
-        id = params[:id].to_i
-        clients = if id.positive?
-                    Client.where(id: id)
-                  else
-                    Client.all
-                  end
+        clients = client_service.find_by_ids_or_all(params[:id])
         render_json(clients)
       end
 

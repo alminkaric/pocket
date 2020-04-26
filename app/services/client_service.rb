@@ -19,4 +19,18 @@ class ClientService
     puts "New client=#{client} created"
     client
   end
+
+  # TODO: Add doc
+  def find_by_ids_or_all(*ids)
+    all_ids_integer = ids.all? { |i| i.is_a?(Integer) }
+    return Client.find(ids: ids) if all_ids_integer
+
+    load_all
+  end
+
+  protected
+
+  def klass
+    Client
+  end
 end

@@ -9,10 +9,7 @@
 # - delete(model)
 #
 module CrudServiceMethods
-  def initialize
-    info_logger("#{self.class} initialized!")
-  end
-
+  include Loggers
   # Default implementation of get method for a model
   # @param id [Integer] unique identifier for the model
   def get(id)
@@ -47,7 +44,7 @@ module CrudServiceMethods
     model.destroy
   end
 
-  protected
+  private
 
   # Represents the model class. This method must be
   # implemented by the service.
@@ -69,15 +66,6 @@ module CrudServiceMethods
     Please implement this method in the service"
   end
 
-  private
-
-  def debug_logger(message)
-    method_caller_name = caller_locations(1, 1)[0].label
-    Rails.logger.debug "DEBUG [#{self.class}.#{method_caller_name}]: #{message}"
-  end
-
-  def info_logger(message)
-    method_caller_name = caller_locations(1, 1)[0].label
-    Rails.logger.info "INFO [#{self.class}.#{method_caller_name}]: #{message}"
-  end
+  alias call_get get
+  private :call_get
 end

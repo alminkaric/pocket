@@ -31,5 +31,17 @@
         "3000"
       ]
     },
+    {
+      "type": "ruby-debug",
+      "request": "launch",
+      "name": "RSpec (Active File)",
+      "program": "rspec",
+      "programArgs": [
+        "-I",
+        "${workspaceFolder}",
+        "${file}"
+      ],
+      "useBundler": false
+    },
   ]
 }
