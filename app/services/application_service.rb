@@ -8,7 +8,7 @@
 # - save(model)
 # - delete(model)
 #
-module CrudServiceMethods
+class ApplicationService
   include Loggers
   # Default implementation of get method for a model
   # @param id [Integer] unique identifier for the model
@@ -19,6 +19,7 @@ module CrudServiceMethods
     result
   end
 
+  # @return [Array]
   def load_all
     debug_logger("Fetching all from #{klass}")
     result = klass.all
@@ -65,7 +66,4 @@ module CrudServiceMethods
     raise "The method 'klass' is not implemented.
     Please implement this method in the service"
   end
-
-  alias call_get get
-  private :call_get
 end

@@ -2,9 +2,7 @@
 
 ##
 # CRUD method for Client model
-class ClientService
-  include CrudServiceMethods
-
+class ClientService < ApplicationService
   ##
   # Creates new record of client based on the following params
   # @param name [String]

@@ -20,7 +20,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'faker'
-  gem 'readapt'
   gem 'rspec-rails', '~> 4.0.0'
 end
 
@@ -30,7 +29,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.3'
   gem 'rubocop'
   gem 'ruby-debug-ide', '~> 0.7.2'
-  gem 'solargraph'
+  gem 'solargraph', '~> 0.38.6'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'

@@ -8,6 +8,7 @@
       "name": "Start Rails server",
       "type": "Ruby",
       "request": "launch",
+      "preLaunchTask": "rake: db:migrate",
       "cwd": "${workspaceRoot}",
       "program": "${workspaceRoot}/bin/rails",
       "args": [
@@ -20,6 +21,7 @@
       "name": "Debug Rails server",
       "type": "Ruby",
       "request": "launch",
+      "preLaunchTask": "rake: db:migrate",
       "cwd": "${workspaceRoot}",
       "useBundler": true,
       "pathToBundler": "/home/almin/.rbenv/shims/bundle",
@@ -30,18 +32,6 @@
         "-p",
         "3000"
       ]
-    },
-    {
-      "type": "ruby-debug",
-      "request": "launch",
-      "name": "RSpec (Active File)",
-      "program": "rspec",
-      "programArgs": [
-        "-I",
-        "${workspaceFolder}",
-        "${file}"
-      ],
-      "useBundler": false
     },
   ]
 }

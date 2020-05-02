@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-class PersonService
+class PersonService < ApplicationService
   attr_reader :client_service
-
-  include CrudServiceMethods
 
   def initialize
     @client_service = ClientService.new
@@ -12,6 +10,7 @@ class PersonService
   ##
   # TODO: Add documentation
   # @param email[string] Email of the user
+  # @return [Person]
   #
   def create(params)
     person = build_person_with_user(params)

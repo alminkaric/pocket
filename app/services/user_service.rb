@@ -1,17 +1,18 @@
 # frozen_string_literal: true
 
-# TODO: add doc
-class UserService
-  include CrudServiceMethods
-
+class UserService < ApplicationService
   def initialize(current_user = nil)
     # @type [User]
     @current_user = current_user
   end
 
   def get(id)
-    puts 'something'
-    call_get(id)
+    return nil if @current_user.blank?
+
+    current_user_id = @current_user.id
+    return nil if current_user_id != id
+
+    super(id)
   end
 
   # @return [User]

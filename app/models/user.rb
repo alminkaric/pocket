@@ -27,5 +27,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # @!method person
+  #   @return [Person]
   has_one :person
+
+  has_many :role_assignments
+
+  # @!method roles
+  #   @return [ActiveRecord::Relation<Role>]
+  has_many :roles, through: :role_assignments
 end
