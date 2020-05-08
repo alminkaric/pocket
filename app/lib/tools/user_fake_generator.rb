@@ -7,18 +7,23 @@ module Tools
         user = user_service.find_user_by_email(email)
         return user if user.present?
 
-        password = Faker::Internet.password(min_length: 8)
         user_service.create(email: email, password: password)
       end
 
       def get_or_create_admin_user(email)
+        user = user_service.find_user_by_email(email)
+        return user if role_service.user_role?(user: user, role: Role::ADMIN)
+
         user = get_or_create_user(email)
-        admin_role = RoleFakeGenerator.get_or_create_role('Admin')
-        role_service.assign_role_to_user(role: admin_role, user: user)
+        role_service.assign_role_to_user(user: user, role: Role::ADMIN)
         user
       end
 
       private
+
+      def password
+        Faker::Internet.password(min_length: 8)
+      end
 
       def user_service
         @user_service ||= UserService.new

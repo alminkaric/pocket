@@ -10,6 +10,16 @@
 #
 class ApplicationService
   include Loggers
+
+  #
+  # TODO: Add descritpion
+  #
+  # @param [User] current_user
+  #
+  def initialize(current_user = nil)
+    @current_user = current_user
+  end
+
   # Default implementation of get method for a model
   # @param id [Integer] unique identifier for the model
   def get(id)

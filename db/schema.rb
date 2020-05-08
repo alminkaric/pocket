@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_30_213158) do
+ActiveRecord::Schema.define(version: 2020_05_04_203337) do
 
-  create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "clients", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.integer "status", default: 0
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 2020_04_30_213158) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "client_id", null: false
-    t.bigint "user_id", null: false
+  create_table "people", force: :cascade do |t|
+    t.integer "client_id", null: false
+    t.integer "user_id", null: false
     t.string "first_name"
     t.string "last_name"
     t.string "employee_id"
@@ -34,22 +34,32 @@ ActiveRecord::Schema.define(version: 2020_04_30_213158) do
     t.index ["user_id"], name: "index_people_on_user_id"
   end
 
-  create_table "role_assignments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "role_id", null: false
+  create_table "permissions", force: :cascade do |t|
+    t.string "class_name"
+    t.string "method_name"
+    t.string "holder_type", null: false
+    t.integer "holder_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["holder_type", "holder_id"], name: "index_permissions_on_holder_type_and_holder_id"
+  end
+
+  create_table "role_assignments", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "role_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["role_id"], name: "index_role_assignments_on_role_id"
     t.index ["user_id"], name: "index_role_assignments_on_user_id"
   end
 
-  create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "roles", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

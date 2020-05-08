@@ -6,12 +6,12 @@ namespace :roles do
     default_roles = %w[Developer Admin]
     roles_table_empty = Role.all.empty?
 
-    return unless roles_table_empty
-
-    default_roles.each do |role_name|
-      puts "Creating #{role_name} role"
-      role = Role.create(name: role_name)
-      puts "Created role #{role.name} with id=#{role.id}"
+    if roles_table_empty
+      default_roles.each do |role_name|
+        puts "Creating #{role_name} role"
+        role = Role.create(name: role_name)
+        puts "Created role #{role.name} with id=#{role.id}"
+      end
     end
   end
 end

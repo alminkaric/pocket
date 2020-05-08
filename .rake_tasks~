@@ -51,6 +51,7 @@ test:system
 time:zones[country_or_offset]
 tmp:clear
 tmp:create
+users:create_admin_user
 webpacker
 webpacker:binstubs
 webpacker:check_binstubs

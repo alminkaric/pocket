@@ -31,9 +31,16 @@ class User < ApplicationRecord
   #   @return [Person]
   has_one :person
 
+  # @!method role_assignments
+  #   @return [Array<RoleAssignment>]
   has_many :role_assignments
 
   # @!method roles
-  #   @return [ActiveRecord::Relation<Role>]
+  #   @return [Array<Role>]
   has_many :roles, through: :role_assignments
+
+  def self.admin_user
+    # tried as constant but didn't work in test env
+    User.find_by(email: 'admin@pocket.com')
+  end
 end
