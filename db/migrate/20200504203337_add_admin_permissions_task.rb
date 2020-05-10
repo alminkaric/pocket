@@ -3,5 +3,6 @@
 class AddAdminPermissionsTask < ActiveRecord::Migration[6.0]
   def up
     Rake::Task['permissions:add_admin_permissions_for_user_service'].invoke
+    Rake::Task['permissions:add_admin_permissions_for_role_service'].invoke
   end
 end

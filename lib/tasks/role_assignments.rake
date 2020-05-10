@@ -3,7 +3,7 @@
 namespace :role_assignments do
   desc 'Adds admin role to admin user'
   task add_admin_user_role: :environment do
-    role = Role::ADMIN
+    role = Role.admin
     admin_user = User.admin_user
     admin_user = User.create(email: 'admin@pocket.com', password: 'defaultAdminPassword') unless admin_user.present?
 

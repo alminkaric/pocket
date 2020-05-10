@@ -22,6 +22,7 @@ class PermissionService < ApplicationService
     has_common_elements
   end
 
+  # @return [void]
   def check_user_permission_for(method_name)
     user_has_permission = user_permission_for?(method_name)
     raise PermissionError unless user_has_permission

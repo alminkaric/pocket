@@ -12,10 +12,10 @@ module Tools
 
       def get_or_create_admin_user(email)
         user = user_service.find_user_by_email(email)
-        return user if role_service.user_role?(user: user, role: Role::ADMIN)
+        return user if role_service.user_role?(user: user, role: Role.admin)
 
         user = get_or_create_user(email)
-        role_service.assign_role_to_user(user: user, role: Role::ADMIN)
+        role_service.assign_role_to_user(user: user, role: Role.admin)
         user
       end
 

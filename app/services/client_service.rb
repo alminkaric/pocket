@@ -8,11 +8,11 @@ class ClientService < ApplicationService
   # @param name [String]
   # @param description [String]
   # @return [Client]
-  def create(params)
-    puts "Building client with params=#{params}"
+  def create(name:, description: nil)
+    puts "Building client with params=#{parameters}"
     client = Client.new
-    client.name = params[:name]
-    client.description = params[:description]
+    client.name = name
+    client.description = description
     save(client)
     puts "New client=#{client} created"
     client

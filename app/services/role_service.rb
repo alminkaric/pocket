@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 #
-## Service for accessing {Role}
+## Service for accessing [Role]
 #
 # @see Role
 # @author Almin Karic <almin.karic.3t1@gmail.com>
@@ -25,11 +25,17 @@ class RoleService < ApplicationService
     save(role)
   end
 
+  def save(role)
+    permission_service.check_user_permission_for('save')
+
+    super(role)
+  end
+
   #
   # Checks if user has given role
   #
   # @param [User] user
-  # @param [Role] role_name
+  # @param [Role] role
   #
   # @return [Boolean]
   #
@@ -40,6 +46,7 @@ class RoleService < ApplicationService
   end
 
   def assign_role_to_user(role:, user:)
+    permission_service.check_user_permission_for('assign_role_to_user')
     RoleAssignment.create(role: role, user: user)
   end
 
@@ -47,5 +54,11 @@ class RoleService < ApplicationService
 
   def klass
     Role
+  end
+
+  private
+
+  def permission_service
+    @permission_service ||= PermissionService.new(current_user: @current_user, class_to_check: self.class)
   end
 end

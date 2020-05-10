@@ -50,6 +50,7 @@ class ApplicationService
     model
   end
 
+  # @return [void]
   def delete(model)
     debug_logger("Going to delete entry #{klass}=#{model.attributes} from database")
     model.destroy

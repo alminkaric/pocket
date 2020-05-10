@@ -19,7 +19,7 @@ class UserService < ApplicationService
     permission_service.check_user_permission_for('create_admin_user')
 
     user = create(email: email, password: password)
-    role_service.assign_role_to_user(role: Role::ADMIN, user: user)
+    role_service.assign_role_to_user(role: Role.admin, user: user)
     user
   end
 
@@ -30,6 +30,7 @@ class UserService < ApplicationService
     super(user)
   end
 
+  # @return [void]
   def delete(user)
     permission_service.check_user_permission_for('delete')
 
@@ -51,12 +52,5 @@ class UserService < ApplicationService
   def permission_service
     @permission_service ||=
       PermissionService.new(current_user: @current_user, class_to_check: self.class)
-  end
-
-  def current_user_can_use_save?(user)
-    return true if user.new_record?
-    return true if permission_service.user_permission_for?('save')
-
-    false
   end
 end

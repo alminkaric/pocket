@@ -3,11 +3,15 @@
 require 'rails_helper'
 
 RSpec.describe 'UserService' do
-  let(:admin_user) { User.admin_user }
-  let(:normal_user) { Tools::UserFakeGenerator.get_or_create_user('normaluser@test.com') }
+  # @!method user_test_data
+  #   @return [UserTestData]
+  let(:user_test_data) { UserTestData.new }
+
+  let(:admin_user) { user_test_data.admin_user }
+  let(:normal_user) { user_test_data.normal_user }
   let(:user_service) { UserService.new }
-  let(:email) { 'jon.snow@got.com' }
-  let(:password) { 'testpass123' }
+  let(:email) { UserTestData::EMAIL }
+  let(:password) { UserTestData::PASSWORD }
 
   describe 'create method' do
     it 'creates a new user without current user' do
@@ -17,7 +21,7 @@ RSpec.describe 'UserService' do
     end
 
     it 'creates a new user with admin user' do
-      user_service = UserService.new(admin_user)
+      user_service = UserService.new(user_test_data.admin_user)
       user = user_service.create(email: email, password: password)
 
       expect(user.persisted?).to be true
