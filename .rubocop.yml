@@ -1,4 +1,4 @@
-Metrics/LineLength:
+Layout/LineLength:
   # Change the default 80 chars limit value
   Max: 120
   # If you want the rule not to apply to a specific folder/file
@@ -7,3 +7,27 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*.rb'
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - bin/bundle
+    - config/initializers/devise.rb
+    - node_modules/**/*
+Style/Documentation:
+  Exclude:
+    - config/*/**.rb
+    - db/migrate/**.rb
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true

@@ -50,13 +50,11 @@ class RoleService < ApplicationService
     RoleAssignment.create(role: role, user: user)
   end
 
-  protected
+  private
 
   def klass
     Role
   end
-
-  private
 
   def permission_service
     @permission_service ||= PermissionService.new(current_user: @current_user, class_to_check: self.class)

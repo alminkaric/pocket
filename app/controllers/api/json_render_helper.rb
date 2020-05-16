@@ -20,9 +20,7 @@ module Api
       start_index = params[:_start].to_i
       end_index = params[:_end].to_i
       output = collection
-      if end_index > start_index
-        output = collection.slice(start_index, end_index - start_index)
-      end
+      output = collection.slice(start_index, end_index - start_index) if end_index > start_index
       render json: output
     end
 

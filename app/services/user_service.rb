@@ -37,13 +37,11 @@ class UserService < ApplicationService
     super(user)
   end
 
-  protected
+  private
 
   def klass
     User
   end
-
-  private
 
   def role_service
     @role_service ||= RoleService.new(@current_user)

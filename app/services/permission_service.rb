@@ -25,13 +25,11 @@ class PermissionService < ApplicationService
     super(permission)
   end
 
-  protected
+  private
 
   def klass
     Permission
   end
-
-  private
 
   def holder_is_role?(permission)
     permission_holder = permission.holder

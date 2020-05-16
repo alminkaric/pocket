@@ -74,7 +74,6 @@ class ApplicationService
   #
   #
   def klass
-    raise "The method 'klass' is not implemented.
-    Please implement this method in the service"
+    raise NotImplementedError, "Subclasses must implement a 'klass' method"
   end
 end
