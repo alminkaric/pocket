@@ -29,7 +29,7 @@ group :development do
   gem 'rubocop', '~> 0.83.0'
   gem 'ruby-debug-ide', '~> 0.7.2'
   gem 'solargraph', '~> 0.39.7'
-  gem 'sorbet', '~> 0.5.5648'
+  gem 'sorbet', '~> 0.5.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'

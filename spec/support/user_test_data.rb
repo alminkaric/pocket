@@ -12,8 +12,8 @@ class UserTestData
   sig { void }
   def initialize
     @admin_user = T.let(User.admin_user, User)
-    @user_service = T.let(UserService.new(User.admin_user), UserService)
-    @role_service = T.let(RoleService.new(User.admin_user), RoleService)
+    @user_service = T.let(ServiceFactory.user_service(User.admin_user), UserService)
+    @role_service = T.let(ServiceFactory.role_service(User.admin_user), RoleService)
 
     @normal_user = T.let(get_or_create_user('normal-user@pocket.com'), User)
   end

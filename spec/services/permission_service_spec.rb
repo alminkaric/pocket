@@ -11,13 +11,13 @@ RSpec.describe PermissionService do
   # @!method permission_service_with_admin
   #   @return [PermissionService]
   let(:permission_service_with_admin) do
-    PermissionService.new(current_user: user_test_data.admin_user, class_to_check: PermissionService)
+    ServiceFactory.permission_service(PermissionService, user_test_data.admin_user)
   end
 
   # @!method permission_service_with_normal_user
   #   @return [PermissionService]
   let(:permission_service_with_normal_user) do
-    PermissionService.new(current_user: user_test_data.normal_user, class_to_check: PermissionService)
+    ServiceFactory.permission_service(PermissionService, user_test_data.normal_user)
   end
 
   describe 'check_user_permission_for method' do
@@ -33,10 +33,7 @@ RSpec.describe PermissionService do
     end
 
     it "raises #{PermissionError.name} when current_user is nil" do
-      permission_service = PermissionService.new(
-        class_to_check: described_class,
-        current_user: nil
-      )
+      permission_service = ServiceFactory.permission_service(PermissionService)
       expect { permission_service.check_user_permission_for(method) }.to raise_error PermissionError
     end
 
@@ -73,7 +70,7 @@ RSpec.describe PermissionService do
     end
 
     it "doesn't save a permission if current user nil" do
-      permission_service = PermissionService.new(class_to_check: described_class)
+      permission_service = ServiceFactory.permission_service(described_class)
       expect { permission_service.save(permission) }.to raise_error PermissionError
     end
   end

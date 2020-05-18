@@ -13,7 +13,7 @@ class RoleTestData
     private
 
     def role_service
-      @role_service ||= RoleService.new
+      @role_service ||= ServiceFactory.role_service
     end
   end
 end

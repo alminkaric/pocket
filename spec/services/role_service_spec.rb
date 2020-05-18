@@ -9,31 +9,30 @@ RSpec.describe 'RoleService' do
   let(:user_test_data) { UserTestData.new }
   # @!method role_service
   #   @return [RoleService]
-  let(:role_service) { RoleService.new }
+  let(:role_service) { ServiceFactory.role_service }
+  let(:role_service_with_admin) { ServiceFactory.role_service(user_test_data.admin_user) }
+  let(:role_service_with_normal_user) { ServiceFactory.role_service(user_test_data.normal_user) }
   let(:role_name) { 'Test role' }
   let(:role) { Role.create(name: role_name) }
 
   describe 'save method' do
     it 'saves a role for admin user' do
-      role_service = RoleService.new(user_test_data.admin_user)
       role = Role.new
       role.name = role_name
-      role_service.save(role)
+      role_service_with_admin.save(role)
       expect(role.persisted?).to be true
     end
 
     it "doesn't save a role for normal user" do
-      role_service = RoleService.new(user_test_data.normal_user)
       role = Role.new
       role.name = role_name
-      expect { role_service.save(role) }.to raise_exception PermissionError
+      expect { role_service_with_normal_user.save(role) }.to raise_exception PermissionError
     end
 
     it "doesn't update existing role for normal user" do
-      role_service = RoleService.new(user_test_data.normal_user)
       role.name = 'New role name'
-      expect { role_service.save(role) }.to raise_exception PermissionError
-      role = role_service.find_by_name(role_name)
+      expect { role_service_with_normal_user.save(role) }.to raise_exception PermissionError
+      role = role_service_with_normal_user.find_by_name(role_name)
       expect(role.name).to match role_name
     end
 
@@ -46,37 +45,32 @@ RSpec.describe 'RoleService' do
 
   describe 'find_by_name method' do
     it 'returns role for admin user' do
-      role_service = RoleService.new(user_test_data.admin_user)
       role = Role.create(name: role_name)
-      founded_role = role_service.find_by_name(role_name)
+      founded_role = role_service_with_admin.find_by_name(role_name)
       expect(founded_role).to match role
     end
 
     it 'returns role for normal_user' do
-      role_service = RoleService.new(user_test_data.normal_user)
       role = Role.create(name: role_name)
-      founded_role = role_service.find_by_name(role_name)
+      founded_role = role_service_with_normal_user.find_by_name(role_name)
       expect(founded_role).to match role
     end
   end
 
   describe 'find_or_create method' do
     it 'creates new role for admin user' do
-      role_service = RoleService.new(user_test_data.admin_user)
-      role = role_service.find_or_create(role_name)
+      role = role_service_with_admin.find_or_create(role_name)
       expect(role.persisted?).to be true
     end
 
     it 'retrieves existing role for admin user' do
-      role_service = RoleService.new(user_test_data.admin_user)
       role = Role.create(name: role_name)
-      founded_role = role_service.find_or_create(role_name)
+      founded_role = role_service_with_admin.find_or_create(role_name)
       expect(founded_role).to match role
     end
 
     it "doesn't create role for normal user" do
-      role_service = RoleService.new(user_test_data.normal_user)
-      expect { role_service.find_or_create(role_name) }.to raise_exception PermissionError
+      expect { role_service_with_normal_user.find_or_create(role_name) }.to raise_exception PermissionError
     end
   end
 
@@ -108,11 +102,10 @@ RSpec.describe 'RoleService' do
 
   describe 'assign_role_to_user method' do
     it 'assigns user to role when current user is admin' do
-      role_service = RoleService.new(user_test_data.admin_user)
       user = user_test_data.normal_user
-      role_service.assign_role_to_user(role: Role.admin, user: user)
+      role_service_with_admin.assign_role_to_user(role: Role.admin, user: user)
 
-      has_admin_role = role_service.user_role?(
+      has_admin_role = role_service_with_admin.user_role?(
         user: user,
         role: Role.admin
       )
@@ -120,18 +113,16 @@ RSpec.describe 'RoleService' do
     end
 
     it "doesn't assing user to role when current user is normal user" do
-      role_service = RoleService.new(user_test_data.normal_user)
       user = user_test_data.normal_user
       expect do
-        role_service.assign_role_to_user(role: Role.admin, user: user)
+        role_service_with_normal_user.assign_role_to_user(role: Role.admin, user: user)
       end.to raise_exception PermissionError
     end
 
     it "doesn't assing user to role when current user is nil" do
-      role_service = RoleService.new(user_test_data.normal_user)
       user = nil
       expect do
-        role_service.assign_role_to_user(role: Role.admin, user: user)
+        role_service_with_normal_user.assign_role_to_user(role: Role.admin, user: user)
       end.to raise_exception PermissionError
     end
   end

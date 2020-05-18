@@ -1,10 +1,12 @@
-# typed: true
+# typed: strict
 # frozen_string_literal: true
 
 module Api
   module V1
     class UsersController < ApiBaseController
-      include JsonRenderHelper
+      final!
+
+      sig(:final) { void }
       def index
         users = user_service.load_all
         render_json(users)
@@ -12,8 +14,9 @@ module Api
 
       private
 
+      sig(:final) { returns(UserService) }
       def user_service
-        @user_service ||= UserService.new
+        T.cast(@services[:user_service] ||= ServiceFactory.user_service(current_user), UserService)
       end
     end
   end

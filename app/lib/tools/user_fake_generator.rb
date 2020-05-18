@@ -27,11 +27,11 @@ module Tools
       end
 
       def user_service
-        @user_service ||= UserService.new
+        @user_service ||= ServiceFactory.user_service
       end
 
       def role_service
-        @role_service ||= RoleService.new
+        @role_service ||= ServiceFactory.role_service
       end
     end
   end

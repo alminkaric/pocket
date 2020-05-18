@@ -27,9 +27,6 @@ class PersonService < ApplicationService
   def create(args)
     person = build_person_with_user(args)
     puts "Creating person with params=#{args}"
-    raise ArgumentError, 'User must be set' if person.user.nil?
-    raise ArgumentError, 'Client must be set' if person.client_id.nil?
-
     save(person)
     puts "New person created person=#{person}"
     person

@@ -331,7 +331,7 @@ DEPENDENCIES
   selenium-webdriver
   simplecov (~> 0.18.5)
   solargraph (~> 0.39.7)
-  sorbet (~> 0.5.5648)
+  sorbet (~> 0.5.0)
   sorbet-rails (~> 0.6.4)
   spring
   spring-watcher-listen (~> 2.0.0)

@@ -2,11 +2,24 @@
 # frozen_string_literal: true
 
 # TODO: Add doc
-class PermissionService < ApplicationService
-  sig { params(class_to_check: Class, current_user: T.nilable(User)).void }
-  def initialize(class_to_check:, current_user: nil)
-    super(current_user)
-    @class_name = T.let(String(class_to_check.name), String)
+class PermissionService
+  extend T::Sig
+  include IService
+
+  sig { params(class_name: String, current_user: T.nilable(User)).void }
+  def initialize(class_name:, current_user: nil)
+    @class_name = class_name
+    @current_user = current_user
+  end
+
+  sig { override.params(id: Integer).returns(Permission) }
+  def get(id)
+    ServiceUtils.get(id, Permission)
+  end
+
+  sig { override.returns(T::Array[Permission]) }
+  def load_all
+    ServiceUtils.load_all(Permission)
   end
 
   sig { params(method_name: String).void }
@@ -15,23 +28,17 @@ class PermissionService < ApplicationService
     raise PermissionError unless user_has_permission
   end
 
-  sig { params(permission: Permission).returns(Permission) }
+  sig { override.params(permission: Permission).returns(ApplicationRecord) }
   def save(permission)
     check_user_permission_for('save')
-    super(permission)
+    ServiceUtils.save(permission, Permission)
   end
 
-  sig { params(permission: Permission).void }
+  sig { override.params(permission: Permission).void }
   def delete(permission)
     check_user_permission_for('delete')
-    super(permission)
-  end
 
-  private
-
-  sig { returns(T.class_of(Permission)) }
-  def klass
-    Permission
+    ServiceUtils.delete(permission, Permission)
   end
 
   sig { params(permission: Permission).returns(T::Boolean) }

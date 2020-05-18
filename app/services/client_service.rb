@@ -31,7 +31,7 @@ class ClientService < ApplicationService
 
   protected
 
-  sig { returns(T.class_of(ApplicationRecord)) }
+  sig { override.returns(T.class_of(ApplicationRecord)) }
   def klass
     Client
   end

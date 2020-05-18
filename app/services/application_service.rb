@@ -12,6 +12,8 @@
 class ApplicationService
   include Loggers
   extend T::Sig
+  extend T::Helpers
+  abstract!
 
   #
   # TODO: Add descritpion
@@ -80,8 +82,6 @@ class ApplicationService
   #   end
   #
   #
-  sig { returns(T.class_of(ApplicationRecord)) }
-  def klass
-    raise NotImplementedError, "Subclasses must implement a 'klass' method"
-  end
+  sig { abstract.returns(T.class_of(ApplicationRecord)) }
+  def klass; end
 end

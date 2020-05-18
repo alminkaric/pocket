@@ -1,23 +1,27 @@
-# typed: false
+# typed: strict
 # frozen_string_literal: true
 
 class ApplicationValidator
+  extend T::Sig
+  extend T::Helpers
+  abstract!
+
+  sig { void }
   def initialize
-    @model = validator_model.new
+    @model = T.let(validator_model.new, T.untyped)
   end
 
   # return [boolean]
-  def validate(_model)
-    raise NotImplementedError 'validate model needs to be implemented'
-  end
+  sig { abstract.params(_model: T.untyped).returns(T::Boolean) }
+  def validate(_model); end
 
+  sig { returns(ActiveModel::Errors) }
   def errors
     @model.errors
   end
 
   protected
 
-  def validator_model
-    raise NotImplementedError 'Validator model needs to be implemented'
-  end
+  sig { abstract.returns(T.class_of(ApplicationRecord)) }
+  def validator_model; end
 end

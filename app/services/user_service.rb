@@ -1,12 +1,24 @@
 # typed: strict
 # frozen_string_literal: true
 
-class UserService < ApplicationService
-  sig { params(current_user: T.nilable(User)).void }
-  def initialize(current_user = nil)
-    super(current_user)
-    @permission_service = T.let(PermissionService.new(current_user: @current_user, class_to_check: self.class), PermissionService)
-    @role_service = T.let(RoleService.new(@current_user), RoleService)
+class UserService
+  extend T::Sig
+  include IService
+
+  sig { params(permission_service: PermissionService, role_service: RoleService).void }
+  def initialize(permission_service:, role_service:)
+    @permission_service = permission_service
+    @role_service = role_service
+  end
+
+  sig { override.params(id: Integer).returns(User) }
+  def get(id)
+    ServiceUtils.get(id, User)
+  end
+
+  sig { override.returns(T::Array[User]) }
+  def load_all
+    ServiceUtils.load_all(User)
   end
 
   sig { params(email: String).returns(T.nilable(User)) }
@@ -31,24 +43,17 @@ class UserService < ApplicationService
     user
   end
 
-  sig { params(user: User).returns(User) }
+  sig { override.params(user: User).returns(User) }
   def save(user)
     @permission_service.check_user_permission_for('save') unless user.new_record?
 
-    super(user)
+    ServiceUtils.save(user, User)
   end
 
-  sig { params(user: User).void }
+  sig { override.params(user: User).void }
   def delete(user)
     @permission_service.check_user_permission_for('delete')
 
-    super(user)
-  end
-
-  private
-
-  sig { returns(T.class_of(User)) }
-  def klass
-    User
+    ServiceUtils.delete(user, User)
   end
 end
