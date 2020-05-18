@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 require 'rails_helper'
@@ -49,7 +50,6 @@ RSpec.describe PermissionService do
     end
 
     it "raises #{ArgumentError.name} when method_name is blank" do
-      expect { permission_service_with_admin.check_user_permission_for(nil) }.to raise_error ArgumentError
       expect { permission_service_with_admin.check_user_permission_for('') }.to raise_error ArgumentError
     end
   end

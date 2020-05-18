@@ -1,3 +1,4 @@
+# typed: true
 # frozen_string_literal: true
 
 class CreateRolesTask < ActiveRecord::Migration[6.0]

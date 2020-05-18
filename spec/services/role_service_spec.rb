@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 require 'rails_helper'
@@ -96,18 +97,10 @@ RSpec.describe 'RoleService' do
       expect(has_admin_role).to be false
     end
 
-    it 'returns false when checking admin role for nil current user' do
-      has_admin_role = role_service.user_role?(
-        user: nil,
-        role: Role.admin
-      )
-      expect(has_admin_role).to be false
-    end
-
-    it 'returns false when checking nil role for user' do
+    it 'returns false when checking non-saved role for user' do
       has_admin_role = role_service.user_role?(
         user: user_test_data.normal_user,
-        role: nil
+        role: Role.new(name: RoleTestData::NAME)
       )
       expect(has_admin_role).to be false
     end

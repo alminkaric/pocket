@@ -1,3 +1,4 @@
+# typed: strict
 # frozen_string_literal: true
 
 # Default CRUD implementation for the services.
@@ -10,18 +11,21 @@
 #
 class ApplicationService
   include Loggers
+  extend T::Sig
 
   #
   # TODO: Add descritpion
   #
   # @param [User] current_user
   #
+  sig { params(current_user: T.nilable(User)).void }
   def initialize(current_user = nil)
-    @current_user = current_user
+    @current_user = T.let(current_user, T.nilable(User))
   end
 
   # Default implementation of get method for a model
   # @param id [Integer] unique identifier for the model
+  sig { params(id: Integer).returns(ApplicationRecord) }
   def get(id)
     debug_logger("Fetching a single #{klass}, with id=#{id}")
     result = klass.find(id)
@@ -30,6 +34,7 @@ class ApplicationService
   end
 
   # @return [Array]
+  sig { returns(T.untyped) }
   def load_all
     debug_logger("Fetching all from #{klass}")
     result = klass.all
@@ -37,6 +42,7 @@ class ApplicationService
     result
   end
 
+  sig { params(model: T.untyped).returns(ApplicationRecord) }
   def save(model)
     if model.persisted?
       original_model = get(model.id)
@@ -51,6 +57,7 @@ class ApplicationService
   end
 
   # @return [void]
+  sig { params(model: T.untyped).void }
   def delete(model)
     debug_logger("Going to delete entry #{klass}=#{model.attributes} from database")
     model.destroy
@@ -73,6 +80,7 @@ class ApplicationService
   #   end
   #
   #
+  sig { returns(T.class_of(ApplicationRecord)) }
   def klass
     raise NotImplementedError, "Subclasses must implement a 'klass' method"
   end

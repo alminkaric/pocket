@@ -1,3 +1,4 @@
+# typed: strict
 # frozen_string_literal: true
 
 module Api
@@ -6,6 +7,7 @@ module Api
     # Base controller for V1 api
     #
     class ApiBaseController < ActionController::API
+      extend T::Sig
     end
   end
 end

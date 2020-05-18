@@ -1,3 +1,4 @@
+# typed: strict
 # frozen_string_literal: true
 
 # Transform JSON request param keys from JSON-conventional camelCase to

@@ -12,6 +12,7 @@ gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2'
 gem 'sass-rails', '>= 6'
+gem 'sorbet-rails', '~> 0.6.4'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 
@@ -23,12 +24,12 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate'
   gem 'debase', '~> 0.2.4.1'
   gem 'listen', '>= 3.0.5', '< 3.3'
-  gem 'rubocop'
+  gem 'rubocop', '~> 0.83.0'
   gem 'ruby-debug-ide', '~> 0.7.2'
   gem 'solargraph', '~> 0.39.7'
+  gem 'sorbet', '~> 0.5.5648'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
