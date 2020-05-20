@@ -11,12 +11,6 @@ module Api
       extend T::Helpers
       include JsonRenderHelper
       abstract!
-
-      sig { void }
-      def initialize
-        super
-        @services = T.let({}, T::Hash[Symbol, IService])
-      end
     end
   end
 end

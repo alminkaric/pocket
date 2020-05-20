@@ -3,6 +3,7 @@
 
 class UserTestData
   extend T::Sig
+  ADMIN_EMAIL = 'admin@user.com'
   EMAIL = 'jon.snow@got.com'
   PASSWORD = 'testpass1234'
 
@@ -26,8 +27,9 @@ class UserTestData
     @user_service.create(email: email, password: PASSWORD)
   end
 
-  sig { params(email: String).returns(User) }
-  def get_or_create_admin_user(email)
+  sig { params(email: T.nilable(String)).returns(User) }
+  def get_or_create_admin_user(email = nil)
+    email ||= ADMIN_EMAIL
     user = @user_service.find_user_by_email(email)
     return user if user && @role_service.user_role?(user: user, role: Role.admin)
 

@@ -41,6 +41,8 @@ class PermissionService
     ServiceUtils.delete(permission, Permission)
   end
 
+  private
+
   sig { params(permission: Permission).returns(T::Boolean) }
   def holder_is_role?(permission)
     permission_holder = permission.holder

@@ -4,37 +4,33 @@
 require 'rails_helper'
 
 RSpec.describe UserService do
-  # @!method user_test_data
-  #   @return [UserTestData]
-  let(:user_test_data) { UserTestData.new }
-
-  let(:admin_user) { user_test_data.admin_user }
-  let(:normal_user) { user_test_data.normal_user }
-  let(:user_service) { ServiceFactory.user_service }
-  # @!method user_service_with_normal_user
+  # @!method subject
   #   @return [UserService]
-  let(:user_service_with_normal_user) { ServiceFactory.user_service(normal_user) }
-  let(:user_service_with_admin_user) { ServiceFactory.user_service(admin_user) }
-  let(:email) { UserTestData::EMAIL }
-  let(:password) { UserTestData::PASSWORD }
+  subject do
+    test_data = UserTestData.new
+    permission_service =
+      PermissionService.new(class_name: described_class.name, current_user: test_data.get_or_create_admin_user)
+    role_service = RoleService.new(permission_service)
+    UserService.new(permission_service: permission_service, role_service: role_service)
+  end
 
   describe 'create method' do
-    it 'creates a new user without current user' do
-      user = user_service.create(email: email, password: password)
-
+    it 'creates a new user' do
+      user = subject.create(email: UserTestData::EMAIL, password: UserTestData::PASSWORD)
       expect(user.persisted?).to be true
     end
 
-    it 'creates a new user with admin user' do
-      user_service = user_service_with_admin_user
-      user = user_service.create(email: email, password: password)
+    it "doesn't a new user with missing email" do
+      expect { subject.create(email: nil, password: UserTestData::PASSWORD) }.to raise_error TypeError
+    end
 
-      expect(user.persisted?).to be true
+    it "doesn't a new user with missing password" do
+      expect { subject.create(email: UserTestData::EMAIL, password: nil) }.to raise_error TypeError
     end
   end
 
   describe 'get method' do
-    it 'returns user for current user' do
+    it 'returns user' do
       user_service = user_service_with_normal_user
       user_id = normal_user.id
       user = user_service.get(user_id)

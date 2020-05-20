@@ -16,7 +16,8 @@ module Api
 
       sig(:final) { returns(UserService) }
       def user_service
-        T.cast(@services[:user_service] ||= ServiceFactory.user_service(current_user), UserService)
+        @user_service = T.let(@user_service, T.nilable(UserService))
+        @user_service ||= ServiceFactory.user_service(current_user)
       end
     end
   end

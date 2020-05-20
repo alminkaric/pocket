@@ -21,6 +21,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'faker'
+  gem 'rspec-rails', '~> 4.0.0'
+  gem 'sorbet', '~> 0.5.0'
 end
 
 group :development do
@@ -29,7 +31,6 @@ group :development do
   gem 'rubocop', '~> 0.83.0'
   gem 'ruby-debug-ide', '~> 0.7.2'
   gem 'solargraph', '~> 0.39.7'
-  gem 'sorbet', '~> 0.5.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
@@ -37,7 +38,6 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'rspec-rails', '~> 4.0.0'
   gem 'selenium-webdriver'
   gem 'simplecov', '~> 0.18.5'
   gem 'sqlite3', '~> 1.3', '>= 1.3.11'

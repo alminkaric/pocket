@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/sassc/all/sassc.rbi
 #
-# sassc-2.2.1
+# sassc-2.3.0
 
 module SassC
   def self.load_paths; end
@@ -330,8 +330,8 @@ class SassC::Util::NormalizedMap
   def values; end
 end
 module SassC::Script
-  def self.custom_functions; end
-  def self.formatted_function_name(function_name); end
+  def self.custom_functions(functions: nil); end
+  def self.formatted_function_name(function_name, functions: nil); end
 end
 class SassC::Script::Value
   def ==(other); end
@@ -488,7 +488,7 @@ class SassC::FunctionsHandler
   def arguments_from_native_list(native_argument_list); end
   def error(message); end
   def initialize(options); end
-  def setup(native_options); end
+  def setup(native_options, functions: nil); end
   def to_native_value(sass_value); end
 end
 class SassC::Dependency

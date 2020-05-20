@@ -14,6 +14,7 @@ module ::Anonymous_Delegator_36; end
 module ::Anonymous_Delegator_4; end
 module ::Anonymous_Delegator_68; end
 module ::Anonymous_Delegator_8; end
+module ::FactoryBot; end
 module ActiveRecord::CollectionCacheKey; end
 module Anonymous_Module_23::Anonymous_Module_24; end
 module Anonymous_Module_23::Anonymous_Module_25; end
@@ -44,6 +45,7 @@ module Anonymous_Module_63::Anonymous_Module_24; end
 module Anonymous_Module_63::Anonymous_Module_25; end
 module T::InterfaceWrapper::Helpers; end
 module T::Private::Abstract::Hooks; end
+module T::Private::Final::NoInherit; end
 module T::Private::Methods::MethodHooks; end
 module T::Private::Methods::SingletonMethodHooks; end
 module T::Props::Plugin::ClassMethods; end

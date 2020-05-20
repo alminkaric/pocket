@@ -3875,60 +3875,13 @@ class Addrinfo
   def connect_internal(local_addrinfo, timeout=T.unsafe(nil)); end
 end
 
-module Annotate::Constants
-  ALL_ANNOTATE_OPTIONS = ::T.let(nil, ::T.untyped)
-  FLAG_OPTIONS = ::T.let(nil, ::T.untyped)
-  OTHER_OPTIONS = ::T.let(nil, ::T.untyped)
-  PATH_OPTIONS = ::T.let(nil, ::T.untyped)
-  POSITION_OPTIONS = ::T.let(nil, ::T.untyped)
-  TRUE_RE = ::T.let(nil, ::T.untyped)
+class Api::V1::ApiBaseController
+  def initialize(*args, &blk); end
 end
 
-module AnnotateModels
-  ACTIVEADMIN_DIR = ::T.let(nil, ::T.untyped)
-  BLUEPRINTS_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  BLUEPRINTS_TEST_DIR = ::T.let(nil, ::T.untyped)
-  COMPAT_PREFIX = ::T.let(nil, ::T.untyped)
-  COMPAT_PREFIX_MD = ::T.let(nil, ::T.untyped)
-  CONTROLLER_DIR = ::T.let(nil, ::T.untyped)
-  CONTROLLER_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  CONTROLLER_TEST_DIR = ::T.let(nil, ::T.untyped)
-  END_MARK = ::T.let(nil, ::T.untyped)
-  EXEMPLARS_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  EXEMPLARS_TEST_DIR = ::T.let(nil, ::T.untyped)
-  FABRICATORS_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  FABRICATORS_TEST_DIR = ::T.let(nil, ::T.untyped)
-  FACTORY_BOT_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  FACTORY_BOT_TEST_DIR = ::T.let(nil, ::T.untyped)
-  FIXTURE_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  FIXTURE_TEST_DIR = ::T.let(nil, ::T.untyped)
-  HELPER_DIR = ::T.let(nil, ::T.untyped)
-  INDEX_CLAUSES = ::T.let(nil, ::T.untyped)
-  MAGIC_COMMENT_MATCHER = ::T.let(nil, ::T.untyped)
-  MATCHED_TYPES = ::T.let(nil, ::T.untyped)
-  MODEL_TEST_DIR = ::T.let(nil, ::T.untyped)
-  NO_DEFAULT_COL_TYPES = ::T.let(nil, ::T.untyped)
-  NO_LIMIT_COL_TYPES = ::T.let(nil, ::T.untyped)
-  PREFIX = ::T.let(nil, ::T.untyped)
-  PREFIX_MD = ::T.let(nil, ::T.untyped)
-  REQUEST_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  ROUTING_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  SERIALIZERS_DIR = ::T.let(nil, ::T.untyped)
-  SERIALIZERS_SPEC_DIR = ::T.let(nil, ::T.untyped)
-  SERIALIZERS_TEST_DIR = ::T.let(nil, ::T.untyped)
-  SKIP_ANNOTATION_PREFIX = ::T.let(nil, ::T.untyped)
-  SPEC_MODEL_DIR = ::T.let(nil, ::T.untyped)
-  UNIT_TEST_DIR = ::T.let(nil, ::T.untyped)
-end
-
-module AnnotateRoutes
-  HEADER_ROW = ::T.let(nil, ::T.untyped)
-  PREFIX = ::T.let(nil, ::T.untyped)
-  PREFIX_MD = ::T.let(nil, ::T.untyped)
-end
-
-module AnnotateRoutes::Helpers
-  MAGIC_COMMENT_MATCHER = ::T.let(nil, ::T.untyped)
+class Api::V1::ApiBaseController
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
 end
 
 class Api::V1::PersonsController
@@ -3936,9 +3889,16 @@ class Api::V1::PersonsController
   extend ::T::Private::Methods::SingletonMethodHooks
 end
 
+class Api::V1::UsersController
+  extend ::T::Private::Final::NoInherit
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class ApplicationRecord
   include ::ApplicationRecord::GeneratedAttributeMethods
   include ::ApplicationRecord::GeneratedAssociationMethods
+  def initialize(*args, &blk); end
   RelationType = ::T.let(nil, ::T.untyped)
 end
 
@@ -3986,7 +3946,21 @@ module ApplicationRecord::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
+class ApplicationRecord
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
+end
+
 class ApplicationService
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class ApplicationValidator
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
   extend ::T::Private::Methods::MethodHooks
   extend ::T::Private::Methods::SingletonMethodHooks
 end
@@ -4169,6 +4143,11 @@ class Backport::Server::Tcpip
 end
 
 module Backport::Server
+end
+
+class BaseValidator
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 BasicObject::BasicObject = BasicObject
@@ -8280,6 +8259,20 @@ module IRB
   def self.version(); end
 end
 
+module IService
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+module IValidator
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class Integer
   include ::JSON::Ext::Generator::GeneratorMethods::Integer
   include ::ActiveSupport::NumericWithFormat
@@ -8453,6 +8446,11 @@ end
 
 module Logger::Period
   SiD = ::T.let(nil, ::T.untyped)
+end
+
+module Loggers
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 module Loofah
@@ -10683,6 +10681,11 @@ module Permission::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
+class PermissionService
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class Person
   def autosave_associated_records_for_client(*args); end
 
@@ -10737,40 +10740,40 @@ module Polyfill
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-module Polyfill::Module::M47129693470780
+module Polyfill::Module::M47162833420480
 end
 
-module Polyfill::Module::M47129693470780
+module Polyfill::Module::M47162833420480
 end
 
-module Polyfill::Module::M47129693806300
+module Polyfill::Module::M47162833764200
 end
 
-module Polyfill::Module::M47129693806300
+module Polyfill::Module::M47162833764200
 end
 
-module Polyfill::Module::M47129694131920
+module Polyfill::Module::M47162834089820
 end
 
-module Polyfill::Module::M47129694131920
+module Polyfill::Module::M47162834089820
 end
 
-module Polyfill::Module::M47129694816000
+module Polyfill::Module::M47162834773820
 end
 
-module Polyfill::Module::M47129694816000
+module Polyfill::Module::M47162834773820
 end
 
-module Polyfill::Module::M47129695085720
+module Polyfill::Module::M47162835051720
 end
 
-module Polyfill::Module::M47129695085720
+module Polyfill::Module::M47162835051720
 end
 
-module Polyfill::Module::M47129695673000
+module Polyfill::Module::M47162835647200
 end
 
-module Polyfill::Module::M47129695673000
+module Polyfill::Module::M47162835647200
 end
 
 class Proc
@@ -14067,6 +14070,8 @@ module Role::GeneratedRelationMethods
 end
 
 class Role
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
   def self.after_add_for_permissions(); end
 
   def self.after_add_for_permissions=(val); end
@@ -14187,6 +14192,40 @@ module RoleAssignment::GeneratedRelationMethods
 end
 
 module RoleAssignment::GeneratedRelationMethods
+  extend ::Mutex_m
+end
+
+class RoleService
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class RoleValidator::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Role::GeneratedRelationMethods
+  include ::RoleValidator::GeneratedRelationMethods
+end
+
+class RoleValidator::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Role::GeneratedRelationMethods
+  include ::RoleValidator::GeneratedRelationMethods
+end
+
+class RoleValidator::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Role::GeneratedRelationMethods
+  include ::RoleValidator::GeneratedRelationMethods
+end
+
+module RoleValidator::GeneratedAttributeMethods
+  extend ::Mutex_m
+end
+
+module RoleValidator::GeneratedRelationMethods
+end
+
+module RoleValidator::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
@@ -14515,6 +14554,10 @@ class RuboCop::Cop::Layout::EmptyLinesAroundAccessModifier
 end
 
 class RuboCop::Cop::Layout::EmptyLinesAroundArguments
+  MSG = ::T.let(nil, ::T.untyped)
+end
+
+class RuboCop::Cop::Layout::EmptyLinesAroundAttributeAccessor
   MSG = ::T.let(nil, ::T.untyped)
 end
 
@@ -15963,6 +16006,10 @@ class RuboCop::Cop::Style::SingleLineMethods
   MSG = ::T.let(nil, ::T.untyped)
 end
 
+class RuboCop::Cop::Style::SlicingWithRange
+  MSG = ::T.let(nil, ::T.untyped)
+end
+
 class RuboCop::Cop::Style::SpecialGlobalVars
   ENGLISH_VARS = ::T.let(nil, ::T.untyped)
   MSG_BOTH = ::T.let(nil, ::T.untyped)
@@ -16234,10 +16281,6 @@ class RuboCop::MagicComment::VimComment
   FORMAT = ::T.let(nil, ::T.untyped)
   OPERATOR = ::T.let(nil, ::T.untyped)
   SEPARATOR = ::T.let(nil, ::T.untyped)
-end
-
-module RuboCop::NameSimilarity
-  MINIMUM_SIMILARITY_TO_SUGGEST = ::T.let(nil, ::T.untyped)
 end
 
 class RuboCop::Options
@@ -17705,6 +17748,14 @@ end
 
 module Selenium::WebDriver::Zipper
   EXTENSIONS = ::T.let(nil, ::T.untyped)
+end
+
+class ServiceFactory
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class ServiceUtils
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class Set
@@ -21885,6 +21936,8 @@ class User
   extend ::Devise::Models::Recoverable::ClassMethods
   extend ::Devise::Models::Registerable::ClassMethods
   extend ::Devise::Models::Validatable::ClassMethods
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
   def self.after_add_for_role_assignments(); end
 
   def self.after_add_for_role_assignments=(val); end
@@ -21938,6 +21991,20 @@ class User
   def self.devise_modules=(val); end
 
   def self.devise_modules?(); end
+end
+
+class UserService
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class UserTestData
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class ValidatorFactory
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class Vector
