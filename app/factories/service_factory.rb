@@ -2,7 +2,6 @@
 # frozen_string_literal: true
 
 class ServiceFactory
-  extend T::Sig
   class << self
     extend T::Sig
 
@@ -10,7 +9,14 @@ class ServiceFactory
     def user_service(current_user = nil)
       permission_service = permission_service(UserService, current_user)
       role_service = role_service(current_user)
-      UserService.new(permission_service: permission_service, role_service: role_service)
+      validator = ValidatorFactory.get_validator(UserValidator)
+      params = {
+        permission_service: permission_service,
+        role_service: role_service,
+        validator: validator,
+        current_user: current_user
+      }
+      UserService.new(params)
     end
 
     sig { params(class_to_check: Class, current_user: T.nilable(User)).returns(PermissionService) }

@@ -5,17 +5,22 @@ class ValidatorFactory
   class << self
     extend T::Sig
 
-    sig { params(role: Role).returns(IValidator) }
-    def role_validator(role)
-      role_validator = RoleValidator.new(role.attributes)
-      base_validator(role_validator)
+    sig { params(validator_class: Class).returns(IValidator) }
+    def get_validator(validator_class)
+      validator = instantiate_validator(validator_class)
+      BaseValidator.new(validator)
     end
 
     private
 
-    sig { params(validator: IValidator).returns(BaseValidator) }
-    def base_validator(validator)
-      BaseValidator.new(validator)
+    sig { params(validator_class: Class).returns(IValidator) }
+    def instantiate_validator(validator_class)
+      T.cast(validator_class.new, IValidator)
+    rescue TypeError
+      # can happen when runing rspec so the 'T.cast(validator_class.new, IValidator)' fails
+      validator_class_string = T.let(T.must(validator_class.name), String)
+      validator_class = Kernel.const_get(validator_class_string)
+      T.cast(validator_class.new, IValidator)
     end
   end
 end

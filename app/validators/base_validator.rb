@@ -10,6 +10,11 @@ class BaseValidator
     @validator = validator
   end
 
+  sig { override.params(record: ApplicationRecord).void }
+  def init(record)
+    @validator.init(record)
+  end
+
   sig { override.returns(T::Boolean) }
   def valid?
     @validator.valid?

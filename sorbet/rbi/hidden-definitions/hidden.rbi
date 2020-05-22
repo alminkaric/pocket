@@ -5563,8 +5563,6 @@ module Client::GeneratedRelationMethods
 end
 
 class Client
-  def self.active(*args); end
-
   def self.after_add_for_people(); end
 
   def self.after_add_for_people=(val); end
@@ -5588,12 +5586,6 @@ class Client
   def self.before_remove_for_people=(val); end
 
   def self.before_remove_for_people?(); end
-
-  def self.inactive(*args); end
-
-  def self.not_active(*args); end
-
-  def self.not_inactive(*args); end
 end
 
 class Complex
@@ -7122,6 +7114,8 @@ class File::Stat
 end
 
 class File
+  def self.atomic_write(file_name, temp_dir=T.unsafe(nil)); end
+
   def self.cleanpath(path, rel_root=T.unsafe(nil)); end
 
   def self.exists?(_); end
@@ -7131,8 +7125,6 @@ class File
   def self.mkfifo(*_); end
 
   def self.open!(file, *args, &block); end
-
-  def self.probe_stat_in(dir); end
 end
 
 FileList = Rake::FileList
@@ -7342,6 +7334,10 @@ class Hash
   def update(*_); end
 end
 
+class Hash
+  def self.from_trusted_xml(xml); end
+end
+
 HashWithIndifferentAccess = ActiveSupport::HashWithIndifferentAccess
 
 module I18n
@@ -7400,6 +7396,13 @@ end
 
 module I18n::Tests::Localization
   def self.included(base); end
+end
+
+module IModelValidator
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 module INotify
@@ -7631,12 +7634,6 @@ module IRB
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-class IRB::Abort
-end
-
-class IRB::Abort
-end
-
 class IRB::Context
   def __exit__(*_); end
 
@@ -7644,160 +7641,14 @@ class IRB::Context
 
   def __to_s__(); end
 
-  def ap_name(); end
-
-  def ap_name=(ap_name); end
-
-  def auto_indent_mode(); end
-
-  def auto_indent_mode=(auto_indent_mode); end
-
-  def back_trace_limit(); end
-
-  def back_trace_limit=(back_trace_limit); end
-
-  def debug?(); end
-
-  def debug_level(); end
-
-  def debug_level=(value); end
-
-  def echo(); end
-
-  def echo=(echo); end
-
-  def echo?(); end
-
-  def eval_history=(*opts, &b); end
-
   def evaluate(line, line_no, exception: T.unsafe(nil)); end
-
-  def exit(ret=T.unsafe(nil)); end
-
-  def file_input?(); end
-
-  def ignore_eof(); end
-
-  def ignore_eof=(ignore_eof); end
-
-  def ignore_eof?(); end
-
-  def ignore_sigint(); end
-
-  def ignore_sigint=(ignore_sigint); end
-
-  def ignore_sigint?(); end
 
   def initialize(irb, workspace=T.unsafe(nil), input_method=T.unsafe(nil), output_method=T.unsafe(nil)); end
 
-  def inspect?(); end
-
   def inspect_last_value(); end
-
-  def inspect_mode(); end
-
-  def inspect_mode=(opt); end
-
-  def io(); end
-
-  def io=(io); end
-
-  def irb(); end
-
-  def irb=(irb); end
-
-  def irb_name(); end
-
-  def irb_name=(irb_name); end
-
-  def irb_path(); end
-
-  def irb_path=(irb_path); end
-
-  def last_value(); end
-
-  def load_modules(); end
-
-  def load_modules=(load_modules); end
-
-  def main(); end
-
-  def prompt_c(); end
-
-  def prompt_c=(prompt_c); end
-
-  def prompt_i(); end
-
-  def prompt_i=(prompt_i); end
-
-  def prompt_mode(); end
-
-  def prompt_mode=(mode); end
-
-  def prompt_n(); end
-
-  def prompt_n=(prompt_n); end
-
-  def prompt_s(); end
-
-  def prompt_s=(prompt_s); end
-
-  def prompting?(); end
-
-  def rc(); end
-
-  def rc=(rc); end
-
-  def rc?(); end
-
-  def return_format(); end
-
-  def return_format=(return_format); end
-
-  def save_history=(*opts, &b); end
-
-  def set_last_value(value); end
-
-  def thread(); end
-
-  def use_loader=(*opts, &b); end
-
-  def use_readline(); end
-
-  def use_readline=(opt); end
-
-  def use_readline?(); end
-
-  def use_tracer=(*opts, &b); end
-
-  def verbose(); end
-
-  def verbose=(verbose); end
-
-  def verbose?(); end
-
-  def workspace(); end
-
-  def workspace=(workspace); end
-
-  def workspace_home(); end
   IDNAME_IVARS = ::T.let(nil, ::T.untyped)
   NOPRINTING_IVARS = ::T.let(nil, ::T.untyped)
   NO_INSPECTING_IVARS = ::T.let(nil, ::T.untyped)
-end
-
-class IRB::Context
-end
-
-module IRB::ContextExtender
-end
-
-IRB::ContextExtender::CE = IRB::ContextExtender
-
-module IRB::ContextExtender
-  def self.def_extend_command(cmd_name, load_file, *aliases); end
-
-  def self.install_extend_commands(); end
 end
 
 class IRB::DefaultEncodings
@@ -7817,17 +7668,11 @@ class IRB::DefaultEncodings
 end
 
 module IRB::ExtendCommandBundle
-  def install_alias_method(to, from, override=T.unsafe(nil)); end
-
   def irb(*opts, &b); end
 
   def irb_change_workspace(*opts, &b); end
 
-  def irb_context(); end
-
   def irb_current_working_workspace(*opts, &b); end
-
-  def irb_exit(ret=T.unsafe(nil)); end
 
   def irb_fg(*opts, &b); end
 
@@ -7837,82 +7682,34 @@ module IRB::ExtendCommandBundle
 
   def irb_kill(*opts, &b); end
 
-  def irb_load(*opts, &b); end
-
   def irb_pop_workspace(*opts, &b); end
 
   def irb_push_workspace(*opts, &b); end
 
-  def irb_require(*opts, &b); end
-
   def irb_source(*opts, &b); end
 
   def irb_workspaces(*opts, &b); end
-  NO_OVERRIDE = ::T.let(nil, ::T.untyped)
-  OVERRIDE_ALL = ::T.let(nil, ::T.untyped)
-  OVERRIDE_PRIVATE_ONLY = ::T.let(nil, ::T.untyped)
 end
 
 IRB::ExtendCommandBundle::EXCB = IRB::ExtendCommandBundle
 
 module IRB::ExtendCommandBundle
-  def self.def_extend_command(cmd_name, cmd_class, load_file=T.unsafe(nil), *aliases); end
-
-  def self.extend_object(obj); end
-
-  def self.install_extend_commands(); end
-
   def self.irb_original_method_name(method_name); end
 end
 
 class IRB::FileInputMethod
-  def encoding(); end
-
-  def eof?(); end
-
   def initialize(file); end
 end
 
-class IRB::FileInputMethod
-end
-
 class IRB::InputMethod
-  def file_name(); end
-
-  def gets(); end
-
   def initialize(file=T.unsafe(nil)); end
-
-  def prompt(); end
-
-  def prompt=(prompt); end
-
-  def readable_after_eof?(); end
-end
-
-class IRB::InputMethod
 end
 
 class IRB::Inspector
-  def init(); end
-
   def initialize(inspect_proc, init_proc=T.unsafe(nil)); end
-
-  def inspect_value(v); end
-  INSPECTORS = ::T.let(nil, ::T.untyped)
-end
-
-class IRB::Inspector
-  def self.def_inspector(key, arg=T.unsafe(nil), &block); end
-
-  def self.keys_with_inspector(inspector); end
 end
 
 class IRB::Irb
-  def context(); end
-
-  def eval_input(); end
-
   def handle_exception(exc); end
 
   def initialize(workspace=T.unsafe(nil), input_method=T.unsafe(nil), output_method=T.unsafe(nil)); end
@@ -7920,29 +7717,6 @@ class IRB::Irb
   def output_value(); end
 
   def prompt(prompt, ltype, indent, line_no); end
-
-  def run(conf=T.unsafe(nil)); end
-
-  def scanner(); end
-
-  def scanner=(scanner); end
-
-  def signal_handle(); end
-
-  def signal_status(status); end
-
-  def suspend_context(context); end
-
-  def suspend_input_method(input_method); end
-
-  def suspend_name(path=T.unsafe(nil), name=T.unsafe(nil)); end
-
-  def suspend_workspace(workspace); end
-  ATTR_PLAIN = ::T.let(nil, ::T.untyped)
-  ATTR_TTY = ::T.let(nil, ::T.untyped)
-end
-
-class IRB::Irb
 end
 
 class IRB::Locale
@@ -7982,141 +7756,20 @@ end
 class IRB::Locale
 end
 
-module IRB::MethodExtender
-  def def_post_proc(base_method, extend_method); end
-
-  def def_pre_proc(base_method, extend_method); end
-
-  def new_alias_name(name, prefix=T.unsafe(nil), postfix=T.unsafe(nil)); end
-end
-
-module IRB::MethodExtender
-end
-
-module IRB::Notifier
-  def Fail(err=T.unsafe(nil), *rest); end
-
-  def Raise(err=T.unsafe(nil), *rest); end
-  D_NOMSG = ::T.let(nil, ::T.untyped)
-end
-
 class IRB::Notifier::AbstractNotifier
-  def exec_if(); end
-
   def initialize(prefix, base_notifier); end
-
-  def notify?(); end
-
-  def ppx(prefix, *objs); end
-
-  def prefix(); end
-
-  def print(*opts); end
-
-  def printf(format, *opts); end
-
-  def printn(*opts); end
-
-  def puts(*objs); end
-end
-
-class IRB::Notifier::AbstractNotifier
-end
-
-class IRB::Notifier::CompositeNotifier
-  def def_notifier(level, prefix=T.unsafe(nil)); end
-
-  def level(); end
-
-  def level=(value); end
-
-  def level_notifier(); end
-
-  def level_notifier=(value); end
-
-  def notifiers(); end
-end
-
-class IRB::Notifier::CompositeNotifier
-end
-
-class IRB::Notifier::ErrUndefinedNotifier
-end
-
-class IRB::Notifier::ErrUndefinedNotifier
-end
-
-class IRB::Notifier::ErrUnrecognizedLevel
-end
-
-class IRB::Notifier::ErrUnrecognizedLevel
 end
 
 class IRB::Notifier::LeveledNotifier
-  include ::Comparable
   def initialize(base, level, prefix); end
-
-  def level(); end
-end
-
-class IRB::Notifier::LeveledNotifier
 end
 
 class IRB::Notifier::NoMsgNotifier
   def initialize(); end
 end
 
-class IRB::Notifier::NoMsgNotifier
-end
-
-module IRB::Notifier
-  extend ::Exception2MessageMapper
-  def self.def_notifier(prefix=T.unsafe(nil), output_method=T.unsafe(nil)); end
-
-  def self.included(mod); end
-end
-
-class IRB::OutputMethod
-  def Fail(err=T.unsafe(nil), *rest); end
-
-  def Raise(err=T.unsafe(nil), *rest); end
-
-  def parse_printf_format(format, opts); end
-
-  def ppx(prefix, *objs); end
-
-  def print(*opts); end
-
-  def printf(format, *opts); end
-
-  def printn(*opts); end
-
-  def puts(*objs); end
-end
-
-class IRB::OutputMethod::NotImplementedError
-end
-
-class IRB::OutputMethod::NotImplementedError
-end
-
-class IRB::OutputMethod
-  extend ::Exception2MessageMapper
-  def self.included(mod); end
-end
-
 class IRB::ReadlineInputMethod
-  include ::Readline
-  def encoding(); end
-
-  def eof?(); end
-
   def initialize(); end
-
-  def line(line_no); end
-end
-
-class IRB::ReadlineInputMethod
 end
 
 class IRB::SLex
@@ -8184,63 +7837,25 @@ class IRB::SLex
 end
 
 class IRB::StdioInputMethod
-  def encoding(); end
-
-  def eof?(); end
-
   def initialize(); end
-
-  def line(line_no); end
-end
-
-class IRB::StdioInputMethod
-end
-
-class IRB::StdioOutputMethod
-end
-
-class IRB::StdioOutputMethod
 end
 
 class IRB::WorkSpace
-  def code_around_binding(); end
-
-  def evaluate(context, statements, file=T.unsafe(nil), line=T.unsafe(nil)); end
-
-  def filter_backtrace(bt); end
-
   def initialize(*main); end
 
   def local_variable_get(name); end
 
   def local_variable_set(name, value); end
-
-  def main(); end
-end
-
-class IRB::WorkSpace
 end
 
 module IRB
-  def self.CurrentContext(); end
-
   def self.Inspector(inspect, init=T.unsafe(nil)); end
-
-  def self.conf(); end
-
-  def self.default_src_encoding(); end
 
   def self.delete_caller(); end
 
   def self.init_config(ap_path); end
 
   def self.init_error(); end
-
-  def self.irb_abort(irb, exception=T.unsafe(nil)); end
-
-  def self.irb_at_exit(); end
-
-  def self.irb_exit(irb, ret); end
 
   def self.load_modules(); end
 
@@ -8253,10 +7868,6 @@ module IRB
   def self.run_config(); end
 
   def self.setup(ap_path, argv: T.unsafe(nil)); end
-
-  def self.start(ap_path=T.unsafe(nil)); end
-
-  def self.version(); end
 end
 
 module IService
@@ -10410,25 +10021,6 @@ module ObjectSpace
   def self.undefine_finalizer(_); end
 end
 
-module Observable
-  def add_observer(observer, func=T.unsafe(nil)); end
-
-  def changed(state=T.unsafe(nil)); end
-
-  def changed?(); end
-
-  def count_observers(); end
-
-  def delete_observer(observer); end
-
-  def delete_observers(); end
-
-  def notify_observers(*arg); end
-end
-
-module Observable
-end
-
 class OpenSSL::ASN1::ASN1Data
   def indefinite_length(); end
 
@@ -10478,12 +10070,6 @@ end
 
 class OpenSSL::PKey::EC::Point
   def to_octet_string(_); end
-end
-
-class OpenSSL::PKey::RSA
-  def sign_pss(*_); end
-
-  def verify_pss(*_); end
 end
 
 module OpenSSL::SSL
@@ -10740,40 +10326,40 @@ module Polyfill
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-module Polyfill::Module::M47162833420480
+module Polyfill::Module::M47060393424980
 end
 
-module Polyfill::Module::M47162833420480
+module Polyfill::Module::M47060393424980
 end
 
-module Polyfill::Module::M47162833764200
+module Polyfill::Module::M47060393727740
 end
 
-module Polyfill::Module::M47162833764200
+module Polyfill::Module::M47060393727740
 end
 
-module Polyfill::Module::M47162834089820
+module Polyfill::Module::M47060394045200
 end
 
-module Polyfill::Module::M47162834089820
+module Polyfill::Module::M47060394045200
 end
 
-module Polyfill::Module::M47162834773820
+module Polyfill::Module::M47060394770200
 end
 
-module Polyfill::Module::M47162834773820
+module Polyfill::Module::M47060394770200
 end
 
-module Polyfill::Module::M47162835051720
+module Polyfill::Module::M47060395064480
 end
 
-module Polyfill::Module::M47162835051720
+module Polyfill::Module::M47060395064480
 end
 
-module Polyfill::Module::M47162835647200
+module Polyfill::Module::M47060395578160
 end
 
-module Polyfill::Module::M47162835647200
+module Polyfill::Module::M47060395578160
 end
 
 class Proc
@@ -11833,36 +11419,6 @@ end
 
 module Puma::Util
   DEFAULT_SEP = ::T.let(nil, ::T.untyped)
-end
-
-module RDoc::Text
-  def expand_tabs(text); end
-
-  def flush_left(text); end
-
-  def markup(text); end
-
-  def normalize_comment(text); end
-
-  def parse(text, format=T.unsafe(nil)); end
-
-  def snippet(text, limit=T.unsafe(nil)); end
-
-  def strip_hashes(text); end
-
-  def strip_newlines(text); end
-
-  def strip_stars(text); end
-
-  def to_html(text); end
-
-  def wrap(txt, line_len=T.unsafe(nil)); end
-  MARKUP_FORMAT = ::T.let(nil, ::T.untyped)
-  TO_HTML_CHARACTERS = ::T.let(nil, ::T.untyped)
-end
-
-module RDoc::Text
-  def self.encode_fallback(character, encoding, fallback); end
 end
 
 module REXML
@@ -12974,88 +12530,7 @@ module RbConfig
 end
 
 module Readline
-  FILENAME_COMPLETION_PROC = ::T.let(nil, ::T.untyped)
-  HISTORY = ::T.let(nil, ::T.untyped)
-  USERNAME_COMPLETION_PROC = ::T.let(nil, ::T.untyped)
-  VERSION = ::T.let(nil, ::T.untyped)
-end
-
-module Readline
-  def self.basic_quote_characters(); end
-
-  def self.basic_quote_characters=(basic_quote_characters); end
-
-  def self.basic_word_break_characters(); end
-
-  def self.basic_word_break_characters=(basic_word_break_characters); end
-
-  def self.completer_quote_characters(); end
-
-  def self.completer_quote_characters=(completer_quote_characters); end
-
-  def self.completer_word_break_characters(); end
-
-  def self.completer_word_break_characters=(completer_word_break_characters); end
-
-  def self.completion_append_character(); end
-
-  def self.completion_append_character=(completion_append_character); end
-
-  def self.completion_case_fold(); end
-
-  def self.completion_case_fold=(completion_case_fold); end
-
-  def self.completion_proc(); end
-
-  def self.completion_proc=(completion_proc); end
-
   def self.completion_quote_character(); end
-
-  def self.delete_text(*_); end
-
-  def self.emacs_editing_mode(); end
-
-  def self.emacs_editing_mode?(); end
-
-  def self.filename_quote_characters(); end
-
-  def self.filename_quote_characters=(filename_quote_characters); end
-
-  def self.get_screen_size(); end
-
-  def self.input=(input); end
-
-  def self.insert_text(_); end
-
-  def self.line_buffer(); end
-
-  def self.output=(output); end
-
-  def self.point(); end
-
-  def self.point=(point); end
-
-  def self.pre_input_hook(); end
-
-  def self.pre_input_hook=(pre_input_hook); end
-
-  def self.quoting_detection_proc(); end
-
-  def self.quoting_detection_proc=(quoting_detection_proc); end
-
-  def self.redisplay(); end
-
-  def self.refresh_line(); end
-
-  def self.set_screen_size(_, _1); end
-
-  def self.special_prefixes(); end
-
-  def self.special_prefixes=(special_prefixes); end
-
-  def self.vi_editing_mode(); end
-
-  def self.vi_editing_mode?(); end
 end
 
 class Regexp
@@ -13412,7 +12887,6 @@ class Ripper
   def yydebug(); end
 
   def yydebug=(yydebug); end
-  EVENTS = ::T.let(nil, ::T.untyped)
   EXPR_ARG = ::T.let(nil, ::T.untyped)
   EXPR_ARG_ANY = ::T.let(nil, ::T.untyped)
   EXPR_BEG = ::T.let(nil, ::T.untyped)
@@ -13431,28 +12905,13 @@ class Ripper
   EXPR_MID = ::T.let(nil, ::T.untyped)
   EXPR_NONE = ::T.let(nil, ::T.untyped)
   EXPR_VALUE = ::T.let(nil, ::T.untyped)
-  PARSER_EVENTS = ::T.let(nil, ::T.untyped)
   PARSER_EVENT_TABLE = ::T.let(nil, ::T.untyped)
-  SCANNER_EVENTS = ::T.let(nil, ::T.untyped)
   SCANNER_EVENT_TABLE = ::T.let(nil, ::T.untyped)
   Version = ::T.let(nil, ::T.untyped)
 end
 
 class Ripper::Filter
-  def column(); end
-
-  def filename(); end
-
   def initialize(src, filename=T.unsafe(nil), lineno=T.unsafe(nil)); end
-
-  def lineno(); end
-
-  def parse(init=T.unsafe(nil)); end
-
-  def state(); end
-end
-
-class Ripper::Filter
 end
 
 class Ripper::Lexer
@@ -13940,11 +13399,7 @@ end
 class Ripper
   def self.dedent_string(_, _1); end
 
-  def self.lex(src, filename=T.unsafe(nil), lineno=T.unsafe(nil)); end
-
   def self.lex_state_name(_); end
-
-  def self.parse(src, filename=T.unsafe(nil), lineno=T.unsafe(nil)); end
 
   def self.token_match(src, pattern); end
 end
@@ -14200,33 +13655,53 @@ class RoleService
   extend ::T::Private::Methods::SingletonMethodHooks
 end
 
-class RoleValidator::ActiveRecord_AssociationRelation
-  include ::ActiveRecord::Delegation::ClassSpecificRelation
-  include ::Role::GeneratedRelationMethods
-  include ::RoleValidator::GeneratedRelationMethods
+class RoleTestData
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
-class RoleValidator::ActiveRecord_Associations_CollectionProxy
-  include ::ActiveRecord::Delegation::ClassSpecificRelation
-  include ::Role::GeneratedRelationMethods
-  include ::RoleValidator::GeneratedRelationMethods
+class RoleValidator
+  include ::ActiveSupport::Callbacks
+  include ::ActiveModel::Validations::HelperMethods
+  def __callbacks(); end
+
+  def __callbacks?(); end
+
+  def _run_validate_callbacks(&block); end
+
+  def _validate_callbacks(); end
+
+  def _validators(); end
+
+  def _validators?(); end
+
+  def model_name(*args, &block); end
+
+  def validation_context(); end
 end
 
-class RoleValidator::ActiveRecord_Relation
-  include ::ActiveRecord::Delegation::ClassSpecificRelation
-  include ::Role::GeneratedRelationMethods
-  include ::RoleValidator::GeneratedRelationMethods
-end
+class RoleValidator
+  extend ::ActiveModel::Callbacks
+  extend ::ActiveSupport::DescendantsTracker
+  extend ::ActiveModel::Translation
+  extend ::ActiveModel::Naming
+  extend ::ActiveModel::Validations::HelperMethods
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+  def self.__callbacks(); end
 
-module RoleValidator::GeneratedAttributeMethods
-  extend ::Mutex_m
-end
+  def self.__callbacks=(val); end
 
-module RoleValidator::GeneratedRelationMethods
-end
+  def self.__callbacks?(); end
 
-module RoleValidator::GeneratedRelationMethods
-  extend ::Mutex_m
+  def self._validate_callbacks(); end
+
+  def self._validate_callbacks=(value); end
+
+  def self._validators(); end
+
+  def self._validators=(val); end
+
+  def self._validators?(); end
 end
 
 class RuboCop::AST::ArrayNode
@@ -17542,10 +17017,6 @@ module SecureRandom
   BASE58_ALPHABET = ::T.let(nil, ::T.untyped)
 end
 
-module SecureRandom
-  def self.bytes(n); end
-end
-
 module Selenium::WebDriver
   VERSION = ::T.let(nil, ::T.untyped)
 end
@@ -17779,25 +17250,6 @@ class Set
 
   def reset(); end
   InspectKey = ::T.let(nil, ::T.untyped)
-end
-
-module Shellwords
-end
-
-module Shellwords
-  def self.escape(str); end
-
-  def self.join(array); end
-
-  def self.shellescape(str); end
-
-  def self.shelljoin(array); end
-
-  def self.shellsplit(line); end
-
-  def self.shellwords(line); end
-
-  def self.split(line); end
 end
 
 class SignalException
@@ -21811,6 +21263,11 @@ end
 module UnicodeNormalize
 end
 
+class UniqueValidator
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class User
   include ::Devise::Models::Authenticatable
   include ::Devise::Models::DatabaseAuthenticatable
@@ -21999,6 +21456,15 @@ class UserService
 end
 
 class UserTestData
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class UserValidator
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class ValidationError
   extend ::T::Private::Methods::MethodHooks
   extend ::T::Private::Methods::SingletonMethodHooks
 end
@@ -22187,17 +21653,6 @@ end
 
 class WeakRef
   def initialize(orig); end
-
-  def weakref_alive?(); end
-end
-
-class WeakRef::RefError
-end
-
-class WeakRef::RefError
-end
-
-class WeakRef
 end
 
 class WebConsole::Context

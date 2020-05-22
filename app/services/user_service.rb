@@ -5,10 +5,19 @@ class UserService
   extend T::Sig
   include IService
 
-  sig { params(permission_service: PermissionService, role_service: RoleService).void }
-  def initialize(permission_service:, role_service:)
+  sig do
+    params(
+      permission_service: PermissionService,
+      role_service: RoleService,
+      validator: IValidator,
+      current_user: T.nilable(User)
+    ).void
+  end
+  def initialize(permission_service:, role_service:, validator:, current_user: nil)
     @permission_service = permission_service
     @role_service = role_service
+    @validator = validator
+    @current_user = current_user
   end
 
   sig { override.params(id: Integer).returns(User) }
@@ -45,15 +54,25 @@ class UserService
 
   sig { override.params(user: User).returns(User) }
   def save(user)
-    @permission_service.check_user_permission_for('save') unless user.new_record?
+    @permission_service.check_user_permission_for('save') unless user.new_record? || own_user?(user)
+    ServiceUtils.validate(user, @validator)
 
     ServiceUtils.save(user, User)
   end
 
   sig { override.params(user: User).void }
   def delete(user)
-    @permission_service.check_user_permission_for('delete')
+    @permission_service.check_user_permission_for('delete') unless own_user?(user)
 
     ServiceUtils.delete(user, User)
+  end
+
+  private
+
+  sig { params(user: User).returns(T::Boolean) }
+  def own_user?(user)
+    return false unless @current_user
+
+    user == @current_user
   end
 end

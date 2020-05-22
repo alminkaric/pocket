@@ -219,6 +219,18 @@ module Person::QueryMethodsReturningRelation
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(Person::ActiveRecord_Relation) }
   def extending(*args, &block); end
+
+  sig do
+    params(
+      of: T.nilable(Integer),
+      start: T.nilable(Integer),
+      finish: T.nilable(Integer),
+      load: T.nilable(T::Boolean),
+      error_on_ignore: T.nilable(T::Boolean),
+      block: T.nilable(T.proc.params(e: Person::ActiveRecord_Relation).void)
+    ).returns(ActiveRecord::Batches::BatchEnumerator)
+  end
+  def in_batches(of: 1000, start: nil, finish: nil, load: false, error_on_ignore: nil, &block); end
 end
 
 module Person::QueryMethodsReturningAssociationRelation
@@ -320,6 +332,18 @@ module Person::QueryMethodsReturningAssociationRelation
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(Person::ActiveRecord_AssociationRelation) }
   def extending(*args, &block); end
+
+  sig do
+    params(
+      of: T.nilable(Integer),
+      start: T.nilable(Integer),
+      finish: T.nilable(Integer),
+      load: T.nilable(T::Boolean),
+      error_on_ignore: T.nilable(T::Boolean),
+      block: T.nilable(T.proc.params(e: Person::ActiveRecord_AssociationRelation).void)
+    ).returns(ActiveRecord::Batches::BatchEnumerator)
+  end
+  def in_batches(of: 1000, start: nil, finish: nil, load: false, error_on_ignore: nil, &block); end
 end
 
 class Person::ActiveRecord_Relation < ActiveRecord::Relation

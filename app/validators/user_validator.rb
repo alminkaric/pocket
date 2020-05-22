@@ -1,22 +1,32 @@
-# typed: true
+# typed: strict
 # frozen_string_literal: true
 
-class UserValidator < ApplicationValidator
-  # @return [boolean]
-  def validate(user)
-    @model.email = user.email
-    @model.password = user.password
-    @model.valid?
+class UserValidator
+  extend T::Sig
+  include IModelValidator
+
+  sig { void }
+  def initialize
+    @user = T.let(User.new, User)
   end
 
-  protected
-
-  class UserValidatorModel < User
+  sig { override.returns(T.class_of(ApplicationRecord)) }
+  def model
+    User
   end
 
-  def validator_model
-    UserValidatorModel
+  sig { override.params(user: User).void }
+  def init(user)
+    @user = user
   end
 
-  private_constant :UserValidatorModel
+  sig { override.returns(T::Boolean) }
+  def valid?
+    @user.valid?
+  end
+
+  sig { override.returns(ActiveModel::Errors) }
+  def errors
+    @user.errors
+  end
 end

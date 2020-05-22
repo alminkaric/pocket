@@ -75,7 +75,7 @@ class RoleService
     user.roles.include? role
   end
 
-  sig { params(role: T.untyped, user: T.untyped).returns(RoleAssignment) }
+  sig { params(role: Role, user: User).returns(RoleAssignment) }
   def assign_role_to_user(role:, user:)
     @permission_service.check_user_permission_for('assign_role_to_user')
     RoleAssignment.create(role: role, user: user)

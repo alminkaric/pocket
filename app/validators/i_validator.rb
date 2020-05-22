@@ -6,6 +6,9 @@ module IValidator
   extend T::Helpers
   interface!
 
+  sig { abstract.params(record: T.untyped).void }
+  def init(record); end
+
   sig { abstract.returns(T::Boolean) }
   def valid?; end
 

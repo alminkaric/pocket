@@ -3,97 +3,99 @@
 
 require 'rails_helper'
 
-RSpec.describe 'RoleService' do
-  # @!method user_test_data
-  #   @return [UserTestData]
-  let(:user_test_data) { UserTestData.new }
-  # @!method role_service
+RSpec.describe RoleService do
+  # @!subject
   #   @return [RoleService]
-  let(:role_service) { ServiceFactory.role_service }
-  let(:role_service_with_admin) { ServiceFactory.role_service(user_test_data.admin_user) }
-  let(:role_service_with_normal_user) { ServiceFactory.role_service(user_test_data.normal_user) }
-  let(:role_name) { 'Test role' }
-  let(:role) { Role.create(name: role_name) }
+  subject do
+    ServiceFactory.role_service(UserTestData.get_or_create_admin_user)
+  end
 
   describe 'save method' do
-    it 'saves a role for admin user' do
-      role = Role.new
-      role.name = role_name
-      role_service_with_admin.save(role)
+    it 'saves a role' do
+      role = RoleTestData.get_or_build_role
+      subject.save(role)
       expect(role.persisted?).to be true
     end
 
-    it "doesn't save a role for normal user" do
-      role = Role.new
-      role.name = role_name
-      expect { role_service_with_normal_user.save(role) }.to raise_exception PermissionError
+    context 'when regular user' do
+      subject { ServiceFactory.role_service(UserTestData.get_or_create_user) }
+
+      it "doesn't save a role" do
+        role = RoleTestData.get_or_build_role
+        expect { subject.save(role) }.to raise_exception PermissionError
+      end
+
+      it "doesn't update existing role" do
+        role_name = 'some test role'
+        role = RoleTestData.get_or_create_role(role_name)
+        role.name = 'New role name'
+        expect { subject.save(role) }.to raise_exception PermissionError
+        role = subject.find_by_name(role_name)
+        expect(role.name).to match role_name
+      end
     end
 
-    it "doesn't update existing role for normal user" do
-      role.name = 'New role name'
-      expect { role_service_with_normal_user.save(role) }.to raise_exception PermissionError
-      role = role_service_with_normal_user.find_by_name(role_name)
-      expect(role.name).to match role_name
-    end
+    context 'when current_user is nil' do
+      subject { ServiceFactory.role_service }
 
-    it "doesn't save a role without current_user" do
-      role = Role.new
-      role.name = role_name
-      expect { role_service.save(role) }.to raise_exception PermissionError
+      it "doesn't save a role" do
+        role = RoleTestData.get_or_build_role
+        expect { subject.save(role) }.to raise_exception PermissionError
+      end
     end
   end
 
   describe 'find_by_name method' do
-    it 'returns role for admin user' do
-      role = Role.create(name: role_name)
-      founded_role = role_service_with_admin.find_by_name(role_name)
-      expect(founded_role).to match role
-    end
-
-    it 'returns role for normal_user' do
-      role = Role.create(name: role_name)
-      founded_role = role_service_with_normal_user.find_by_name(role_name)
+    it 'returns role' do
+      role_name = RoleTestData::NAME
+      role = RoleTestData.get_or_create_role(role_name)
+      founded_role = subject.find_by_name(role_name)
       expect(founded_role).to match role
     end
   end
 
   describe 'find_or_create method' do
     it 'creates new role for admin user' do
-      role = role_service_with_admin.find_or_create(role_name)
+      role_name = 'some random role name'
+      role = subject.find_or_create(role_name)
       expect(role.persisted?).to be true
     end
 
-    it 'retrieves existing role for admin user' do
-      role = Role.create(name: role_name)
-      founded_role = role_service_with_admin.find_or_create(role_name)
+    it 'retrieves existing role' do
+      role = RoleTestData.get_or_create_role
+      founded_role = subject.find_or_create(RoleTestData::NAME)
       expect(founded_role).to match role
     end
 
-    it "doesn't create role for normal user" do
-      expect { role_service_with_normal_user.find_or_create(role_name) }.to raise_exception PermissionError
+    context 'when regular user' do
+      subject { ServiceFactory.role_service(UserTestData.get_or_create_user) }
+
+      it "doesn't create role" do
+        expect { subject.find_or_create(RoleTestData::NAME) }.to raise_exception PermissionError
+      end
     end
   end
 
   describe 'user_role? method' do
     it 'returns true when checking admin role for admin user' do
-      has_admin_role = role_service.user_role?(
-        user: user_test_data.admin_user,
+      has_admin_role = subject.user_role?(
+        user: UserTestData.get_or_create_admin_user,
         role: Role.admin
       )
       expect(has_admin_role).to be true
     end
 
-    it 'returns false when checking admin role for normal user' do
-      has_admin_role = role_service.user_role?(
-        user: user_test_data.normal_user,
+    it 'returns false when checking admin role for regular user' do
+      has_admin_role = subject.user_role?(
+        user: UserTestData.get_or_create_user,
         role: Role.admin
       )
       expect(has_admin_role).to be false
     end
 
     it 'returns false when checking non-saved role for user' do
-      has_admin_role = role_service.user_role?(
-        user: user_test_data.normal_user,
+      has_admin_role = subject.user_role?(
+        user: UserTestData.get_or_create_user,
         role: Role.new(name: RoleTestData::NAME)
       )
       expect(has_admin_role).to be false
@@ -101,29 +103,36 @@ RSpec.describe 'RoleService' do
   end
 
   describe 'assign_role_to_user method' do
-    it 'assigns user to role when current user is admin' do
-      user = user_test_data.normal_user
-      role_service_with_admin.assign_role_to_user(role: Role.admin, user: user)
+    it 'assigns user to role' do
+      user = UserTestData.get_or_create_user
+      subject.assign_role_to_user(role: Role.admin, user: user)
 
-      has_admin_role = role_service_with_admin.user_role?(
+      has_admin_role = subject.user_role?(
         user: user,
         role: Role.admin
       )
       expect(has_admin_role).to be true
     end
 
-    it "doesn't assing user to role when current user is normal user" do
-      user = user_test_data.normal_user
-      expect do
-        role_service_with_normal_user.assign_role_to_user(role: Role.admin, user: user)
-      end.to raise_exception PermissionError
+    context 'when regular user' do
+      subject { ServiceFactory.role_service(UserTestData.get_or_create_user) }
+
+      it "doesn't assing user to role" do
+        user = UserTestData.get_or_create_user('some-random@user.com')
+        expect do
+          subject.assign_role_to_user(role: Role.admin, user: user)
+        end.to raise_exception PermissionError
+      end
     end
 
-    it "doesn't assing user to role when current user is nil" do
-      user = nil
-      expect do
-        role_service_with_normal_user.assign_role_to_user(role: Role.admin, user: user)
-      end.to raise_exception PermissionError
+    context 'when current_user is nil' do
+      subject { ServiceFactory.role_service }
+      it "doesn't assing user to role" do
+        user = nil
+        expect do
+          subject.assign_role_to_user(role: Role.admin, user: user)
+        end.to raise_exception TypeError
+      end
     end
   end
 end

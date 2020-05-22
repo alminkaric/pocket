@@ -7,34 +7,38 @@ class UserTestData
   EMAIL = 'jon.snow@got.com'
   PASSWORD = 'testpass1234'
 
-  sig { returns(User) }
-  attr_reader :admin_user, :normal_user
+  class << self
+    extend T::Sig
+    sig { params(email: T.nilable(String)).returns(User) }
+    def get_or_create_user(email = nil)
+      email ||= EMAIL
+      user = user_service.find_user_by_email(email)
+      return user if user.present?
 
-  sig { void }
-  def initialize
-    @admin_user = T.let(User.admin_user, User)
-    @user_service = T.let(ServiceFactory.user_service(User.admin_user), UserService)
-    @role_service = T.let(ServiceFactory.role_service(User.admin_user), RoleService)
+      user_service.create(email: email, password: PASSWORD)
+    end
 
-    @normal_user = T.let(get_or_create_user('normal-user@pocket.com'), User)
-  end
+    sig { params(email: T.nilable(String)).returns(User) }
+    def get_or_create_admin_user(email = nil)
+      email ||= ADMIN_EMAIL
+      user = user_service.find_user_by_email(email)
+      return user if user && role_service.user_role?(user: user, role: Role.admin)
 
-  sig { params(email: String).returns(User) }
-  def get_or_create_user(email)
-    user = @user_service.find_user_by_email(email)
-    return user if user.present?
+      user = get_or_create_user(email)
+      role_service.assign_role_to_user(user: user, role: Role.admin)
+      user
+    end
 
-    @user_service.create(email: email, password: PASSWORD)
-  end
+    private
 
-  sig { params(email: T.nilable(String)).returns(User) }
-  def get_or_create_admin_user(email = nil)
-    email ||= ADMIN_EMAIL
-    user = @user_service.find_user_by_email(email)
-    return user if user && @role_service.user_role?(user: user, role: Role.admin)
+    sig { returns(UserService) }
+    def user_service
+      ServiceFactory.user_service(User.admin_user)
+    end
 
-    user = get_or_create_user(email)
-    @role_service.assign_role_to_user(user: user, role: Role.admin)
-    user
+    sig { returns(RoleService) }
+    def role_service
+      ServiceFactory.role_service(User.admin_user)
+    end
   end
 end

@@ -104,7 +104,6 @@
 # wrong constant name <RESERVED_93>
 # wrong constant name <RESERVED_94>
 # wrong constant name <RESERVED_95>
-# wrong constant name <RESERVED_96>
 # wrong constant name <RESERVED_9>
 # wrong constant name <TypeAlias>
 # wrong constant name <TypeAlias>
@@ -414,48 +413,48 @@
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Id_C
 # Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision
-# Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_R
+# Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_R
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Revision
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_R
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Version
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
 # Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_R
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Revision
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_R
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_R
 # Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Revision
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_R
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version
 # Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Revision
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_R
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_R
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Version
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 # Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_R
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_R
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Revision
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Version
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_R
 # Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_R
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision_C
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Revision
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Revision
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Version
@@ -1554,37 +1553,37 @@
 # uninitialized constant ActiveRecord::AdvisoryLockBase::ActiveRecord_AssociationRelation::VALUE_METHODS
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_AssociationRelation::CLAUSE_METHODS
 # wrong constant name <static-init>
-# uninitialized constant #<Class:0x000055c9ed2f3368>::CLAUSE_METHODS
+# uninitialized constant #<Class:0x0000559a3917dff8>::CLAUSE_METHODS
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::ClassMethods
 #                ActiveRecord::AdvisoryLockBase::ClassMethods
 #                ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::VALUE_METHODS
 #                ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::CLAUSE_METHODS
-# uninitialized constant #<Class:0x000055c9ed2f3368>::DEFAULT_VALUES
+# uninitialized constant #<Class:0x0000559a3917dff8>::DEFAULT_VALUES
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::DEFAULT_VALUES
-# uninitialized constant #<Class:0x000055c9ed2f3368>::Elem
-# uninitialized constant #<Class:0x000055c9ed2f3368>::FROZEN_EMPTY_ARRAY
+# uninitialized constant #<Class:0x0000559a3917dff8>::Elem
+# uninitialized constant #<Class:0x0000559a3917dff8>::FROZEN_EMPTY_ARRAY
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_HASH
 #                ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_ARRAY
-# uninitialized constant #<Class:0x000055c9ed2f3368>::FROZEN_EMPTY_HASH
+# uninitialized constant #<Class:0x0000559a3917dff8>::FROZEN_EMPTY_HASH
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_HASH
 #                ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_ARRAY
-# uninitialized constant #<Class:0x000055c9ed2f3368>::INVALID_METHODS_FOR_DELETE_ALL
+# uninitialized constant #<Class:0x0000559a3917dff8>::INVALID_METHODS_FOR_DELETE_ALL
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::INVALID_METHODS_FOR_DELETE_ALL
-# uninitialized constant #<Class:0x000055c9ed2f3368>::MULTI_VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a3917dff8>::MULTI_VALUE_METHODS
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::MULTI_VALUE_METHODS
-# uninitialized constant #<Class:0x000055c9ed2f3368>::ONE_AS_ONE
+# uninitialized constant #<Class:0x0000559a3917dff8>::ONE_AS_ONE
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::ONE_AS_ONE
-# uninitialized constant #<Class:0x000055c9ed2f3368>::ORDER_IGNORE_MESSAGE
+# uninitialized constant #<Class:0x0000559a3917dff8>::ORDER_IGNORE_MESSAGE
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::ORDER_IGNORE_MESSAGE
-# uninitialized constant #<Class:0x000055c9ed2f3368>::SINGLE_VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a3917dff8>::SINGLE_VALUE_METHODS
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::SINGLE_VALUE_METHODS
-# uninitialized constant #<Class:0x000055c9ed2f3368>::STRUCTURAL_OR_METHODS
+# uninitialized constant #<Class:0x0000559a3917dff8>::STRUCTURAL_OR_METHODS
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::STRUCTURAL_OR_METHODS
-# uninitialized constant #<Class:0x000055c9ed2f3368>::VALID_DIRECTIONS
+# uninitialized constant #<Class:0x0000559a3917dff8>::VALID_DIRECTIONS
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::VALID_DIRECTIONS
-# uninitialized constant #<Class:0x000055c9ed2f3368>::VALID_UNSCOPING_VALUES
+# uninitialized constant #<Class:0x0000559a3917dff8>::VALID_UNSCOPING_VALUES
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::VALID_UNSCOPING_VALUES
-# uninitialized constant #<Class:0x000055c9ed2f3368>::VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a3917dff8>::VALUE_METHODS
 # Did you mean?  ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::VALUE_METHODS
 #                ActiveRecord::AdvisoryLockBase::ActiveRecord_Associations_CollectionProxy::CLAUSE_METHODS
 # wrong constant name <static-init>
@@ -1726,26 +1725,26 @@
 # wrong constant name <static-init>
 # uninitialized constant ActiveRecord::Enum::RUBYGEMS_ACTIVATION_MONITOR
 # wrong constant name collect?
-# uninitialized constant #<Class:0x000055c9ed2f0960>::ACTIONS
+# uninitialized constant #<Class:0x0000559a39593368>::ACTIONS
 # Did you mean?  ActiveRecord::InternalMetadata::ACTIONS
-# uninitialized constant #<Class:0x000055c9ed2f0960>::CALLBACKS
+# uninitialized constant #<Class:0x0000559a39593368>::CALLBACKS
 # Did you mean?  ActiveRecord::InternalMetadata::Callbacks
 #                ActiveRecord::Callbacks
 #                ActiveRecord::InternalMetadata::Callback
 #                ActiveRecord::InternalMetadata::CALLBACKS
-# uninitialized constant #<Class:0x000055c9ed2f0960>::CALLBACK_FILTER_TYPES
+# uninitialized constant #<Class:0x0000559a39593368>::CALLBACK_FILTER_TYPES
 # Did you mean?  ActiveRecord::InternalMetadata::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055c9ed2f0960>::CALL_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a39593368>::CALL_COMPILABLE_REGEXP
 # Did you mean?  ActiveRecord::InternalMetadata::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedAssociationMethods>
 # wrong constant name <Class:GeneratedRelationMethods>
-# uninitialized constant #<Class:0x000055c9ed2f0960>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant #<Class:0x0000559a39593368>::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  ActiveRecord::InternalMetadata::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055c9ed2f0960>::NAME_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a39593368>::NAME_COMPILABLE_REGEXP
 # Did you mean?  ActiveRecord::InternalMetadata::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055c9ed2f0960>::RESTRICTED_CLASS_METHODS
+# uninitialized constant #<Class:0x0000559a39593368>::RESTRICTED_CLASS_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055c9ed2f0960>::UNASSIGNABLE_KEYS
+# uninitialized constant #<Class:0x0000559a39593368>::UNASSIGNABLE_KEYS
 # Did you mean?  ActiveRecord::InternalMetadata::UNASSIGNABLE_KEYS
 # uninitialized constant ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation::CLAUSE_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation::ClassMethods
@@ -1766,36 +1765,36 @@
 # uninitialized constant ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation::VALID_UNSCOPING_VALUES
 # uninitialized constant ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation::VALUE_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation::CLAUSE_METHODS
-# uninitialized constant #<Class:0x000055c9ed2fb928>::CLAUSE_METHODS
+# uninitialized constant #<Class:0x0000559a395923a0>::CLAUSE_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::ClassMethods
 #                ActiveRecord::InternalMetadata::ClassMethods
 #                ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::VALUE_METHODS
 #                ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::CLAUSE_METHODS
-# uninitialized constant #<Class:0x000055c9ed2fb928>::DEFAULT_VALUES
+# uninitialized constant #<Class:0x0000559a395923a0>::DEFAULT_VALUES
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::DEFAULT_VALUES
-# uninitialized constant #<Class:0x000055c9ed2fb928>::FROZEN_EMPTY_ARRAY
+# uninitialized constant #<Class:0x0000559a395923a0>::FROZEN_EMPTY_ARRAY
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_HASH
 #                ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_ARRAY
-# uninitialized constant #<Class:0x000055c9ed2fb928>::FROZEN_EMPTY_HASH
+# uninitialized constant #<Class:0x0000559a395923a0>::FROZEN_EMPTY_HASH
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_HASH
 #                ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_ARRAY
-# uninitialized constant #<Class:0x000055c9ed2fb928>::INVALID_METHODS_FOR_DELETE_ALL
+# uninitialized constant #<Class:0x0000559a395923a0>::INVALID_METHODS_FOR_DELETE_ALL
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::INVALID_METHODS_FOR_DELETE_ALL
-# uninitialized constant #<Class:0x000055c9ed2fb928>::MULTI_VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a395923a0>::MULTI_VALUE_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::MULTI_VALUE_METHODS
-# uninitialized constant #<Class:0x000055c9ed2fb928>::ONE_AS_ONE
+# uninitialized constant #<Class:0x0000559a395923a0>::ONE_AS_ONE
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::ONE_AS_ONE
-# uninitialized constant #<Class:0x000055c9ed2fb928>::ORDER_IGNORE_MESSAGE
+# uninitialized constant #<Class:0x0000559a395923a0>::ORDER_IGNORE_MESSAGE
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::ORDER_IGNORE_MESSAGE
-# uninitialized constant #<Class:0x000055c9ed2fb928>::SINGLE_VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a395923a0>::SINGLE_VALUE_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::SINGLE_VALUE_METHODS
-# uninitialized constant #<Class:0x000055c9ed2fb928>::STRUCTURAL_OR_METHODS
+# uninitialized constant #<Class:0x0000559a395923a0>::STRUCTURAL_OR_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::STRUCTURAL_OR_METHODS
-# uninitialized constant #<Class:0x000055c9ed2fb928>::VALID_DIRECTIONS
+# uninitialized constant #<Class:0x0000559a395923a0>::VALID_DIRECTIONS
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::VALID_DIRECTIONS
-# uninitialized constant #<Class:0x000055c9ed2fb928>::VALID_UNSCOPING_VALUES
+# uninitialized constant #<Class:0x0000559a395923a0>::VALID_UNSCOPING_VALUES
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::VALID_UNSCOPING_VALUES
-# uninitialized constant #<Class:0x000055c9ed2fb928>::VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a395923a0>::VALUE_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::VALUE_METHODS
 #                ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy::CLAUSE_METHODS
 # uninitialized constant ActiveRecord::InternalMetadata::ActiveRecord_Relation::CLAUSE_METHODS
@@ -2097,36 +2096,36 @@
 # uninitialized constant ActiveRecord::SchemaMigration::ActiveRecord_AssociationRelation::VALID_UNSCOPING_VALUES
 # uninitialized constant ActiveRecord::SchemaMigration::ActiveRecord_AssociationRelation::VALUE_METHODS
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_AssociationRelation::CLAUSE_METHODS
-# uninitialized constant #<Class:0x000055c9ed305fb8>::CLAUSE_METHODS
+# uninitialized constant #<Class:0x0000559a3958eb60>::CLAUSE_METHODS
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::ClassMethods
 #                ActiveRecord::SchemaMigration::ClassMethods
 #                ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::VALUE_METHODS
 #                ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::CLAUSE_METHODS
-# uninitialized constant #<Class:0x000055c9ed305fb8>::DEFAULT_VALUES
+# uninitialized constant #<Class:0x0000559a3958eb60>::DEFAULT_VALUES
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::DEFAULT_VALUES
-# uninitialized constant #<Class:0x000055c9ed305fb8>::FROZEN_EMPTY_ARRAY
+# uninitialized constant #<Class:0x0000559a3958eb60>::FROZEN_EMPTY_ARRAY
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_HASH
 #                ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_ARRAY
-# uninitialized constant #<Class:0x000055c9ed305fb8>::FROZEN_EMPTY_HASH
+# uninitialized constant #<Class:0x0000559a3958eb60>::FROZEN_EMPTY_HASH
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_HASH
 #                ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_ARRAY
-# uninitialized constant #<Class:0x000055c9ed305fb8>::INVALID_METHODS_FOR_DELETE_ALL
+# uninitialized constant #<Class:0x0000559a3958eb60>::INVALID_METHODS_FOR_DELETE_ALL
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::INVALID_METHODS_FOR_DELETE_ALL
-# uninitialized constant #<Class:0x000055c9ed305fb8>::MULTI_VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a3958eb60>::MULTI_VALUE_METHODS
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::MULTI_VALUE_METHODS
-# uninitialized constant #<Class:0x000055c9ed305fb8>::ONE_AS_ONE
+# uninitialized constant #<Class:0x0000559a3958eb60>::ONE_AS_ONE
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::ONE_AS_ONE
-# uninitialized constant #<Class:0x000055c9ed305fb8>::ORDER_IGNORE_MESSAGE
+# uninitialized constant #<Class:0x0000559a3958eb60>::ORDER_IGNORE_MESSAGE
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::ORDER_IGNORE_MESSAGE
-# uninitialized constant #<Class:0x000055c9ed305fb8>::SINGLE_VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a3958eb60>::SINGLE_VALUE_METHODS
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::SINGLE_VALUE_METHODS
-# uninitialized constant #<Class:0x000055c9ed305fb8>::STRUCTURAL_OR_METHODS
+# uninitialized constant #<Class:0x0000559a3958eb60>::STRUCTURAL_OR_METHODS
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::STRUCTURAL_OR_METHODS
-# uninitialized constant #<Class:0x000055c9ed305fb8>::VALID_DIRECTIONS
+# uninitialized constant #<Class:0x0000559a3958eb60>::VALID_DIRECTIONS
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::VALID_DIRECTIONS
-# uninitialized constant #<Class:0x000055c9ed305fb8>::VALID_UNSCOPING_VALUES
+# uninitialized constant #<Class:0x0000559a3958eb60>::VALID_UNSCOPING_VALUES
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::VALID_UNSCOPING_VALUES
-# uninitialized constant #<Class:0x000055c9ed305fb8>::VALUE_METHODS
+# uninitialized constant #<Class:0x0000559a3958eb60>::VALUE_METHODS
 # Did you mean?  ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::VALUE_METHODS
 #                ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy::CLAUSE_METHODS
 # uninitialized constant ActiveRecord::SchemaMigration::ActiveRecord_Relation::CLAUSE_METHODS
@@ -2753,8 +2752,8 @@
 # wrong constant name read_nonblock<defaultArg>2
 # wrong constant name read_nonblock
 # uninitialized constant BigDecimal::EXABYTE
-# Did you mean?  BigDecimal::TERABYTE
-#                BigDecimal::MEGABYTE
+# Did you mean?  BigDecimal::MEGABYTE
+#                BigDecimal::TERABYTE
 # uninitialized constant BigDecimal::GIGABYTE
 # uninitialized constant BigDecimal::KILOBYTE
 # uninitialized constant BigDecimal::MEGABYTE
@@ -2762,8 +2761,8 @@
 # uninitialized constant BigDecimal::PETABYTE
 # Did you mean?  BigDecimal::TERABYTE
 # uninitialized constant BigDecimal::TERABYTE
-# Did you mean?  BigDecimal::PETABYTE
-#                BigDecimal::EXABYTE
+# Did you mean?  BigDecimal::EXABYTE
+#                BigDecimal::PETABYTE
 # wrong constant name clone
 # wrong constant name to_digits
 # wrong constant name new
@@ -3488,24 +3487,24 @@
 # uninitialized constant Class::DELEGATION_RESERVED_METHOD_NAMES
 # uninitialized constant Class::RUBY_RESERVED_KEYWORDS
 # wrong constant name json_creatable?
-# uninitialized constant #<Class:0x000055c9e7d0e538>::ACTIONS
+# uninitialized constant #<Class:0x0000559a33fad958>::ACTIONS
 # Did you mean?  Client::ACTIONS
-# uninitialized constant #<Class:0x000055c9e7d0e538>::CALLBACKS
+# uninitialized constant #<Class:0x0000559a33fad958>::CALLBACKS
 # Did you mean?  Client::Callbacks
 #                Client::Callback
 #                Client::CALLBACKS
-# uninitialized constant #<Class:0x000055c9e7d0e538>::CALLBACK_FILTER_TYPES
+# uninitialized constant #<Class:0x0000559a33fad958>::CALLBACK_FILTER_TYPES
 # Did you mean?  Client::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055c9e7d0e538>::CALL_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a33fad958>::CALL_COMPILABLE_REGEXP
 # Did you mean?  Client::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedRelationMethods>
-# uninitialized constant #<Class:0x000055c9e7d0e538>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant #<Class:0x0000559a33fad958>::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  Client::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055c9e7d0e538>::NAME_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a33fad958>::NAME_COMPILABLE_REGEXP
 # Did you mean?  Client::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055c9e7d0e538>::RESTRICTED_CLASS_METHODS
+# uninitialized constant #<Class:0x0000559a33fad958>::RESTRICTED_CLASS_METHODS
 # Did you mean?  Client::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055c9e7d0e538>::UNASSIGNABLE_KEYS
+# uninitialized constant #<Class:0x0000559a33fad958>::UNASSIGNABLE_KEYS
 # Did you mean?  Client::UNASSIGNABLE_KEYS
 # wrong constant name after_add_for_people
 # wrong constant name after_add_for_people=
@@ -3584,7 +3583,6 @@
 # wrong constant name not_active
 # wrong constant name not_inactive
 # wrong constant name <static-init>
-# wrong constant name active
 # wrong constant name after_add_for_people
 # wrong constant name after_add_for_people=
 # wrong constant name after_add_for_people?
@@ -3597,9 +3595,6 @@
 # wrong constant name before_remove_for_people
 # wrong constant name before_remove_for_people=
 # wrong constant name before_remove_for_people?
-# wrong constant name inactive
-# wrong constant name not_active
-# wrong constant name not_inactive
 # wrong constant name polar
 # wrong constant name rect
 # wrong constant name rectangular
@@ -3638,6 +3633,10 @@
 # uninitialized constant Continuation
 # uninitialized constant Coverage
 # uninitialized constant Coverage
+# uninitialized constant DBM
+# uninitialized constant DBM
+# uninitialized constant DBMError
+# uninitialized constant DBMError
 # wrong constant name _dump
 # wrong constant name _load
 # wrong constant name alive?
@@ -3740,8 +3739,8 @@
 # undefined method `initialize<defaultArg>1' for class `Date::Infinity'
 # Did you mean?  initialize_dup
 # uninitialized constant Date::Infinity::EXABYTE
-# Did you mean?  Date::Infinity::TERABYTE
-#                Date::Infinity::MEGABYTE
+# Did you mean?  Date::Infinity::MEGABYTE
+#                Date::Infinity::TERABYTE
 # uninitialized constant Date::Infinity::GIGABYTE
 # uninitialized constant Date::Infinity::KILOBYTE
 # uninitialized constant Date::Infinity::MEGABYTE
@@ -3749,8 +3748,8 @@
 # uninitialized constant Date::Infinity::PETABYTE
 # Did you mean?  Date::Infinity::TERABYTE
 # uninitialized constant Date::Infinity::TERABYTE
-# Did you mean?  Date::Infinity::PETABYTE
-#                Date::Infinity::EXABYTE
+# Did you mean?  Date::Infinity::EXABYTE
+#                Date::Infinity::PETABYTE
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # undefined method `methods<defaultArg>1' for class `Delegator'
@@ -4241,15 +4240,21 @@
 # wrong constant name transfer
 # wrong constant name current
 # wrong constant name yield
+# uninitialized constant Fiddle
+# Did you mean?  File
+# uninitialized constant Fiddle
+# Did you mean?  File
 # wrong constant name size?
+# undefined singleton method `atomic_write<defaultArg>1' for `File'
 # undefined singleton method `cleanpath<defaultArg>1' for `File'
+# wrong constant name atomic_write<defaultArg>1
+# wrong constant name atomic_write
 # wrong constant name cleanpath<defaultArg>1
 # wrong constant name cleanpath
 # wrong constant name exists?
 # wrong constant name lutime
 # wrong constant name mkfifo
 # wrong constant name open!
-# wrong constant name probe_stat_in
 # uninitialized constant FileUtils::DryRun::LN_SUPPORTED
 # Did you mean?  FileUtils::LN_SUPPORTED
 # uninitialized constant FileUtils::DryRun::RUBY
@@ -4272,8 +4277,8 @@
 # Did you mean?  Person
 #                FileUtils::VERSION
 # uninitialized constant Float::EXABYTE
-# Did you mean?  Float::TERABYTE
-#                Float::MEGABYTE
+# Did you mean?  Float::MEGABYTE
+#                Float::TERABYTE
 # uninitialized constant Float::GIGABYTE
 # uninitialized constant Float::KILOBYTE
 # uninitialized constant Float::MEGABYTE
@@ -4281,8 +4286,8 @@
 # uninitialized constant Float::PETABYTE
 # Did you mean?  Float::TERABYTE
 # uninitialized constant Float::TERABYTE
-# Did you mean?  Float::PETABYTE
-#                Float::EXABYTE
+# Did you mean?  Float::EXABYTE
+#                Float::PETABYTE
 # wrong constant name _compile_method
 # wrong constant name _delegator_method
 # wrong constant name _valid_method?
@@ -4293,6 +4298,12 @@
 # wrong constant name stress=
 # wrong constant name verify_internal_consistency
 # wrong constant name verify_transient_heap_internal_consistency
+# uninitialized constant GDBM
+# uninitialized constant GDBM
+# uninitialized constant GDBMError
+# uninitialized constant GDBMError
+# uninitialized constant GDBMFatalError
+# uninitialized constant GDBMFatalError
 # uninitialized constant Gem::Resolver::Molinillo::DependencyGraph::Log::Elem
 # wrong constant name _routes
 # wrong constant name rails_info_path
@@ -4307,48 +4318,48 @@
 # uninitialized constant GetText::PoParser::Racc_Runtime_Core_Id_C
 # Did you mean?  GetText::PoParser::Racc_Runtime_Core_Version_C
 # uninitialized constant GetText::PoParser::Racc_Runtime_Core_Revision
-# Did you mean?  GetText::PoParser::Racc_Runtime_Core_Revision_C
-#                GetText::PoParser::Racc_Runtime_Core_Revision_R
+# Did you mean?  GetText::PoParser::Racc_Runtime_Core_Revision_R
+#                GetText::PoParser::Racc_Runtime_Core_Revision_C
 #                GetText::PoParser::Racc_Runtime_Revision
 #                GetText::PoParser::Racc_Runtime_Core_Version
-#                GetText::PoParser::Racc_Runtime_Core_Version_C
 #                GetText::PoParser::Racc_Runtime_Core_Version_R
+#                GetText::PoParser::Racc_Runtime_Core_Version_C
 #                GetText::PoParser::Racc_Runtime_Version
 #                GetText::PoParser::Racc_Runtime_Core_Id_C
 # uninitialized constant GetText::PoParser::Racc_Runtime_Core_Revision_C
 # Did you mean?  GetText::PoParser::Racc_Runtime_Core_Revision_R
 #                GetText::PoParser::Racc_Runtime_Revision
-#                GetText::PoParser::Racc_Runtime_Core_Version_C
 #                GetText::PoParser::Racc_Runtime_Core_Version_R
+#                GetText::PoParser::Racc_Runtime_Core_Version_C
 #                GetText::PoParser::Racc_Runtime_Core_Version
 #                GetText::PoParser::Racc_Runtime_Core_Id_C
 # uninitialized constant GetText::PoParser::Racc_Runtime_Core_Revision_R
 # Did you mean?  GetText::PoParser::Racc_Runtime_Core_Revision_C
 #                GetText::PoParser::Racc_Runtime_Revision
-#                GetText::PoParser::Racc_Runtime_Core_Version_C
 #                GetText::PoParser::Racc_Runtime_Core_Version_R
+#                GetText::PoParser::Racc_Runtime_Core_Version_C
 #                GetText::PoParser::Racc_Runtime_Core_Version
 # uninitialized constant GetText::PoParser::Racc_Runtime_Core_Version
 # Did you mean?  GetText::PoParser::Racc_Runtime_Revision
 #                GetText::PoParser::Racc_Runtime_Core_Revision
-#                GetText::PoParser::Racc_Runtime_Core_Version_C
 #                GetText::PoParser::Racc_Runtime_Core_Version_R
-#                GetText::PoParser::Racc_Runtime_Core_Revision_C
+#                GetText::PoParser::Racc_Runtime_Core_Version_C
 #                GetText::PoParser::Racc_Runtime_Core_Revision_R
+#                GetText::PoParser::Racc_Runtime_Core_Revision_C
 #                GetText::PoParser::Racc_Runtime_Version
 #                GetText::PoParser::Racc_Runtime_Core_Id_C
 # uninitialized constant GetText::PoParser::Racc_Runtime_Core_Version_C
 # Did you mean?  GetText::PoParser::Racc_Runtime_Core_Version_R
-#                GetText::PoParser::Racc_Runtime_Core_Revision_C
 #                GetText::PoParser::Racc_Runtime_Core_Revision_R
+#                GetText::PoParser::Racc_Runtime_Core_Revision_C
 #                GetText::PoParser::Racc_Runtime_Revision
 #                GetText::PoParser::Racc_Runtime_Core_Revision
 #                GetText::PoParser::Racc_Runtime_Version
 #                GetText::PoParser::Racc_Runtime_Core_Id_C
 # uninitialized constant GetText::PoParser::Racc_Runtime_Core_Version_R
 # Did you mean?  GetText::PoParser::Racc_Runtime_Core_Version_C
-#                GetText::PoParser::Racc_Runtime_Core_Revision_C
 #                GetText::PoParser::Racc_Runtime_Core_Revision_R
+#                GetText::PoParser::Racc_Runtime_Core_Revision_C
 #                GetText::PoParser::Racc_Runtime_Revision
 #                GetText::PoParser::Racc_Runtime_Core_Revision
 #                GetText::PoParser::Racc_Runtime_Version
@@ -4362,6 +4373,8 @@
 # Did you mean?  GetText::PoParser::Racc_Runtime_Revision
 #                GetText::PoParser::Racc_Runtime_Core_Version
 # uninitialized constant GetText::PoParser::Racc_YY_Parse_Method
+# uninitialized constant GetoptLong
+# uninitialized constant GetoptLong
 # wrong constant name <Class:BaseLocator>
 # wrong constant name <Class:BlockLocator>
 # wrong constant name <Class:UnscopedLocator>
@@ -4412,6 +4425,7 @@
 # wrong constant name transform_keys!
 # wrong constant name transform_values!
 # wrong constant name update
+# wrong constant name from_trusted_xml
 # uninitialized constant I18n::Backend::KeyValue::DEFAULT_REPLACEMENT_CHAR
 # uninitialized constant I18n::Backend::KeyValue::FLATTEN_SEPARATOR
 # uninitialized constant I18n::Backend::KeyValue::SEPARATOR_ESCAPE_CHAR
@@ -4517,27 +4531,10 @@
 # wrong constant name <static-init>
 # wrong constant name new_ntoh
 # wrong constant name ntop
-# wrong constant name <Class:Abort>
-# wrong constant name <Class:Context>
-# wrong constant name <Class:ContextExtender>
 # wrong constant name <Class:DefaultEncodings>
-# wrong constant name <Class:ExtendCommandBundle>
-# wrong constant name <Class:FileInputMethod>
-# wrong constant name <Class:InputMethod>
-# wrong constant name <Class:Inspector>
-# wrong constant name <Class:Irb>
 # wrong constant name <Class:Locale>
-# wrong constant name <Class:MethodExtender>
-# wrong constant name <Class:Notifier>
-# wrong constant name <Class:OutputMethod>
-# wrong constant name <Class:ReadlineInputMethod>
 # wrong constant name <Class:SLex>
-# wrong constant name <Class:StdioInputMethod>
-# wrong constant name <Class:StdioOutputMethod>
-# wrong constant name <Class:WorkSpace>
-# wrong constant name <static-init>
 # undefined method `evaluate<defaultArg>1' for class `IRB::Context'
-# undefined method `exit<defaultArg>1' for class `IRB::Context'
 # undefined method `initialize<defaultArg>1' for class `IRB::Context'
 # Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `IRB::Context'
@@ -4547,84 +4544,13 @@
 # wrong constant name __exit__
 # wrong constant name __inspect__
 # wrong constant name __to_s__
-# wrong constant name ap_name
-# wrong constant name ap_name=
-# wrong constant name auto_indent_mode
-# wrong constant name auto_indent_mode=
-# wrong constant name back_trace_limit
-# wrong constant name back_trace_limit=
-# wrong constant name debug?
-# wrong constant name debug_level
-# wrong constant name debug_level=
-# wrong constant name echo
-# wrong constant name echo=
-# wrong constant name echo?
-# wrong constant name eval_history=
 # wrong constant name evaluate<defaultArg>1
 # wrong constant name evaluate
-# wrong constant name exit<defaultArg>1
-# wrong constant name exit
-# wrong constant name file_input?
-# wrong constant name ignore_eof
-# wrong constant name ignore_eof=
-# wrong constant name ignore_eof?
-# wrong constant name ignore_sigint
-# wrong constant name ignore_sigint=
-# wrong constant name ignore_sigint?
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize<defaultArg>2
 # wrong constant name initialize<defaultArg>3
 # wrong constant name initialize
-# wrong constant name inspect?
 # wrong constant name inspect_last_value
-# wrong constant name inspect_mode
-# wrong constant name inspect_mode=
-# wrong constant name io
-# wrong constant name io=
-# wrong constant name irb
-# wrong constant name irb=
-# wrong constant name irb_name
-# wrong constant name irb_name=
-# wrong constant name irb_path
-# wrong constant name irb_path=
-# wrong constant name last_value
-# wrong constant name load_modules
-# wrong constant name load_modules=
-# wrong constant name main
-# wrong constant name prompt_c
-# wrong constant name prompt_c=
-# wrong constant name prompt_i
-# wrong constant name prompt_i=
-# wrong constant name prompt_mode
-# wrong constant name prompt_mode=
-# wrong constant name prompt_n
-# wrong constant name prompt_n=
-# wrong constant name prompt_s
-# wrong constant name prompt_s=
-# wrong constant name prompting?
-# wrong constant name rc
-# wrong constant name rc=
-# wrong constant name rc?
-# wrong constant name return_format
-# wrong constant name return_format=
-# wrong constant name save_history=
-# wrong constant name set_last_value
-# wrong constant name thread
-# wrong constant name use_loader=
-# wrong constant name use_readline
-# wrong constant name use_readline=
-# wrong constant name use_readline?
-# wrong constant name use_tracer=
-# wrong constant name verbose
-# wrong constant name verbose=
-# wrong constant name verbose?
-# wrong constant name workspace
-# wrong constant name workspace=
-# wrong constant name workspace_home
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name def_extend_command
-# wrong constant name install_extend_commands
 # uninitialized constant IRB::DefaultEncodings::Elem
 # wrong constant name external
 # wrong constant name external=
@@ -4633,69 +4559,33 @@
 # wrong constant name <static-init>
 # wrong constant name []
 # wrong constant name members
-# undefined method `install_alias_method<defaultArg>1' for module `IRB::ExtendCommandBundle'
-# undefined method `irb_exit<defaultArg>1' for module `IRB::ExtendCommandBundle'
-# wrong constant name install_alias_method<defaultArg>1
-# wrong constant name install_alias_method
 # wrong constant name irb
 # wrong constant name irb_change_workspace
-# wrong constant name irb_context
 # wrong constant name irb_current_working_workspace
-# wrong constant name irb_exit<defaultArg>1
-# wrong constant name irb_exit
 # wrong constant name irb_fg
 # wrong constant name irb_help
 # wrong constant name irb_jobs
 # wrong constant name irb_kill
-# wrong constant name irb_load
 # wrong constant name irb_pop_workspace
 # wrong constant name irb_push_workspace
-# wrong constant name irb_require
 # wrong constant name irb_source
 # wrong constant name irb_workspaces
-# undefined singleton method `def_extend_command<defaultArg>1' for `IRB::ExtendCommandBundle'
-# wrong constant name <static-init>
-# wrong constant name def_extend_command<defaultArg>1
-# wrong constant name def_extend_command
-# wrong constant name extend_object
-# wrong constant name install_extend_commands
 # wrong constant name irb_original_method_name
-# wrong constant name encoding
-# wrong constant name eof?
 # wrong constant name initialize
-# wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `IRB::InputMethod'
 # Did you mean?  initialize_dup
-# wrong constant name file_name
-# wrong constant name gets
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
-# wrong constant name prompt
-# wrong constant name prompt=
-# wrong constant name readable_after_eof?
-# wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `IRB::Inspector'
 # Did you mean?  initialize_dup
-# wrong constant name init
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
-# wrong constant name inspect_value
-# undefined singleton method `def_inspector<defaultArg>1' for `IRB::Inspector'
-# wrong constant name <static-init>
-# wrong constant name def_inspector<defaultArg>1
-# wrong constant name def_inspector
-# wrong constant name keys_with_inspector
 # undefined method `initialize<defaultArg>1' for class `IRB::Irb'
 # Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `IRB::Irb'
 # Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `IRB::Irb'
 # Did you mean?  initialize_dup
-# undefined method `run<defaultArg>1' for class `IRB::Irb'
-# undefined method `suspend_name<defaultArg>1' for class `IRB::Irb'
-# undefined method `suspend_name<defaultArg>2' for class `IRB::Irb'
-# wrong constant name context
-# wrong constant name eval_input
 # wrong constant name handle_exception
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize<defaultArg>2
@@ -4703,19 +4593,6 @@
 # wrong constant name initialize
 # wrong constant name output_value
 # wrong constant name prompt
-# wrong constant name run<defaultArg>1
-# wrong constant name run
-# wrong constant name scanner
-# wrong constant name scanner=
-# wrong constant name signal_handle
-# wrong constant name signal_status
-# wrong constant name suspend_context
-# wrong constant name suspend_input_method
-# wrong constant name suspend_name<defaultArg>1
-# wrong constant name suspend_name<defaultArg>2
-# wrong constant name suspend_name
-# wrong constant name suspend_workspace
-# wrong constant name <static-init>
 # undefined method `find<defaultArg>1' for class `IRB::Locale'
 # undefined method `initialize<defaultArg>1' for class `IRB::Locale'
 # Did you mean?  initialize_dup
@@ -4745,80 +4622,9 @@
 # wrong constant name require
 # wrong constant name territory
 # wrong constant name <static-init>
-# undefined method `new_alias_name<defaultArg>1' for module `IRB::MethodExtender'
-# undefined method `new_alias_name<defaultArg>2' for module `IRB::MethodExtender'
-# wrong constant name def_post_proc
-# wrong constant name def_pre_proc
-# wrong constant name new_alias_name<defaultArg>1
-# wrong constant name new_alias_name<defaultArg>2
-# wrong constant name new_alias_name
-# wrong constant name <static-init>
-# undefined method `Fail<defaultArg>1' for module `IRB::Notifier'
-# undefined method `Raise<defaultArg>1' for module `IRB::Notifier'
-# wrong constant name <Class:AbstractNotifier>
-# wrong constant name <Class:CompositeNotifier>
-# wrong constant name <Class:ErrUndefinedNotifier>
-# wrong constant name <Class:ErrUnrecognizedLevel>
-# wrong constant name Fail<defaultArg>1
-# uninitialized constant IRB::Notifier::Fail
-# Did you mean?  File
-# wrong constant name <Class:LeveledNotifier>
-# wrong constant name <Class:NoMsgNotifier>
-# wrong constant name Raise<defaultArg>1
-# uninitialized constant IRB::Notifier::Raise
-# Did you mean?  Rails
-# wrong constant name exec_if
 # wrong constant name initialize
-# wrong constant name notify?
-# wrong constant name ppx
-# wrong constant name prefix
-# wrong constant name print
-# wrong constant name printf
-# wrong constant name printn
-# wrong constant name puts
-# wrong constant name <static-init>
-# undefined method `def_notifier<defaultArg>1' for class `IRB::Notifier::CompositeNotifier'
-# wrong constant name def_notifier<defaultArg>1
-# wrong constant name def_notifier
-# wrong constant name level
-# wrong constant name level=
-# wrong constant name level_notifier
-# wrong constant name level_notifier=
-# wrong constant name notifiers
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <=>
 # wrong constant name initialize
-# wrong constant name level
-# wrong constant name <static-init>
 # wrong constant name initialize
-# wrong constant name <static-init>
-# undefined singleton method `def_notifier<defaultArg>1' for `IRB::Notifier'
-# undefined singleton method `def_notifier<defaultArg>2' for `IRB::Notifier'
-# wrong constant name <static-init>
-# wrong constant name def_notifier<defaultArg>1
-# wrong constant name def_notifier<defaultArg>2
-# wrong constant name def_notifier
-# wrong constant name included
-# undefined method `Fail<defaultArg>1' for class `IRB::OutputMethod'
-# undefined method `Raise<defaultArg>1' for class `IRB::OutputMethod'
-# wrong constant name Fail<defaultArg>1
-# uninitialized constant IRB::OutputMethod::Fail
-# Did you mean?  File
-# wrong constant name <Class:NotImplementedError>
-# wrong constant name Raise<defaultArg>1
-# uninitialized constant IRB::OutputMethod::Raise
-# Did you mean?  Rails
-# wrong constant name parse_printf_format
-# wrong constant name ppx
-# wrong constant name print
-# wrong constant name printf
-# wrong constant name printn
-# wrong constant name puts
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name included
 # uninitialized constant IRB::ReadlineInputMethod::FILENAME_COMPLETION_PROC
 # Did you mean?  IRB::ReadlineInputMethod::USERNAME_COMPLETION_PROC
 # uninitialized constant IRB::ReadlineInputMethod::HISTORY
@@ -4827,11 +4633,7 @@
 # uninitialized constant IRB::ReadlineInputMethod::VERSION
 # Did you mean?  Person
 #                IRB::VERSION
-# wrong constant name encoding
-# wrong constant name eof?
 # wrong constant name initialize
-# wrong constant name line
-# wrong constant name <static-init>
 # undefined method `Fail<defaultArg>1' for class `IRB::SLex'
 # undefined method `Raise<defaultArg>1' for class `IRB::SLex'
 # undefined method `create<defaultArg>1' for class `IRB::SLex'
@@ -4888,42 +4690,18 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name included
-# wrong constant name encoding
-# wrong constant name eof?
 # wrong constant name initialize
-# wrong constant name line
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# undefined method `evaluate<defaultArg>1' for class `IRB::WorkSpace'
-# undefined method `evaluate<defaultArg>2' for class `IRB::WorkSpace'
-# wrong constant name code_around_binding
-# wrong constant name evaluate<defaultArg>1
-# wrong constant name evaluate<defaultArg>2
-# wrong constant name evaluate
-# wrong constant name filter_backtrace
 # wrong constant name initialize
 # wrong constant name local_variable_get
 # wrong constant name local_variable_set
-# wrong constant name main
-# wrong constant name <static-init>
 # undefined singleton method `Inspector<defaultArg>1' for `IRB'
-# undefined singleton method `irb_abort<defaultArg>1' for `IRB'
 # undefined singleton method `parse_opts<defaultArg>1' for `IRB'
 # undefined singleton method `rc_file<defaultArg>1' for `IRB'
 # undefined singleton method `setup<defaultArg>1' for `IRB'
-# undefined singleton method `start<defaultArg>1' for `IRB'
-# wrong constant name <static-init>
-# uninitialized constant IRB::CurrentContext
 # wrong constant name Inspector<defaultArg>1
-# wrong constant name conf
-# wrong constant name default_src_encoding
 # wrong constant name delete_caller
 # wrong constant name init_config
 # wrong constant name init_error
-# wrong constant name irb_abort<defaultArg>1
-# wrong constant name irb_abort
-# wrong constant name irb_at_exit
-# wrong constant name irb_exit
 # wrong constant name load_modules
 # wrong constant name parse_opts<defaultArg>1
 # wrong constant name parse_opts
@@ -4933,12 +4711,9 @@
 # wrong constant name run_config
 # wrong constant name setup<defaultArg>1
 # wrong constant name setup
-# wrong constant name start<defaultArg>1
-# wrong constant name start
-# wrong constant name version
 # uninitialized constant Integer::EXABYTE
-# Did you mean?  Integer::TERABYTE
-#                Integer::MEGABYTE
+# Did you mean?  Integer::MEGABYTE
+#                Integer::TERABYTE
 # uninitialized constant Integer::GIGABYTE
 # uninitialized constant Integer::KILOBYTE
 # uninitialized constant Integer::MEGABYTE
@@ -4946,8 +4721,8 @@
 # uninitialized constant Integer::PETABYTE
 # Did you mean?  Integer::TERABYTE
 # uninitialized constant Integer::TERABYTE
-# Did you mean?  Integer::PETABYTE
-#                Integer::EXABYTE
+# Did you mean?  Integer::EXABYTE
+#                Integer::PETABYTE
 # wrong constant name allbits?
 # wrong constant name anybits?
 # wrong constant name digits
@@ -6879,8 +6654,8 @@
 # wrong constant name -
 # wrong constant name /
 # uninitialized constant Matrix::Scalar::EXABYTE
-# Did you mean?  Matrix::Scalar::TERABYTE
-#                Matrix::Scalar::MEGABYTE
+# Did you mean?  Matrix::Scalar::MEGABYTE
+#                Matrix::Scalar::TERABYTE
 # uninitialized constant Matrix::Scalar::GIGABYTE
 # uninitialized constant Matrix::Scalar::KILOBYTE
 # uninitialized constant Matrix::Scalar::MEGABYTE
@@ -6888,8 +6663,8 @@
 # uninitialized constant Matrix::Scalar::PETABYTE
 # Did you mean?  Matrix::Scalar::TERABYTE
 # uninitialized constant Matrix::Scalar::TERABYTE
-# Did you mean?  Matrix::Scalar::PETABYTE
-#                Matrix::Scalar::EXABYTE
+# Did you mean?  Matrix::Scalar::EXABYTE
+#                Matrix::Scalar::PETABYTE
 # wrong constant name initialize
 # wrong constant name <static-init>
 # wrong constant name included
@@ -6960,6 +6735,8 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>
+# uninitialized constant NKF
+# uninitialized constant NKF
 # wrong constant name name
 # wrong constant name receiver
 # uninitialized constant Net::APOP::Revision
@@ -7079,8 +6856,8 @@
 # uninitialized constant Net::IMAP::OP_NO_TICKET
 # uninitialized constant Net::IMAP::OP_NO_TLSv1
 # Did you mean?  Net::IMAP::OP_NO_TLSv1_3
-#                Net::IMAP::OP_NO_TLSv1_1
 #                Net::IMAP::OP_NO_TLSv1_2
+#                Net::IMAP::OP_NO_TLSv1_1
 # uninitialized constant Net::IMAP::OP_NO_TLSv1_1
 # Did you mean?  Net::IMAP::OP_NO_TLSv1_3
 #                Net::IMAP::OP_NO_TLSv1_2
@@ -7088,8 +6865,8 @@
 # Did you mean?  Net::IMAP::OP_NO_TLSv1_3
 #                Net::IMAP::OP_NO_TLSv1_1
 # uninitialized constant Net::IMAP::OP_NO_TLSv1_3
-# Did you mean?  Net::IMAP::OP_NO_TLSv1_1
-#                Net::IMAP::OP_NO_TLSv1_2
+# Did you mean?  Net::IMAP::OP_NO_TLSv1_2
+#                Net::IMAP::OP_NO_TLSv1_1
 # uninitialized constant Net::IMAP::OP_PKCS1_CHECK_1
 # Did you mean?  Net::IMAP::OP_PKCS1_CHECK_2
 # uninitialized constant Net::IMAP::OP_PKCS1_CHECK_2
@@ -7114,8 +6891,8 @@
 #                Net::IMAP::TLS1_2_VERSION
 #                Net::IMAP::TLS1_VERSION
 # uninitialized constant Net::IMAP::TLS1_2_VERSION
-# Did you mean?  Net::IMAP::TLS1_1_VERSION
-#                Net::IMAP::TLS1_3_VERSION
+# Did you mean?  Net::IMAP::TLS1_3_VERSION
+#                Net::IMAP::TLS1_1_VERSION
 #                Net::IMAP::TLS1_VERSION
 #                Net::IMAP::SSL2_VERSION
 # uninitialized constant Net::IMAP::TLS1_3_VERSION
@@ -7124,8 +6901,8 @@
 #                Net::IMAP::TLS1_VERSION
 #                Net::IMAP::SSL3_VERSION
 # uninitialized constant Net::IMAP::TLS1_VERSION
-# Did you mean?  Net::IMAP::TLS1_1_VERSION
-#                Net::IMAP::TLS1_3_VERSION
+# Did you mean?  Net::IMAP::TLS1_3_VERSION
+#                Net::IMAP::TLS1_1_VERSION
 #                Net::IMAP::TLS1_2_VERSION
 # uninitialized constant Net::IMAP::VERIFY_CLIENT_ONCE
 # uninitialized constant Net::IMAP::VERIFY_FAIL_IF_NO_PEER_CERT
@@ -7297,48 +7074,48 @@
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Id_C
 # Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision
-# Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_R
+# Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_R
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Revision
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_R
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Version
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
 # Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_R
 #                Nokogiri::CSS::Parser::Racc_Runtime_Revision
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_R
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_R
 # Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Revision
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_R
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Version
 # Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Revision
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_R
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_R
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Version
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 # Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_R
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_R
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Revision
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision
 #                Nokogiri::CSS::Parser::Racc_Runtime_Version
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_R
 # Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_R
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision_C
 #                Nokogiri::CSS::Parser::Racc_Runtime_Revision
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Revision
 #                Nokogiri::CSS::Parser::Racc_Runtime_Version
@@ -7484,18 +7261,6 @@
 # wrong constant name define_finalizer
 # wrong constant name garbage_collect
 # wrong constant name undefine_finalizer
-# undefined method `add_observer<defaultArg>1' for module `Observable'
-# undefined method `changed<defaultArg>1' for module `Observable'
-# wrong constant name add_observer<defaultArg>1
-# wrong constant name add_observer
-# wrong constant name changed<defaultArg>1
-# wrong constant name changed
-# wrong constant name changed?
-# wrong constant name count_observers
-# wrong constant name delete_observer
-# wrong constant name delete_observers
-# wrong constant name notify_observers
-# wrong constant name <static-init>
 # wrong constant name indefinite_length
 # wrong constant name indefinite_length=
 # wrong constant name +@
@@ -7522,8 +7287,6 @@
 # undefined method `to_bn<defaultArg>1' for class `OpenSSL::PKey::EC::Point'
 # wrong constant name to_bn<defaultArg>1
 # wrong constant name to_octet_string
-# wrong constant name sign_pss
-# wrong constant name verify_pss
 # wrong constant name ==
 # wrong constant name ==
 # wrong constant name ==
@@ -7534,54 +7297,56 @@
 # wrong constant name fips_mode
 # uninitialized constant Opus
 # uninitialized constant Opus
+# uninitialized constant PStore
+# uninitialized constant PStore
 # uninitialized constant PTY
 # uninitialized constant PTY
 # uninitialized constant Parser::Ruby24::Racc_Main_Parsing_Routine
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Id_C
 # Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Version_C
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Revision
-# Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Revision_C
-#                Parser::Ruby24::Racc_Runtime_Core_Revision_R
+# Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Revision_R
+#                Parser::Ruby24::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby24::Racc_Runtime_Revision
 #                Parser::Ruby24::Racc_Runtime_Core_Version
-#                Parser::Ruby24::Racc_Runtime_Core_Version_C
 #                Parser::Ruby24::Racc_Runtime_Core_Version_R
+#                Parser::Ruby24::Racc_Runtime_Core_Version_C
 #                Parser::Ruby24::Racc_Runtime_Version
 #                Parser::Ruby24::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Revision_C
 # Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Revision_R
 #                Parser::Ruby24::Racc_Runtime_Revision
-#                Parser::Ruby24::Racc_Runtime_Core_Version_C
 #                Parser::Ruby24::Racc_Runtime_Core_Version_R
+#                Parser::Ruby24::Racc_Runtime_Core_Version_C
 #                Parser::Ruby24::Racc_Runtime_Core_Version
 #                Parser::Ruby24::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Revision_R
 # Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby24::Racc_Runtime_Revision
-#                Parser::Ruby24::Racc_Runtime_Core_Version_C
 #                Parser::Ruby24::Racc_Runtime_Core_Version_R
+#                Parser::Ruby24::Racc_Runtime_Core_Version_C
 #                Parser::Ruby24::Racc_Runtime_Core_Version
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Version
 # Did you mean?  Parser::Ruby24::Racc_Runtime_Revision
 #                Parser::Ruby24::Racc_Runtime_Core_Revision
-#                Parser::Ruby24::Racc_Runtime_Core_Version_C
 #                Parser::Ruby24::Racc_Runtime_Core_Version_R
-#                Parser::Ruby24::Racc_Runtime_Core_Revision_C
+#                Parser::Ruby24::Racc_Runtime_Core_Version_C
 #                Parser::Ruby24::Racc_Runtime_Core_Revision_R
+#                Parser::Ruby24::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby24::Racc_Runtime_Version
 #                Parser::Ruby24::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Version_C
 # Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Version_R
-#                Parser::Ruby24::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby24::Racc_Runtime_Core_Revision_R
+#                Parser::Ruby24::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby24::Racc_Runtime_Revision
 #                Parser::Ruby24::Racc_Runtime_Core_Revision
 #                Parser::Ruby24::Racc_Runtime_Version
 #                Parser::Ruby24::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Version_R
 # Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Version_C
-#                Parser::Ruby24::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby24::Racc_Runtime_Core_Revision_R
+#                Parser::Ruby24::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby24::Racc_Runtime_Revision
 #                Parser::Ruby24::Racc_Runtime_Core_Revision
 #                Parser::Ruby24::Racc_Runtime_Version
@@ -7599,48 +7364,48 @@
 # uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Id_C
 # Did you mean?  Parser::Ruby26::Racc_Runtime_Core_Version_C
 # uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Revision
-# Did you mean?  Parser::Ruby26::Racc_Runtime_Core_Revision_C
-#                Parser::Ruby26::Racc_Runtime_Core_Revision_R
+# Did you mean?  Parser::Ruby26::Racc_Runtime_Core_Revision_R
+#                Parser::Ruby26::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby26::Racc_Runtime_Revision
 #                Parser::Ruby26::Racc_Runtime_Core_Version
-#                Parser::Ruby26::Racc_Runtime_Core_Version_C
 #                Parser::Ruby26::Racc_Runtime_Core_Version_R
+#                Parser::Ruby26::Racc_Runtime_Core_Version_C
 #                Parser::Ruby26::Racc_Runtime_Version
 #                Parser::Ruby26::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Revision_C
 # Did you mean?  Parser::Ruby26::Racc_Runtime_Core_Revision_R
 #                Parser::Ruby26::Racc_Runtime_Revision
-#                Parser::Ruby26::Racc_Runtime_Core_Version_C
 #                Parser::Ruby26::Racc_Runtime_Core_Version_R
+#                Parser::Ruby26::Racc_Runtime_Core_Version_C
 #                Parser::Ruby26::Racc_Runtime_Core_Version
 #                Parser::Ruby26::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Revision_R
 # Did you mean?  Parser::Ruby26::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby26::Racc_Runtime_Revision
-#                Parser::Ruby26::Racc_Runtime_Core_Version_C
 #                Parser::Ruby26::Racc_Runtime_Core_Version_R
+#                Parser::Ruby26::Racc_Runtime_Core_Version_C
 #                Parser::Ruby26::Racc_Runtime_Core_Version
 # uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Version
 # Did you mean?  Parser::Ruby26::Racc_Runtime_Revision
 #                Parser::Ruby26::Racc_Runtime_Core_Revision
-#                Parser::Ruby26::Racc_Runtime_Core_Version_C
 #                Parser::Ruby26::Racc_Runtime_Core_Version_R
-#                Parser::Ruby26::Racc_Runtime_Core_Revision_C
+#                Parser::Ruby26::Racc_Runtime_Core_Version_C
 #                Parser::Ruby26::Racc_Runtime_Core_Revision_R
+#                Parser::Ruby26::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby26::Racc_Runtime_Version
 #                Parser::Ruby26::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Version_C
 # Did you mean?  Parser::Ruby26::Racc_Runtime_Core_Version_R
-#                Parser::Ruby26::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby26::Racc_Runtime_Core_Revision_R
+#                Parser::Ruby26::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby26::Racc_Runtime_Revision
 #                Parser::Ruby26::Racc_Runtime_Core_Revision
 #                Parser::Ruby26::Racc_Runtime_Version
 #                Parser::Ruby26::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Version_R
 # Did you mean?  Parser::Ruby26::Racc_Runtime_Core_Version_C
-#                Parser::Ruby26::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby26::Racc_Runtime_Core_Revision_R
+#                Parser::Ruby26::Racc_Runtime_Core_Revision_C
 #                Parser::Ruby26::Racc_Runtime_Revision
 #                Parser::Ruby26::Racc_Runtime_Core_Revision
 #                Parser::Ruby26::Racc_Runtime_Version
@@ -7661,24 +7426,24 @@
 # wrong constant name fnmatch?
 # wrong constant name glob
 # wrong constant name make_symlink
-# uninitialized constant #<Class:0x000055c9e7e3dcd8>::ACTIONS
+# uninitialized constant #<Class:0x0000559a34028680>::ACTIONS
 # Did you mean?  Permission::ACTIONS
-# uninitialized constant #<Class:0x000055c9e7e3dcd8>::CALLBACKS
+# uninitialized constant #<Class:0x0000559a34028680>::CALLBACKS
 # Did you mean?  Permission::Callbacks
 #                Permission::Callback
 #                Permission::CALLBACKS
-# uninitialized constant #<Class:0x000055c9e7e3dcd8>::CALLBACK_FILTER_TYPES
+# uninitialized constant #<Class:0x0000559a34028680>::CALLBACK_FILTER_TYPES
 # Did you mean?  Permission::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055c9e7e3dcd8>::CALL_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a34028680>::CALL_COMPILABLE_REGEXP
 # Did you mean?  Permission::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedRelationMethods>
-# uninitialized constant #<Class:0x000055c9e7e3dcd8>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant #<Class:0x0000559a34028680>::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  Permission::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055c9e7e3dcd8>::NAME_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a34028680>::NAME_COMPILABLE_REGEXP
 # Did you mean?  Permission::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055c9e7e3dcd8>::RESTRICTED_CLASS_METHODS
+# uninitialized constant #<Class:0x0000559a34028680>::RESTRICTED_CLASS_METHODS
 # Did you mean?  Permission::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055c9e7e3dcd8>::UNASSIGNABLE_KEYS
+# uninitialized constant #<Class:0x0000559a34028680>::UNASSIGNABLE_KEYS
 # Did you mean?  Permission::UNASSIGNABLE_KEYS
 # wrong constant name autosave_associated_records_for_holder
 # uninitialized constant Permission::ActiveRecord_AssociationRelation::CLAUSE_METHODS
@@ -7740,24 +7505,24 @@
 # Did you mean?  Permission::ActiveRecord_Relation::CLAUSE_METHODS
 # wrong constant name reload_holder
 # wrong constant name <static-init>
-# uninitialized constant #<Class:0x000055c9e81f2108>::ACTIONS
+# uninitialized constant #<Class:0x0000559a3412cba8>::ACTIONS
 # Did you mean?  Person::ACTIONS
-# uninitialized constant #<Class:0x000055c9e81f2108>::CALLBACKS
+# uninitialized constant #<Class:0x0000559a3412cba8>::CALLBACKS
 # Did you mean?  Person::Callbacks
 #                Person::Callback
 #                Person::CALLBACKS
-# uninitialized constant #<Class:0x000055c9e81f2108>::CALLBACK_FILTER_TYPES
+# uninitialized constant #<Class:0x0000559a3412cba8>::CALLBACK_FILTER_TYPES
 # Did you mean?  Person::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055c9e81f2108>::CALL_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a3412cba8>::CALL_COMPILABLE_REGEXP
 # Did you mean?  Person::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedRelationMethods>
-# uninitialized constant #<Class:0x000055c9e81f2108>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant #<Class:0x0000559a3412cba8>::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  Person::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055c9e81f2108>::NAME_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a3412cba8>::NAME_COMPILABLE_REGEXP
 # Did you mean?  Person::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055c9e81f2108>::RESTRICTED_CLASS_METHODS
+# uninitialized constant #<Class:0x0000559a3412cba8>::RESTRICTED_CLASS_METHODS
 # Did you mean?  Person::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055c9e81f2108>::UNASSIGNABLE_KEYS
+# uninitialized constant #<Class:0x0000559a3412cba8>::UNASSIGNABLE_KEYS
 # Did you mean?  Person::UNASSIGNABLE_KEYS
 # wrong constant name autosave_associated_records_for_client
 # wrong constant name autosave_associated_records_for_user
@@ -7833,6 +7598,8 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>
+# uninitialized constant Prime
+# uninitialized constant Prime
 # wrong constant name <<
 # wrong constant name ===
 # wrong constant name >>
@@ -8865,25 +8632,14 @@
 # Did you mean?  Person
 # uninitialized constant Puma::Server::WORKER_CHECK_INTERVAL
 # uninitialized constant Puma::Server::WRITE_TIMEOUT
-# undefined method `parse<defaultArg>1' for module `RDoc::Text'
-# undefined method `snippet<defaultArg>1' for module `RDoc::Text'
-# undefined method `wrap<defaultArg>1' for module `RDoc::Text'
-# wrong constant name expand_tabs
-# wrong constant name flush_left
-# wrong constant name markup
-# wrong constant name normalize_comment
-# wrong constant name parse<defaultArg>1
-# wrong constant name parse
-# wrong constant name snippet<defaultArg>1
-# wrong constant name snippet
-# wrong constant name strip_hashes
-# wrong constant name strip_newlines
-# wrong constant name strip_stars
-# wrong constant name to_html
-# wrong constant name wrap<defaultArg>1
-# wrong constant name wrap
-# wrong constant name <static-init>
-# wrong constant name encode_fallback
+# uninitialized constant RDoc::Constant::RDoc
+# Did you mean?  RDoc::RDoc
+# uninitialized constant RDoc::Constant::RDoc
+# Did you mean?  RDoc::RDoc
+# uninitialized constant RDoc::Markup::Special
+# uninitialized constant RDoc::Markup::Special
+# uninitialized constant RDoc::RipperStateLex
+# uninitialized constant RDoc::RipperStateLex
 # uninitialized constant REXML::Attribute::NAME
 # uninitialized constant REXML::Attribute::NAMECHAR
 # Did you mean?  REXML::Attribute::NAME_CHAR
@@ -9237,7 +8993,7 @@
 # uninitialized constant Rails::BacktraceCleaner::FORMATTED_GEMS_PATTERN
 # wrong constant name properties
 # wrong constant name properties=
-# undefined singleton method `property<defaultArg>1' for `#<Module:0x000055c9ec0a2c40>'
+# undefined singleton method `property<defaultArg>1' for `#<Module:0x0000559a37ffbe38>'
 # wrong constant name <static-init>
 # wrong constant name properties
 # wrong constant name properties=
@@ -9375,45 +9131,7 @@
 # wrong constant name fire_update!<defaultArg>2
 # wrong constant name fire_update!
 # wrong constant name ruby
-# wrong constant name <static-init>
-# wrong constant name basic_quote_characters
-# wrong constant name basic_quote_characters=
-# wrong constant name basic_word_break_characters
-# wrong constant name basic_word_break_characters=
-# wrong constant name completer_quote_characters
-# wrong constant name completer_quote_characters=
-# wrong constant name completer_word_break_characters
-# wrong constant name completer_word_break_characters=
-# wrong constant name completion_append_character
-# wrong constant name completion_append_character=
-# wrong constant name completion_case_fold
-# wrong constant name completion_case_fold=
-# wrong constant name completion_proc
-# wrong constant name completion_proc=
 # wrong constant name completion_quote_character
-# wrong constant name delete_text
-# wrong constant name emacs_editing_mode
-# wrong constant name emacs_editing_mode?
-# wrong constant name filename_quote_characters
-# wrong constant name filename_quote_characters=
-# wrong constant name get_screen_size
-# wrong constant name input=
-# wrong constant name insert_text
-# wrong constant name line_buffer
-# wrong constant name output=
-# wrong constant name point
-# wrong constant name point=
-# wrong constant name pre_input_hook
-# wrong constant name pre_input_hook=
-# wrong constant name quoting_detection_proc
-# wrong constant name quoting_detection_proc=
-# wrong constant name redisplay
-# wrong constant name refresh_line
-# wrong constant name set_screen_size
-# wrong constant name special_prefixes
-# wrong constant name special_prefixes=
-# wrong constant name vi_editing_mode
-# wrong constant name vi_editing_mode?
 # uninitialized constant Regexp::Parser::VERSION_CONST_REGEXP
 # uninitialized constant Regexp::Parser::VERSION_FORMAT
 # uninitialized constant Regexp::Parser::VERSION_REGEXP
@@ -9460,7 +9178,8 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name included
-# wrong constant name <Class:Filter>
+# uninitialized constant Rinda
+# uninitialized constant Rinda
 # wrong constant name <Class:Lexer>
 # wrong constant name <Class:SexpBuilder>
 # wrong constant name <Class:SexpBuilderPP>
@@ -9480,23 +9199,15 @@
 # Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Ripper::Filter'
 # Did you mean?  initialize_dup
-# undefined method `parse<defaultArg>1' for class `Ripper::Filter'
-# wrong constant name column
-# wrong constant name filename
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize<defaultArg>2
 # wrong constant name initialize
-# wrong constant name lineno
-# wrong constant name parse<defaultArg>1
-# wrong constant name parse
-# wrong constant name state
-# wrong constant name <static-init>
 # uninitialized constant Ripper::Lexer::EVENTS
 # Did you mean?  Ripper::EVENTS
 # uninitialized constant Ripper::Lexer::EXPR_ARG
 # Did you mean?  Ripper::Lexer::EXPR_BEG
-#                Ripper::EXPR_BEG
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_BEG
 # uninitialized constant Ripper::Lexer::EXPR_ARG_ANY
 # Did you mean?  Ripper::Lexer::EXPR_END_ANY
 #                Ripper::Lexer::EXPR_BEG_ANY
@@ -9505,8 +9216,8 @@
 #                Ripper::EXPR_BEG_ANY
 # uninitialized constant Ripper::Lexer::EXPR_BEG
 # Did you mean?  Ripper::Lexer::EXPR_ARG
-#                Ripper::EXPR_BEG
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_BEG
 # uninitialized constant Ripper::Lexer::EXPR_BEG_ANY
 # Did you mean?  Ripper::Lexer::EXPR_END_ANY
 #                Ripper::Lexer::EXPR_ARG_ANY
@@ -9531,8 +9242,8 @@
 #                Ripper::EXPR_ENDFN
 # uninitialized constant Ripper::Lexer::EXPR_ENDARG
 # Did you mean?  Ripper::Lexer::EXPR_ARG
-#                Ripper::EXPR_END
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_END
 #                Ripper::Lexer::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 #                Ripper::Lexer::EXPR_CMDARG
@@ -9635,8 +9346,8 @@
 # Did you mean?  Ripper::EVENTS
 # uninitialized constant Ripper::SexpBuilder::EXPR_ARG
 # Did you mean?  Ripper::SexpBuilder::EXPR_BEG
-#                Ripper::EXPR_BEG
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_BEG
 # uninitialized constant Ripper::SexpBuilder::EXPR_ARG_ANY
 # Did you mean?  Ripper::SexpBuilder::EXPR_END_ANY
 #                Ripper::SexpBuilder::EXPR_BEG_ANY
@@ -9645,8 +9356,8 @@
 #                Ripper::EXPR_BEG_ANY
 # uninitialized constant Ripper::SexpBuilder::EXPR_BEG
 # Did you mean?  Ripper::SexpBuilder::EXPR_ARG
-#                Ripper::EXPR_BEG
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_BEG
 # uninitialized constant Ripper::SexpBuilder::EXPR_BEG_ANY
 # Did you mean?  Ripper::SexpBuilder::EXPR_END_ANY
 #                Ripper::SexpBuilder::EXPR_ARG_ANY
@@ -9671,8 +9382,8 @@
 #                Ripper::EXPR_ENDFN
 # uninitialized constant Ripper::SexpBuilder::EXPR_ENDARG
 # Did you mean?  Ripper::SexpBuilder::EXPR_ARG
-#                Ripper::EXPR_END
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_END
 #                Ripper::SexpBuilder::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 #                Ripper::SexpBuilder::EXPR_CMDARG
@@ -9925,8 +9636,8 @@
 # Did you mean?  Ripper::EVENTS
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_ARG
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_BEG
-#                Ripper::EXPR_BEG
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_BEG
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_ARG_ANY
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_END_ANY
 #                Ripper::SexpBuilderPP::EXPR_BEG_ANY
@@ -9935,8 +9646,8 @@
 #                Ripper::EXPR_BEG_ANY
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_BEG
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_ARG
-#                Ripper::EXPR_BEG
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_BEG
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_BEG_ANY
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_END_ANY
 #                Ripper::SexpBuilderPP::EXPR_ARG_ANY
@@ -9961,8 +9672,8 @@
 #                Ripper::EXPR_ENDFN
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_ENDARG
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_ARG
-#                Ripper::EXPR_END
 #                Ripper::EXPR_ARG
+#                Ripper::EXPR_END
 #                Ripper::SexpBuilderPP::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 #                Ripper::SexpBuilderPP::EXPR_CMDARG
@@ -10045,37 +9756,27 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name compile
-# undefined singleton method `lex<defaultArg>1' for `Ripper'
-# undefined singleton method `lex<defaultArg>2' for `Ripper'
-# undefined singleton method `parse<defaultArg>1' for `Ripper'
-# undefined singleton method `parse<defaultArg>2' for `Ripper'
 # wrong constant name dedent_string
-# wrong constant name lex<defaultArg>1
-# wrong constant name lex<defaultArg>2
-# wrong constant name lex
 # wrong constant name lex_state_name
-# wrong constant name parse<defaultArg>1
-# wrong constant name parse<defaultArg>2
-# wrong constant name parse
 # wrong constant name token_match
-# uninitialized constant #<Class:0x000055c9e7f6fbb0>::ACTIONS
+# uninitialized constant #<Class:0x0000559a3404e7b8>::ACTIONS
 # Did you mean?  Role::ACTIONS
-# uninitialized constant #<Class:0x000055c9e7f6fbb0>::CALLBACKS
+# uninitialized constant #<Class:0x0000559a3404e7b8>::CALLBACKS
 # Did you mean?  Role::Callbacks
 #                Role::Callback
 #                Role::CALLBACKS
-# uninitialized constant #<Class:0x000055c9e7f6fbb0>::CALLBACK_FILTER_TYPES
+# uninitialized constant #<Class:0x0000559a3404e7b8>::CALLBACK_FILTER_TYPES
 # Did you mean?  Role::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055c9e7f6fbb0>::CALL_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a3404e7b8>::CALL_COMPILABLE_REGEXP
 # Did you mean?  Role::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedRelationMethods>
-# uninitialized constant #<Class:0x000055c9e7f6fbb0>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant #<Class:0x0000559a3404e7b8>::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  Role::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055c9e7f6fbb0>::NAME_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a3404e7b8>::NAME_COMPILABLE_REGEXP
 # Did you mean?  Role::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055c9e7f6fbb0>::RESTRICTED_CLASS_METHODS
+# uninitialized constant #<Class:0x0000559a3404e7b8>::RESTRICTED_CLASS_METHODS
 # Did you mean?  Role::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055c9e7f6fbb0>::UNASSIGNABLE_KEYS
+# uninitialized constant #<Class:0x0000559a3404e7b8>::UNASSIGNABLE_KEYS
 # Did you mean?  Role::UNASSIGNABLE_KEYS
 # wrong constant name after_add_for_permissions
 # wrong constant name after_add_for_permissions=
@@ -10216,24 +9917,24 @@
 # wrong constant name before_remove_for_users
 # wrong constant name before_remove_for_users=
 # wrong constant name before_remove_for_users?
-# uninitialized constant #<Class:0x000055c9e82fd840>::ACTIONS
+# uninitialized constant #<Class:0x0000559a342b9c00>::ACTIONS
 # Did you mean?  RoleAssignment::ACTIONS
-# uninitialized constant #<Class:0x000055c9e82fd840>::CALLBACKS
+# uninitialized constant #<Class:0x0000559a342b9c00>::CALLBACKS
 # Did you mean?  RoleAssignment::Callbacks
 #                RoleAssignment::Callback
 #                RoleAssignment::CALLBACKS
-# uninitialized constant #<Class:0x000055c9e82fd840>::CALLBACK_FILTER_TYPES
+# uninitialized constant #<Class:0x0000559a342b9c00>::CALLBACK_FILTER_TYPES
 # Did you mean?  RoleAssignment::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055c9e82fd840>::CALL_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a342b9c00>::CALL_COMPILABLE_REGEXP
 # Did you mean?  RoleAssignment::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedRelationMethods>
-# uninitialized constant #<Class:0x000055c9e82fd840>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant #<Class:0x0000559a342b9c00>::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  RoleAssignment::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055c9e82fd840>::NAME_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a342b9c00>::NAME_COMPILABLE_REGEXP
 # Did you mean?  RoleAssignment::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055c9e82fd840>::RESTRICTED_CLASS_METHODS
+# uninitialized constant #<Class:0x0000559a342b9c00>::RESTRICTED_CLASS_METHODS
 # Did you mean?  RoleAssignment::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055c9e82fd840>::UNASSIGNABLE_KEYS
+# uninitialized constant #<Class:0x0000559a342b9c00>::UNASSIGNABLE_KEYS
 # Did you mean?  RoleAssignment::UNASSIGNABLE_KEYS
 # wrong constant name autosave_associated_records_for_role
 # wrong constant name autosave_associated_records_for_user
@@ -10303,64 +10004,23 @@
 # wrong constant name reload_role
 # wrong constant name reload_user
 # wrong constant name <static-init>
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::CLAUSE_METHODS
-# Did you mean?  RoleValidator::ActiveRecord_AssociationRelation::ClassMethods
-#                RoleValidator::ClassMethods
-#                RoleValidator::ActiveRecord_AssociationRelation::VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::DEFAULT_VALUES
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::FROZEN_EMPTY_ARRAY
-# Did you mean?  RoleValidator::ActiveRecord_AssociationRelation::FROZEN_EMPTY_HASH
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::FROZEN_EMPTY_HASH
-# Did you mean?  RoleValidator::ActiveRecord_AssociationRelation::FROZEN_EMPTY_ARRAY
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::INVALID_METHODS_FOR_DELETE_ALL
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::MULTI_VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::ONE_AS_ONE
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::ORDER_IGNORE_MESSAGE
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::SINGLE_VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::STRUCTURAL_OR_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::VALID_DIRECTIONS
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::VALID_UNSCOPING_VALUES
-# uninitialized constant RoleValidator::ActiveRecord_AssociationRelation::VALUE_METHODS
-# Did you mean?  RoleValidator::ActiveRecord_AssociationRelation::CLAUSE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::CLAUSE_METHODS
-# Did you mean?  RoleValidator::ActiveRecord_Associations_CollectionProxy::ClassMethods
-#                RoleValidator::ClassMethods
-#                RoleValidator::ActiveRecord_Associations_CollectionProxy::VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::DEFAULT_VALUES
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_ARRAY
-# Did you mean?  RoleValidator::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_HASH
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_HASH
-# Did you mean?  RoleValidator::ActiveRecord_Associations_CollectionProxy::FROZEN_EMPTY_ARRAY
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::INVALID_METHODS_FOR_DELETE_ALL
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::MULTI_VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::ONE_AS_ONE
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::ORDER_IGNORE_MESSAGE
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::SINGLE_VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::STRUCTURAL_OR_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::VALID_DIRECTIONS
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::VALID_UNSCOPING_VALUES
-# uninitialized constant RoleValidator::ActiveRecord_Associations_CollectionProxy::VALUE_METHODS
-# Did you mean?  RoleValidator::ActiveRecord_Associations_CollectionProxy::CLAUSE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Relation::CLAUSE_METHODS
-# Did you mean?  RoleValidator::ActiveRecord_Relation::ClassMethods
-#                RoleValidator::ClassMethods
-#                RoleValidator::ActiveRecord_Relation::VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Relation::DEFAULT_VALUES
-# uninitialized constant RoleValidator::ActiveRecord_Relation::FROZEN_EMPTY_ARRAY
-# Did you mean?  RoleValidator::ActiveRecord_Relation::FROZEN_EMPTY_HASH
-# uninitialized constant RoleValidator::ActiveRecord_Relation::FROZEN_EMPTY_HASH
-# Did you mean?  RoleValidator::ActiveRecord_Relation::FROZEN_EMPTY_ARRAY
-# uninitialized constant RoleValidator::ActiveRecord_Relation::INVALID_METHODS_FOR_DELETE_ALL
-# uninitialized constant RoleValidator::ActiveRecord_Relation::MULTI_VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Relation::ONE_AS_ONE
-# uninitialized constant RoleValidator::ActiveRecord_Relation::ORDER_IGNORE_MESSAGE
-# uninitialized constant RoleValidator::ActiveRecord_Relation::SINGLE_VALUE_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Relation::STRUCTURAL_OR_METHODS
-# uninitialized constant RoleValidator::ActiveRecord_Relation::VALID_DIRECTIONS
-# uninitialized constant RoleValidator::ActiveRecord_Relation::VALID_UNSCOPING_VALUES
-# uninitialized constant RoleValidator::ActiveRecord_Relation::VALUE_METHODS
-# Did you mean?  RoleValidator::ActiveRecord_Relation::CLAUSE_METHODS
-# wrong constant name <static-init>
+# uninitialized constant RoleValidator::CALLBACK_FILTER_TYPES
+# wrong constant name __callbacks
+# wrong constant name __callbacks?
+# wrong constant name _run_validate_callbacks
+# wrong constant name _validate_callbacks
+# wrong constant name _validators
+# wrong constant name _validators?
+# wrong constant name model_name
+# wrong constant name validation_context
+# wrong constant name __callbacks
+# wrong constant name __callbacks=
+# wrong constant name __callbacks?
+# wrong constant name _validate_callbacks
+# wrong constant name _validate_callbacks=
+# wrong constant name _validators
+# wrong constant name _validators=
+# wrong constant name _validators?
 # uninitialized constant RuboCop::AST::ArrayNode::ASSIGNMENTS
 # uninitialized constant RuboCop::AST::ArrayNode::BASIC_CONDITIONALS
 # uninitialized constant RuboCop::AST::ArrayNode::BASIC_LITERALS
@@ -11537,7 +11197,6 @@
 # uninitialized constant SQLite3::Database::WAL_CHECKPOINTS
 # uninitialized constant Scanf
 # uninitialized constant Scanf
-# wrong constant name bytes
 # uninitialized constant Selenium::WebDriver::Interactions::PointerMove::PAUSE
 # Did you mean?  Selenium::WebDriver::Interactions::Pause
 #                Parser
@@ -11564,14 +11223,8 @@
 # wrong constant name pretty_print
 # wrong constant name pretty_print_cycle
 # wrong constant name reset
-# wrong constant name <static-init>
-# wrong constant name escape
-# wrong constant name join
-# wrong constant name shellescape
-# wrong constant name shelljoin
-# wrong constant name shellsplit
-# wrong constant name shellwords
-# wrong constant name split
+# uninitialized constant Shell
+# uninitialized constant Shell
 # wrong constant name signm
 # wrong constant name signo
 # undefined method `_dump<defaultArg>1' for module `Singleton'
@@ -13574,6 +13227,12 @@
 # wrong constant name xorshift
 # wrong constant name <static-init>
 # wrong constant name <static-init>
+# uninitialized constant ThreadsWait
+# Did you mean?  Threadsafe
+#                ThreadSafe
+# uninitialized constant ThreadsWait
+# Did you mean?  Threadsafe
+#                ThreadSafe
 # wrong constant name <Class:BuilderTemplate>
 # wrong constant name <Class:CSVTemplate>
 # wrong constant name <Class:ERBTemplate>
@@ -13846,28 +13505,28 @@
 # wrong constant name tag
 # wrong constant name value
 # wrong constant name <static-init>
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::ACTIONS
+# uninitialized constant #<Class:0x0000559a35bc17e8>::ACTIONS
 # Did you mean?  User::ACTIONS
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::BLACKLIST_FOR_SERIALIZATION
+# uninitialized constant #<Class:0x0000559a35bc17e8>::BLACKLIST_FOR_SERIALIZATION
 # Did you mean?  User::BLACKLIST_FOR_SERIALIZATION
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::CALLBACKS
+# uninitialized constant #<Class:0x0000559a35bc17e8>::CALLBACKS
 # Did you mean?  User::Callbacks
 #                User::Callback
 #                User::CALLBACKS
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::CALLBACK_FILTER_TYPES
+# uninitialized constant #<Class:0x0000559a35bc17e8>::CALLBACK_FILTER_TYPES
 # Did you mean?  User::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::CALL_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a35bc17e8>::CALL_COMPILABLE_REGEXP
 # Did you mean?  User::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedRelationMethods>
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant #<Class:0x0000559a35bc17e8>::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  User::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::NAME_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x0000559a35bc17e8>::NAME_COMPILABLE_REGEXP
 # Did you mean?  User::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::RESTRICTED_CLASS_METHODS
+# uninitialized constant #<Class:0x0000559a35bc17e8>::RESTRICTED_CLASS_METHODS
 # Did you mean?  User::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::UNASSIGNABLE_KEYS
+# uninitialized constant #<Class:0x0000559a35bc17e8>::UNASSIGNABLE_KEYS
 # Did you mean?  User::UNASSIGNABLE_KEYS
-# uninitialized constant #<Class:0x000055c9e98d4ab0>::VALIDATIONS
+# uninitialized constant #<Class:0x0000559a35bc17e8>::VALIDATIONS
 # Did you mean?  User::VALIDATIONS
 # wrong constant name after_add_for_role_assignments
 # wrong constant name after_add_for_role_assignments=
@@ -14078,11 +13737,7 @@
 # wrong constant name test_reset!
 # wrong constant name <static-init>
 # wrong constant name warn
-# wrong constant name <Class:RefError>
 # wrong constant name initialize
-# wrong constant name weakref_alive?
-# wrong constant name <static-init>
-# wrong constant name <static-init>
 # undefined method `extract<defaultArg>1' for class `WebConsole::Context'
 # wrong constant name extract<defaultArg>1
 # wrong constant name extract
@@ -14194,14 +13849,14 @@
 # uninitialized constant WebSocket::Driver::Client::OPENING_OPCODES
 # uninitialized constant WebSocket::Driver::Client::PACK_FORMATS
 # uninitialized constant WebSocket::Driver::Client::RSV1
-# Did you mean?  WebSocket::Driver::Client::RSV3
-#                WebSocket::Driver::Client::RSV2
+# Did you mean?  WebSocket::Driver::Client::RSV2
+#                WebSocket::Driver::Client::RSV3
 # uninitialized constant WebSocket::Driver::Client::RSV2
 # Did you mean?  WebSocket::Driver::Client::RSV3
 #                WebSocket::Driver::Client::RSV1
 # uninitialized constant WebSocket::Driver::Client::RSV3
-# Did you mean?  WebSocket::Driver::Client::RSV1
-#                WebSocket::Driver::Client::RSV2
+# Did you mean?  WebSocket::Driver::Client::RSV2
+#                WebSocket::Driver::Client::RSV1
 # uninitialized constant WebSocket::Driver::Client::STATES
 # Did you mean?  WebSocket::Driver::STATES
 # uninitialized constant WebSocket::Driver::Client::UNICODE

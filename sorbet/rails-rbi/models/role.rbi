@@ -26,10 +26,10 @@ module Role::GeneratedAttributeMethods
   sig { returns(T::Boolean) }
   def id?; end
 
-  sig { returns(T.nilable(String)) }
+  sig { returns(String) }
   def name; end
 
-  sig { params(value: T.nilable(T.any(String, Symbol))).void }
+  sig { params(value: T.any(String, Symbol)).void }
   def name=(value); end
 
   sig { returns(T::Boolean) }
@@ -198,6 +198,18 @@ module Role::QueryMethodsReturningRelation
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(Role::ActiveRecord_Relation) }
   def extending(*args, &block); end
+
+  sig do
+    params(
+      of: T.nilable(Integer),
+      start: T.nilable(Integer),
+      finish: T.nilable(Integer),
+      load: T.nilable(T::Boolean),
+      error_on_ignore: T.nilable(T::Boolean),
+      block: T.nilable(T.proc.params(e: Role::ActiveRecord_Relation).void)
+    ).returns(ActiveRecord::Batches::BatchEnumerator)
+  end
+  def in_batches(of: 1000, start: nil, finish: nil, load: false, error_on_ignore: nil, &block); end
 end
 
 module Role::QueryMethodsReturningAssociationRelation
@@ -299,6 +311,18 @@ module Role::QueryMethodsReturningAssociationRelation
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(Role::ActiveRecord_AssociationRelation) }
   def extending(*args, &block); end
+
+  sig do
+    params(
+      of: T.nilable(Integer),
+      start: T.nilable(Integer),
+      finish: T.nilable(Integer),
+      load: T.nilable(T::Boolean),
+      error_on_ignore: T.nilable(T::Boolean),
+      block: T.nilable(T.proc.params(e: Role::ActiveRecord_AssociationRelation).void)
+    ).returns(ActiveRecord::Batches::BatchEnumerator)
+  end
+  def in_batches(of: 1000, start: nil, finish: nil, load: false, error_on_ignore: nil, &block); end
 end
 
 class Role::ActiveRecord_Relation < ActiveRecord::Relation

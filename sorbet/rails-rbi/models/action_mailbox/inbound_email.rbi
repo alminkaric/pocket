@@ -65,9 +65,47 @@ class ActionMailbox::InboundEmail < ActiveRecord::Base
 
   sig { returns(T::Hash[T.any(String, Symbol), Integer]) }
   def self.statuses; end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.bounced(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.delivered(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.failed(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.not_bounced(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.not_delivered(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.not_failed(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.not_pending(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.not_processing(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.pending(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.processing(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
+  def self.with_attached_raw_email(*args); end
 end
 
-module ActionMailbox::InboundEmail::QueryMethodsReturningRelation
+class ActionMailbox::InboundEmail::ActiveRecord_Relation < ActiveRecord::Relation
+  include ActionMailbox::InboundEmail::ActiveRelation_WhereNot
+  include ActionMailbox::InboundEmail::CustomFinderMethods
+  include ActionMailbox::InboundEmail::QueryMethodsReturningRelation
+  Elem = type_member(fixed: ActionMailbox::InboundEmail)
+
   sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
   def bounced(*args); end
 
@@ -100,7 +138,100 @@ module ActionMailbox::InboundEmail::QueryMethodsReturningRelation
 
   sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
   def with_attached_raw_email(*args); end
+end
 
+class ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
+  include ActionMailbox::InboundEmail::ActiveRelation_WhereNot
+  include ActionMailbox::InboundEmail::CustomFinderMethods
+  include ActionMailbox::InboundEmail::QueryMethodsReturningAssociationRelation
+  Elem = type_member(fixed: ActionMailbox::InboundEmail)
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def bounced(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def delivered(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def failed(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_bounced(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_delivered(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_failed(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_pending(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_processing(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def pending(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def processing(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def with_attached_raw_email(*args); end
+end
+
+class ActionMailbox::InboundEmail::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
+  include ActionMailbox::InboundEmail::CustomFinderMethods
+  include ActionMailbox::InboundEmail::QueryMethodsReturningAssociationRelation
+  Elem = type_member(fixed: ActionMailbox::InboundEmail)
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def bounced(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def delivered(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def failed(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_bounced(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_delivered(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_failed(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_pending(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def not_processing(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def pending(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def processing(*args); end
+
+  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
+  def with_attached_raw_email(*args); end
+
+  sig { params(records: T.any(ActionMailbox::InboundEmail, T::Array[ActionMailbox::InboundEmail])).returns(T.self_type) }
+  def <<(*records); end
+
+  sig { params(records: T.any(ActionMailbox::InboundEmail, T::Array[ActionMailbox::InboundEmail])).returns(T.self_type) }
+  def append(*records); end
+
+  sig { params(records: T.any(ActionMailbox::InboundEmail, T::Array[ActionMailbox::InboundEmail])).returns(T.self_type) }
+  def push(*records); end
+
+  sig { params(records: T.any(ActionMailbox::InboundEmail, T::Array[ActionMailbox::InboundEmail])).returns(T.self_type) }
+  def concat(*records); end
+end
+
+module ActionMailbox::InboundEmail::QueryMethodsReturningRelation
   sig { returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
   def all; end
 
@@ -199,42 +330,21 @@ module ActionMailbox::InboundEmail::QueryMethodsReturningRelation
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(ActionMailbox::InboundEmail::ActiveRecord_Relation) }
   def extending(*args, &block); end
+
+  sig do
+    params(
+      of: T.nilable(Integer),
+      start: T.nilable(Integer),
+      finish: T.nilable(Integer),
+      load: T.nilable(T::Boolean),
+      error_on_ignore: T.nilable(T::Boolean),
+      block: T.nilable(T.proc.params(e: ActionMailbox::InboundEmail::ActiveRecord_Relation).void)
+    ).returns(ActiveRecord::Batches::BatchEnumerator)
+  end
+  def in_batches(of: 1000, start: nil, finish: nil, load: false, error_on_ignore: nil, &block); end
 end
 
 module ActionMailbox::InboundEmail::QueryMethodsReturningAssociationRelation
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def bounced(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def delivered(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def failed(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def not_bounced(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def not_delivered(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def not_failed(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def not_pending(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def not_processing(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def pending(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def processing(*args); end
-
-  sig { params(args: T.untyped).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
-  def with_attached_raw_email(*args); end
-
   sig { returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
   def all; end
 
@@ -333,20 +443,18 @@ module ActionMailbox::InboundEmail::QueryMethodsReturningAssociationRelation
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation) }
   def extending(*args, &block); end
-end
 
-class ActionMailbox::InboundEmail::ActiveRecord_Relation < ActiveRecord::Relation
-  include ActionMailbox::InboundEmail::ActiveRelation_WhereNot
-  include ActionMailbox::InboundEmail::CustomFinderMethods
-  include ActionMailbox::InboundEmail::QueryMethodsReturningRelation
-  Elem = type_member(fixed: ActionMailbox::InboundEmail)
-end
-
-class ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
-  include ActionMailbox::InboundEmail::ActiveRelation_WhereNot
-  include ActionMailbox::InboundEmail::CustomFinderMethods
-  include ActionMailbox::InboundEmail::QueryMethodsReturningAssociationRelation
-  Elem = type_member(fixed: ActionMailbox::InboundEmail)
+  sig do
+    params(
+      of: T.nilable(Integer),
+      start: T.nilable(Integer),
+      finish: T.nilable(Integer),
+      load: T.nilable(T::Boolean),
+      error_on_ignore: T.nilable(T::Boolean),
+      block: T.nilable(T.proc.params(e: ActionMailbox::InboundEmail::ActiveRecord_AssociationRelation).void)
+    ).returns(ActiveRecord::Batches::BatchEnumerator)
+  end
+  def in_batches(of: 1000, start: nil, finish: nil, load: false, error_on_ignore: nil, &block); end
 end
 
 module ActionMailbox::InboundEmail::GeneratedAssociationMethods
@@ -367,22 +475,4 @@ module ActionMailbox::InboundEmail::GeneratedAssociationMethods
 
   sig { params(attachable: T.untyped).returns(T.untyped) }
   def raw_email=(attachable); end
-end
-
-class ActionMailbox::InboundEmail::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
-  include ActionMailbox::InboundEmail::CustomFinderMethods
-  include ActionMailbox::InboundEmail::QueryMethodsReturningAssociationRelation
-  Elem = type_member(fixed: ActionMailbox::InboundEmail)
-
-  sig { params(records: T.any(ActionMailbox::InboundEmail, T::Array[ActionMailbox::InboundEmail])).returns(T.self_type) }
-  def <<(*records); end
-
-  sig { params(records: T.any(ActionMailbox::InboundEmail, T::Array[ActionMailbox::InboundEmail])).returns(T.self_type) }
-  def append(*records); end
-
-  sig { params(records: T.any(ActionMailbox::InboundEmail, T::Array[ActionMailbox::InboundEmail])).returns(T.self_type) }
-  def push(*records); end
-
-  sig { params(records: T.any(ActionMailbox::InboundEmail, T::Array[ActionMailbox::InboundEmail])).returns(T.self_type) }
-  def concat(*records); end
 end

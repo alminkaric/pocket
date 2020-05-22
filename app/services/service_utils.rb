@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 class ServiceUtils
+  extend T::Sig
   class << self
     extend T::Sig
     include Loggers
@@ -39,6 +40,12 @@ class ServiceUtils
     def delete(model, klass)
       debug_logger("Going to delete entry #{klass}=#{model.attributes} from database")
       model.destroy
+    end
+
+    sig { params(model: ApplicationRecord, validator: IValidator).void }
+    def validate(model, validator)
+      validator.init(model)
+      raise ValidationError, validator.errors unless validator.valid?
     end
   end
 end

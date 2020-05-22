@@ -29,12 +29,53 @@ class ActionText::RichText < ActiveRecord::Base
   extend ActionText::RichText::CustomFinderMethods
   extend ActionText::RichText::QueryMethodsReturningRelation
   RelationType = T.type_alias { T.any(ActionText::RichText::ActiveRecord_Relation, ActionText::RichText::ActiveRecord_Associations_CollectionProxy, ActionText::RichText::ActiveRecord_AssociationRelation) }
+
+  sig { params(args: T.untyped).returns(ActionText::RichText::ActiveRecord_Relation) }
+  def self.with_attached_embeds(*args); end
+end
+
+class ActionText::RichText::ActiveRecord_Relation < ActiveRecord::Relation
+  include ActionText::RichText::ActiveRelation_WhereNot
+  include ActionText::RichText::CustomFinderMethods
+  include ActionText::RichText::QueryMethodsReturningRelation
+  Elem = type_member(fixed: ActionText::RichText)
+
+  sig { params(args: T.untyped).returns(ActionText::RichText::ActiveRecord_Relation) }
+  def with_attached_embeds(*args); end
+end
+
+class ActionText::RichText::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
+  include ActionText::RichText::ActiveRelation_WhereNot
+  include ActionText::RichText::CustomFinderMethods
+  include ActionText::RichText::QueryMethodsReturningAssociationRelation
+  Elem = type_member(fixed: ActionText::RichText)
+
+  sig { params(args: T.untyped).returns(ActionText::RichText::ActiveRecord_AssociationRelation) }
+  def with_attached_embeds(*args); end
+end
+
+class ActionText::RichText::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
+  include ActionText::RichText::CustomFinderMethods
+  include ActionText::RichText::QueryMethodsReturningAssociationRelation
+  Elem = type_member(fixed: ActionText::RichText)
+
+  sig { params(args: T.untyped).returns(ActionText::RichText::ActiveRecord_AssociationRelation) }
+  def with_attached_embeds(*args); end
+
+  sig { params(records: T.any(ActionText::RichText, T::Array[ActionText::RichText])).returns(T.self_type) }
+  def <<(*records); end
+
+  sig { params(records: T.any(ActionText::RichText, T::Array[ActionText::RichText])).returns(T.self_type) }
+  def append(*records); end
+
+  sig { params(records: T.any(ActionText::RichText, T::Array[ActionText::RichText])).returns(T.self_type) }
+  def push(*records); end
+
+  sig { params(records: T.any(ActionText::RichText, T::Array[ActionText::RichText])).returns(T.self_type) }
+  def concat(*records); end
 end
 
 module ActionText::RichText::QueryMethodsReturningRelation
-  sig { params(args: T.untyped).returns(ActionText::RichText::ActiveRecord_Relation) }
-  def with_attached_embeds(*args); end
-
   sig { returns(ActionText::RichText::ActiveRecord_Relation) }
   def all; end
 
@@ -133,12 +174,21 @@ module ActionText::RichText::QueryMethodsReturningRelation
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(ActionText::RichText::ActiveRecord_Relation) }
   def extending(*args, &block); end
+
+  sig do
+    params(
+      of: T.nilable(Integer),
+      start: T.nilable(Integer),
+      finish: T.nilable(Integer),
+      load: T.nilable(T::Boolean),
+      error_on_ignore: T.nilable(T::Boolean),
+      block: T.nilable(T.proc.params(e: ActionText::RichText::ActiveRecord_Relation).void)
+    ).returns(ActiveRecord::Batches::BatchEnumerator)
+  end
+  def in_batches(of: 1000, start: nil, finish: nil, load: false, error_on_ignore: nil, &block); end
 end
 
 module ActionText::RichText::QueryMethodsReturningAssociationRelation
-  sig { params(args: T.untyped).returns(ActionText::RichText::ActiveRecord_AssociationRelation) }
-  def with_attached_embeds(*args); end
-
   sig { returns(ActionText::RichText::ActiveRecord_AssociationRelation) }
   def all; end
 
@@ -237,20 +287,18 @@ module ActionText::RichText::QueryMethodsReturningAssociationRelation
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(ActionText::RichText::ActiveRecord_AssociationRelation) }
   def extending(*args, &block); end
-end
 
-class ActionText::RichText::ActiveRecord_Relation < ActiveRecord::Relation
-  include ActionText::RichText::ActiveRelation_WhereNot
-  include ActionText::RichText::CustomFinderMethods
-  include ActionText::RichText::QueryMethodsReturningRelation
-  Elem = type_member(fixed: ActionText::RichText)
-end
-
-class ActionText::RichText::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
-  include ActionText::RichText::ActiveRelation_WhereNot
-  include ActionText::RichText::CustomFinderMethods
-  include ActionText::RichText::QueryMethodsReturningAssociationRelation
-  Elem = type_member(fixed: ActionText::RichText)
+  sig do
+    params(
+      of: T.nilable(Integer),
+      start: T.nilable(Integer),
+      finish: T.nilable(Integer),
+      load: T.nilable(T::Boolean),
+      error_on_ignore: T.nilable(T::Boolean),
+      block: T.nilable(T.proc.params(e: ActionText::RichText::ActiveRecord_AssociationRelation).void)
+    ).returns(ActiveRecord::Batches::BatchEnumerator)
+  end
+  def in_batches(of: 1000, start: nil, finish: nil, load: false, error_on_ignore: nil, &block); end
 end
 
 module ActionText::RichText::GeneratedAssociationMethods
@@ -282,23 +330,5 @@ module ActionText::RichText::GeneratedAssociationMethods
   def embeds; end
 
   sig { params(attachables: T.untyped).returns(T.untyped) }
-  def embeds=(*attachables); end
-end
-
-class ActionText::RichText::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
-  include ActionText::RichText::CustomFinderMethods
-  include ActionText::RichText::QueryMethodsReturningAssociationRelation
-  Elem = type_member(fixed: ActionText::RichText)
-
-  sig { params(records: T.any(ActionText::RichText, T::Array[ActionText::RichText])).returns(T.self_type) }
-  def <<(*records); end
-
-  sig { params(records: T.any(ActionText::RichText, T::Array[ActionText::RichText])).returns(T.self_type) }
-  def append(*records); end
-
-  sig { params(records: T.any(ActionText::RichText, T::Array[ActionText::RichText])).returns(T.self_type) }
-  def push(*records); end
-
-  sig { params(records: T.any(ActionText::RichText, T::Array[ActionText::RichText])).returns(T.self_type) }
-  def concat(*records); end
+  def embeds=(attachables); end
 end
