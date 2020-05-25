@@ -18,7 +18,7 @@ class RoleService
 
   sig { override.params(id: Integer).returns(Role) }
   def get(id)
-    ServiceUtils.get(id, Role)
+    ServiceUtils::Crud.get(id, Role)
   end
 
   # @return [Role,nil]
@@ -43,21 +43,21 @@ class RoleService
 
   sig { override.returns(T::Array[Role]) }
   def load_all
-    ServiceUtils.load_all(Role)
+    ServiceUtils::Crud.load_all(Role)
   end
 
   sig { override.params(role: Role).returns(Role) }
   def save(role)
     @permission_service.check_user_permission_for('save')
 
-    ServiceUtils.save(role, Role)
+    ServiceUtils::Crud.save(role, Role)
   end
 
   sig { override.params(role: Role).void }
   def delete(role)
     @permission_service.check_user_permission_for('delete')
 
-    ServiceUtils.delete(role, Role)
+    ServiceUtils::Crud.delete(role)
   end
 
   #

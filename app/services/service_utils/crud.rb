@@ -1,8 +1,7 @@
 # typed: strict
 # frozen_string_literal: true
 
-class ServiceUtils
-  extend T::Sig
+class ServiceUtils::Crud
   class << self
     extend T::Sig
     include Loggers
@@ -36,16 +35,10 @@ class ServiceUtils
       model
     end
 
-    sig { params(model: ApplicationRecord, klass: T.class_of(ApplicationRecord)).void }
-    def delete(model, klass)
-      debug_logger("Going to delete entry #{klass}=#{model.attributes} from database")
+    sig { params(model: ApplicationRecord).void }
+    def delete(model)
+      debug_logger("Going to delete entry #{model.class}=#{model.attributes} from database")
       model.destroy
-    end
-
-    sig { params(model: ApplicationRecord, validator: IValidator).void }
-    def validate(model, validator)
-      validator.init(model)
-      raise ValidationError, validator.errors unless validator.valid?
     end
   end
 end

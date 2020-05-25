@@ -19,6 +19,16 @@ class ServiceFactory
       UserService.new(params)
     end
 
+    sig { returns(PersonService) }
+    def person_service
+      PersonService.new(client_service)
+    end
+
+    sig { returns(ClientService) }
+    def client_service
+      ClientService.new
+    end
+
     sig { params(class_to_check: Class, current_user: T.nilable(User)).returns(PermissionService) }
     def permission_service(class_to_check, current_user = nil)
       class_name = T.must(class_to_check.name)

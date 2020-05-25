@@ -8,10 +8,10 @@ module Permission::ActiveRelation_WhereNot
 end
 
 module Permission::GeneratedAttributeMethods
-  sig { returns(T.nilable(String)) }
+  sig { returns(String) }
   def class_name; end
 
-  sig { params(value: T.nilable(T.any(String, Symbol))).void }
+  sig { params(value: T.any(String, Symbol)).void }
   def class_name=(value); end
 
   sig { returns(T::Boolean) }
@@ -53,10 +53,10 @@ module Permission::GeneratedAttributeMethods
   sig { returns(T::Boolean) }
   def id?; end
 
-  sig { returns(T.nilable(String)) }
+  sig { returns(String) }
   def method_name; end
 
-  sig { params(value: T.nilable(T.any(String, Symbol))).void }
+  sig { params(value: T.any(String, Symbol)).void }
   def method_name=(value); end
 
   sig { returns(T::Boolean) }

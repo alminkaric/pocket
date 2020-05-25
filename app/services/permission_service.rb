@@ -14,12 +14,12 @@ class PermissionService
 
   sig { override.params(id: Integer).returns(Permission) }
   def get(id)
-    ServiceUtils.get(id, Permission)
+    ServiceUtils::Crud.get(id, Permission)
   end
 
   sig { override.returns(T::Array[Permission]) }
   def load_all
-    ServiceUtils.load_all(Permission)
+    ServiceUtils::Crud.load_all(Permission)
   end
 
   sig { params(method_name: String).void }
@@ -31,14 +31,14 @@ class PermissionService
   sig { override.params(permission: Permission).returns(ApplicationRecord) }
   def save(permission)
     check_user_permission_for('save')
-    ServiceUtils.save(permission, Permission)
+    ServiceUtils::Crud.save(permission, Permission)
   end
 
   sig { override.params(permission: Permission).void }
   def delete(permission)
     check_user_permission_for('delete')
 
-    ServiceUtils.delete(permission, Permission)
+    ServiceUtils::Crud.delete(permission)
   end
 
   private

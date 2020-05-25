@@ -33,12 +33,12 @@ class UserTestData
 
     sig { returns(UserService) }
     def user_service
-      ServiceFactory.user_service(User.admin_user)
+      ServiceFactory.user_service(User.admin)
     end
 
     sig { returns(RoleService) }
     def role_service
-      ServiceFactory.role_service(User.admin_user)
+      ServiceFactory.role_service(User.admin)
     end
   end
 end

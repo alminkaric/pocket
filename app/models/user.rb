@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :roles, through: :role_assignments
 
   sig { returns(User) }
-  def self.admin_user
+  def self.admin
     # tried as constant but didn't work in test env
     T.must(User.find_by(email: 'admin@pocket.com'))
   end

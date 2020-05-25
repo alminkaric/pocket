@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 2020_05_04_203337) do
   end
 
   create_table "permissions", force: :cascade do |t|
-    t.string "class_name"
-    t.string "method_name"
+    t.string "class_name", null: false
+    t.string "method_name", null: false
     t.string "holder_type", null: false
     t.integer "holder_id", null: false
     t.datetime "created_at", precision: 6, null: false

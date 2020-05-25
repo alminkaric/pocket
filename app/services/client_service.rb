@@ -3,7 +3,30 @@
 
 ##
 # CRUD method for Client model
-class ClientService < ApplicationService
+class ClientService
+  extend T::Sig
+  include IService
+
+  sig { override.params(id: Integer).returns(Client) }
+  def get(id)
+    ServiceUtils::Crud.get(id, Client)
+  end
+
+  sig { override.returns(T::Array[Client]) }
+  def load_all
+    ServiceUtils::Crud.load_all(Client)
+  end
+
+  sig { override.params(client: Client).returns(Client) }
+  def save(client)
+    ServiceUtils::Crud.save(client, Client)
+  end
+
+  sig { override.params(client: Client).void }
+  def delete(client)
+    ServiceUtils::Crud.delete(client)
+  end
+
   ##
   # Creates new record of client based on the following params
   # @param name [String]
@@ -21,18 +44,14 @@ class ClientService < ApplicationService
   end
 
   # TODO: Add doc
-  sig { params(ids: T::Array[Integer]).returns(Client::ActiveRecord_Associations_CollectionProxy) }
+  sig { params(ids: T::Array[Integer]).returns(T::Array[Client]) }
   def find_by_ids_or_all(*ids)
     all_ids_integer = ids.all? { |i| i.is_a?(Integer) }
-    return T.cast(Client.where(ids: ids), Client::ActiveRecord_Associations_CollectionProxy) if all_ids_integer
+    if all_ids_integer
+      clients = Client.where(ids: ids)
+      return clients.to_a
+    end
 
     load_all
-  end
-
-  protected
-
-  sig { override.returns(T.class_of(ApplicationRecord)) }
-  def klass
-    Client
   end
 end

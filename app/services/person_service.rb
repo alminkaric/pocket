@@ -1,77 +1,32 @@
-# typed: true
+# typed: strict
 # frozen_string_literal: true
 
-class PersonService < ApplicationService
-  attr_reader :client_service
+class PersonService
+  extend T::Sig
+  include IService
 
-  def initialize
-    @client_service = ClientService.new
+  sig { params(client_service: ClientService).void }
+  def initialize(client_service)
+    @client_service = client_service
   end
 
-  sig { params(id: Integer).returns(Person) }
+  sig { override.params(id: Integer).returns(Person) }
   def get(id)
-    super(id)
+    ServiceUtils::Crud.get(id, Person)
   end
 
-  ##
-  # TODO: Add documentation
-  # @param email[string] Email of the user
-  # @return [Person]
-  #
-  sig do
-    params(
-      args: { first_name: String, last_name: String, email: String, password: String, client_id: Integer }
-    )
-      .returns(Person)
-  end
-  def create(args)
-    person = build_person_with_user(args)
-    puts "Creating person with params=#{args}"
-    save(person)
-    puts "New person created person=#{person}"
-    person
+  sig { override.returns(T::Array[Person]) }
+  def load_all
+    ServiceUtils::Crud.load_all(Person)
   end
 
-  # TODO: add doc
-  # @return [Person]
-  def update(params)
-    # @type [Person]
-    person = get(params[:id])
-
-    person.first_name = params[:first_name]
-    person.last_name = params[:last_name]
-    person.client_id = params[:client_id]
-    person.employee_id = params[:employee_id]
-
-    save(person)
+  sig { override.params(person: Person).returns(Person) }
+  def save(person)
+    ServiceUtils::Crud.save(person, Person)
   end
 
-  protected
-
-  def klass
-    Person
-  end
-
-  private
-
-  sig do
-    params(
-      first_name: String,
-      last_name: String,
-      email: String,
-      password: String,
-      client_id: Integer
-    ).returns(Person)
-  end
-  def build_person_with_user(first_name:, last_name:, email:, password:, client_id:)
-    user = User.new
-    user.email = email
-    user.password = password
-    person = Person.new
-    person.first_name = first_name
-    person.last_name = last_name
-    person.client_id = client_id
-    person.user = user
-    person
+  sig { override.params(person: Person).void }
+  def delete(person)
+    ServiceUtils::Crud.delete(person)
   end
 end

@@ -6,7 +6,7 @@ require 'rails_helper'
 RSpec.describe UserService do
   # @!method subject
   #   @return [UserService]
-  subject { ServiceFactory.user_service(User.admin_user) }
+  subject { ServiceFactory.user_service(User.admin) }
 
   describe 'create method' do
     it 'creates a new user' do

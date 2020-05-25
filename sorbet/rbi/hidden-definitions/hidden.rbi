@@ -3951,20 +3951,6 @@ class ApplicationRecord
   extend ::T::InterfaceWrapper::Helpers
 end
 
-class ApplicationService
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class ApplicationValidator
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 module Arel
   VERSION = ::T.let(nil, ::T.untyped)
 end
@@ -4143,11 +4129,6 @@ class Backport::Server::Tcpip
 end
 
 module Backport::Server
-end
-
-class BaseValidator
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 BasicObject::BasicObject = BasicObject
@@ -5586,6 +5567,11 @@ class Client
   def self.before_remove_for_people=(val); end
 
   def self.before_remove_for_people?(); end
+end
+
+class ClientService
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class Complex
@@ -7123,8 +7109,6 @@ class File
   def self.lutime(*_); end
 
   def self.mkfifo(*_); end
-
-  def self.open!(file, *args, &block); end
 end
 
 FileList = Rake::FileList
@@ -10267,7 +10251,61 @@ module Permission::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
+class PermissionModelValidator
+  include ::ActiveSupport::Callbacks
+  include ::ActiveModel::Validations::HelperMethods
+  def __callbacks(); end
+
+  def __callbacks?(); end
+
+  def _run_validate_callbacks(&block); end
+
+  def _validate_callbacks(); end
+
+  def _validators(); end
+
+  def _validators?(); end
+
+  def model_name(*args, &block); end
+
+  def validation_context(); end
+end
+
+class PermissionModelValidator
+  extend ::ActiveModel::Callbacks
+  extend ::ActiveSupport::DescendantsTracker
+  extend ::ActiveModel::Translation
+  extend ::ActiveModel::Naming
+  extend ::ActiveModel::Validations::HelperMethods
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+  def self.__callbacks(); end
+
+  def self.__callbacks=(val); end
+
+  def self.__callbacks?(); end
+
+  def self._validate_callbacks(); end
+
+  def self._validate_callbacks=(value); end
+
+  def self._validators(); end
+
+  def self._validators=(val); end
+
+  def self._validators?(); end
+end
+
 class PermissionService
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class PermissionTestData
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class PermissionUniqueValidator
   extend ::T::Private::Methods::MethodHooks
   extend ::T::Private::Methods::SingletonMethodHooks
 end
@@ -10322,44 +10360,49 @@ module Person::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
+class PersonService
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 module Polyfill
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-module Polyfill::Module::M47060393424980
+module Polyfill::Module::M47068699531300
 end
 
-module Polyfill::Module::M47060393424980
+module Polyfill::Module::M47068699531300
 end
 
-module Polyfill::Module::M47060393727740
+module Polyfill::Module::M47068699752180
 end
 
-module Polyfill::Module::M47060393727740
+module Polyfill::Module::M47068699752180
 end
 
-module Polyfill::Module::M47060394045200
+module Polyfill::Module::M47068700069600
 end
 
-module Polyfill::Module::M47060394045200
+module Polyfill::Module::M47068700069600
 end
 
-module Polyfill::Module::M47060394770200
+module Polyfill::Module::M47068700786320
 end
 
-module Polyfill::Module::M47060394770200
+module Polyfill::Module::M47068700786320
 end
 
-module Polyfill::Module::M47060395064480
+module Polyfill::Module::M47068701080620
 end
 
-module Polyfill::Module::M47060395064480
+module Polyfill::Module::M47068701080620
 end
 
-module Polyfill::Module::M47060395578160
+module Polyfill::Module::M47068701610600
 end
 
-module Polyfill::Module::M47060395578160
+module Polyfill::Module::M47068701610600
 end
 
 class Proc
@@ -17225,7 +17268,11 @@ class ServiceFactory
   extend ::T::Private::Methods::SingletonMethodHooks
 end
 
-class ServiceUtils
+class ServiceUtils::Crud
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class ServiceUtils::Tools
   extend ::T::Private::Methods::SingletonMethodHooks
 end
 

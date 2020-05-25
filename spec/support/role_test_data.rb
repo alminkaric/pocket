@@ -25,7 +25,7 @@ class RoleTestData
     sig { returns(RoleService) }
     def role_service
       @role_service = T.let(@role_service, T.nilable(RoleService))
-      @role_service ||= ServiceFactory.role_service(User.admin_user)
+      @role_service ||= ServiceFactory.role_service(User.admin)
     end
   end
 end

@@ -7,14 +7,6 @@ class ValidatorFactory
 
     sig { params(validator_class: Class).returns(IValidator) }
     def get_validator(validator_class)
-      validator = instantiate_validator(validator_class)
-      BaseValidator.new(validator)
-    end
-
-    private
-
-    sig { params(validator_class: Class).returns(IValidator) }
-    def instantiate_validator(validator_class)
       T.cast(validator_class.new, IValidator)
     rescue TypeError
       # can happen when runing rspec so the 'T.cast(validator_class.new, IValidator)' fails
