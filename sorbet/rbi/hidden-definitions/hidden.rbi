@@ -5476,6 +5476,11 @@ class Class
   def json_creatable?(); end
 end
 
+class ClassExistValidator
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class Client
   def after_add_for_people(); end
 
@@ -7206,8 +7211,6 @@ class Gem::Specification
 end
 
 module GeneratedUrlHelpers
-  def _routes(); end
-
   def rails_info_path(*args); end
 
   def rails_info_properties_path(*args); end
@@ -10193,6 +10196,7 @@ end
 
 class Parser::Source::Comment::Associator
   MAGIC_COMMENT_RE = ::T.let(nil, ::T.untyped)
+  POSTFIX_TYPES = ::T.let(nil, ::T.untyped)
 end
 
 class Parser::Source::Rewriter
@@ -10369,40 +10373,40 @@ module Polyfill
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-module Polyfill::Module::M47068699531300
+module Polyfill::Module::M47454019548740
 end
 
-module Polyfill::Module::M47068699531300
+module Polyfill::Module::M47454019548740
 end
 
-module Polyfill::Module::M47068699752180
+module Polyfill::Module::M47454019859780
 end
 
-module Polyfill::Module::M47068699752180
+module Polyfill::Module::M47454019859780
 end
 
-module Polyfill::Module::M47068700069600
+module Polyfill::Module::M47454020169000
 end
 
-module Polyfill::Module::M47068700069600
+module Polyfill::Module::M47454020169000
 end
 
-module Polyfill::Module::M47068700786320
+module Polyfill::Module::M47454020910340
 end
 
-module Polyfill::Module::M47068700786320
+module Polyfill::Module::M47454020910340
 end
 
-module Polyfill::Module::M47068701080620
+module Polyfill::Module::M47454021171900
 end
 
-module Polyfill::Module::M47068701080620
+module Polyfill::Module::M47454021171900
 end
 
-module Polyfill::Module::M47068701610600
+module Polyfill::Module::M47454021701880
 end
 
-module Polyfill::Module::M47068701610600
+module Polyfill::Module::M47454021701880
 end
 
 class Proc
@@ -20247,10 +20251,6 @@ module Solargraph::YardMap::RdocToYard
 end
 
 class Solargraph::YardMap
-end
-
-module SorbetRails
-  TypeAssertDeprecation = ::T.let(nil, ::T.untyped)
 end
 
 SorbetRails::ModelPlugins::Base::Parameter = Parlour::RbiGenerator::Parameter

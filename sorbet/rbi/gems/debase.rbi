@@ -102,7 +102,7 @@ class Debase::Breakpoint
   def self.remove(arg0, arg1); end
   def source; end
 end
-module InvalidName___Class_0x00___InstructionSequenceMixin_64
+module InvalidName___Class_0x00___InstructionSequenceMixin_63
   def do_set_flags(iseq); end
   def load_iseq(path); end
 end

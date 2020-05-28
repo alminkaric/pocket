@@ -1,7 +1,7 @@
 # typed: strict
 # frozen_string_literal: true
 
-class UserValidator
+class UserModelValidator
   extend T::Sig
   include IModelValidator
 

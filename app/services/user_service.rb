@@ -7,13 +7,15 @@ class UserService
 
   sig do
     params(
+      crud: IService,
       permission_service: PermissionService,
       role_service: RoleService,
-      validator: IValidator,
+      validator: IServiceValidator,
       current_user: T.nilable(User)
     ).void
   end
-  def initialize(permission_service:, role_service:, validator:, current_user: nil)
+  def initialize(crud:, permission_service:, role_service:, validator:, current_user: nil)
+    @crud = crud
     @permission_service = permission_service
     @role_service = role_service
     @validator = validator
@@ -22,12 +24,12 @@ class UserService
 
   sig { override.params(id: Integer).returns(User) }
   def get(id)
-    ServiceUtils::Crud.get(id, User)
+    T.cast(@crud.get(id), User)
   end
 
   sig { override.returns(T::Array[User]) }
   def load_all
-    ServiceUtils::Crud.load_all(User)
+    T.cast(@crud.load_all, T::Array[User])
   end
 
   sig { params(email: String).returns(T.nilable(User)) }
@@ -55,16 +57,16 @@ class UserService
   sig { override.params(user: User).returns(User) }
   def save(user)
     @permission_service.check_user_permission_for('save') unless user.new_record? || own_user?(user)
-    ServiceUtils::Tools.validate(user, @validator)
+    @validator.validate(user)
 
-    ServiceUtils::Crud.save(user, User)
+    T.cast(@crud.save(user), User)
   end
 
   sig { override.params(user: User).void }
   def delete(user)
     @permission_service.check_user_permission_for('delete') unless own_user?(user)
 
-    ServiceUtils::Crud.delete(user)
+    @crud.delete(user)
   end
 
   private

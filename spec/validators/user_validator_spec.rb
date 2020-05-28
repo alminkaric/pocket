@@ -3,9 +3,9 @@
 
 require 'rails_helper'
 
-RSpec.describe UserValidator do
+RSpec.describe UserModelValidator do
   # @!method subject
-  #   @return [UserValidator]
+  #   @return [UserModelValidator]
   subject { ValidatorFactory.get_validator(described_class) }
 
   describe 'valid? method' do

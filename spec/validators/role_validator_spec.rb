@@ -3,10 +3,10 @@
 
 require 'rails_helper'
 
-RSpec.describe RoleValidator do
+RSpec.describe RoleModelValidator do
   # @!method role_validator
-  #   @return [RoleValidator]
-  subject { ValidatorFactory.get_validator(RoleValidator) }
+  #   @return [RoleModelValidator]
+  subject { ValidatorFactory.get_validator(RoleModelValidator) }
 
   describe 'valid? method' do
     it 'returns true when role is valid' do

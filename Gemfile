@@ -12,7 +12,7 @@ gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2'
 gem 'sass-rails', '>= 6'
-gem 'sorbet-rails', '~> 0.6.4'
+gem 'sorbet-rails', '~> 0.7.0'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 

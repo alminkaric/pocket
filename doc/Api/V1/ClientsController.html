@@ -189,6 +189,8 @@
   
   
   
+  
+  
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
@@ -209,13 +211,13 @@
       <pre class="lines">
 
 
-7
 8
 9
-10</pre>
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/clients_controller.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/clients_controller.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
   <span class='id identifier rubyid_clients'>clients</span> <span class='op'>=</span> <span class='id identifier rubyid_client_service'>client_service</span><span class='period'>.</span><span class='id identifier rubyid_find_by_ids_or_all'>find_by_ids_or_all</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -241,13 +243,13 @@
       <pre class="lines">
 
 
-12
 13
 14
-15</pre>
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/clients_controller.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/clients_controller.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
   <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='id identifier rubyid_client_service'>client_service</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -263,7 +265,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 15 22:41:12 2020 by
+  Generated on Tue May 26 22:49:18 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.6.6).
 </div>

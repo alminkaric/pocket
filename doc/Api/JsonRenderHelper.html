@@ -76,7 +76,7 @@
   
   <dl>
     <dt>Included in:</dt>
-    <dd><span class='object_link'><a href="V1/ClientsController.html" title="Api::V1::ClientsController (class)">V1::ClientsController</a></span>, <span class='object_link'><a href="V1/PersonsController.html" title="Api::V1::PersonsController (class)">V1::PersonsController</a></span>, <span class='object_link'><a href="V1/UsersController.html" title="Api::V1::UsersController (class)">V1::UsersController</a></span></dd>
+    <dd><span class='object_link'><a href="V1/ApiBaseController.html" title="Api::V1::ApiBaseController (class)">V1::ApiBaseController</a></span>, <span class='object_link'><a href="V1/ClientsController.html" title="Api::V1::ClientsController (class)">V1::ClientsController</a></span>, <span class='object_link'><a href="V1/PersonsController.html" title="Api::V1::PersonsController (class)">V1::PersonsController</a></span></dd>
   </dl>
   
 
@@ -199,15 +199,15 @@
       <pre class="lines">
 
 
-10
 11
 12
 13
 14
-15</pre>
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/api/json_render_helper.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/json_render_helper.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render_json'>render_json</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_set_header'>set_header</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X-Total-Count</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:size</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -225,7 +225,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 15 22:41:11 2020 by
+  Generated on Tue May 26 22:49:18 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.6.6).
 </div>

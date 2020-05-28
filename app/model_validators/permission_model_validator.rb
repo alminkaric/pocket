@@ -19,7 +19,7 @@ class PermissionModelValidator
   validates :method_name, presence: true
   validates :holder_id, presence: true
   validates :holder_type, presence: true
-  validates_with PermissionUniqueValidator
+  validates_with PermissionUniqueValidator, PermissionHolderValidator
 
   sig { void }
   def initialize

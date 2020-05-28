@@ -1,7 +1,7 @@
 # typed: strict
 # frozen_string_literal: true
 
-class RoleValidator
+class RoleModelValidator
   extend T::Sig
   include ActiveModel::Validations
   include IModelValidator

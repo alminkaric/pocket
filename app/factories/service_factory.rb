@@ -1,7 +1,8 @@
-# typed: strong
+# typed: strict
 # frozen_string_literal: true
 
 class ServiceFactory
+  extend T::Sig
   class << self
     extend T::Sig
 
@@ -9,11 +10,12 @@ class ServiceFactory
     def user_service(current_user = nil)
       permission_service = permission_service(UserService, current_user)
       role_service = role_service(current_user)
-      validator = ValidatorFactory.get_validator(UserValidator)
+      user_validator = ValidatorFactory.get_validator(UserModelValidator)
       params = {
+        crud: BaseServiceCrudImpl.new(User),
         permission_service: permission_service,
         role_service: role_service,
-        validator: validator,
+        validator: base_service_validator_impl(user_validator),
         current_user: current_user
       }
       UserService.new(params)
@@ -38,6 +40,18 @@ class ServiceFactory
     sig { params(current_user: T.nilable(User)).returns(RoleService) }
     def role_service(current_user = nil)
       RoleService.new(permission_service(RoleService, current_user))
+    end
+
+    private
+
+    sig { params(klass: T.class_of(ApplicationRecord)).returns(IService) }
+    def base_service_crud_impl(klass)
+      BaseServiceCrudImpl.new(klass)
+    end
+
+    sig { params(validator: IValidator).returns(IServiceValidator) }
+    def base_service_validator_impl(validator)
+      BaseServiceValidatorImpl.new(validator)
     end
   end
 end
