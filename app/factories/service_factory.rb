@@ -6,6 +6,13 @@ class ServiceFactory
   class << self
     extend T::Sig
 
+    sig { params(module_const: Module, crud_type: ECrud, current_user: T.nilable(User)).returns(IService) }
+    def get_service(module_const, crud_type, current_user = nil)
+      service_factory_class = T.unsafe("#{module_const}::ServiceFactory".constantize)
+      service_factory = T.let(service_factory_class.new(current_user), IServiceFactory)
+      service_factory.make_service(crud_type)
+    end
+
     sig { params(current_user: T.nilable(User)).returns(UserService) }
     def user_service(current_user = nil)
       permission_service = permission_service(UserService, current_user)
@@ -44,7 +51,7 @@ class ServiceFactory
 
     private
 
-    sig { params(klass: T.class_of(ApplicationRecord)).returns(IService) }
+    sig { params(klass: T.class_of(ApplicationRecord)).returns(ICrud) }
     def base_service_crud_impl(klass)
       BaseServiceCrudImpl.new(klass)
     end

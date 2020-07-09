@@ -3,13 +3,12 @@
 namespace :permissions do
   desc 'Creates admin permission for user service'
   task add_admin_permissions_for_user_service: :environment do
-    methods_to_add_permission = UserService.instance_methods(false)
+    services = TempUserService.constants
 
-    puts "Going to add admin permissions for #{methods_to_add_permission}"
-    methods_to_add_permission.each do |method_name|
+    services.each do |service_class|
       permission = Permission.find_or_create_by(
-        class_name: UserService.name,
-        method_name: method_name,
+        class_name: "#{TempUserService}::#{service_class}",
+        method_name: 'call',
         holder: Role.admin
       )
 

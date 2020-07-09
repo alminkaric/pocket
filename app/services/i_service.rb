@@ -6,15 +6,6 @@ module IService
   extend T::Helpers
   interface!
 
-  sig { abstract.params(id: Integer).returns(ApplicationRecord) }
-  def get(id); end
-
-  sig { abstract.returns(T::Array[ApplicationRecord]) }
-  def load_all; end
-
-  sig { abstract.params(record: T.untyped).returns(ApplicationRecord) }
-  def save(record); end
-
-  sig { abstract.params(record: T.untyped).void }
-  def delete(record); end
+  sig { abstract.params(args: T.untyped).returns(T.untyped) }
+  def call(args); end
 end

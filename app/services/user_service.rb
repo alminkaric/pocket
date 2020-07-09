@@ -7,7 +7,7 @@ class UserService
 
   sig do
     params(
-      crud: IService,
+      crud: ICrud,
       permission_service: PermissionService,
       role_service: RoleService,
       validator: IServiceValidator,
@@ -22,12 +22,12 @@ class UserService
     @current_user = current_user
   end
 
-  sig { override.params(id: Integer).returns(User) }
+  sig { params(id: Integer).returns(User) }
   def get(id)
     T.cast(@crud.get(id), User)
   end
 
-  sig { override.returns(T::Array[User]) }
+  sig { returns(T::Array[User]) }
   def load_all
     T.cast(@crud.load_all, T::Array[User])
   end
@@ -54,7 +54,7 @@ class UserService
     user
   end
 
-  sig { override.params(user: User).returns(User) }
+  sig { params(user: User).returns(User) }
   def save(user)
     @permission_service.check_user_permission_for('save') unless user.new_record? || own_user?(user)
     @validator.validate(user)
@@ -62,7 +62,7 @@ class UserService
     T.cast(@crud.save(user), User)
   end
 
-  sig { override.params(user: User).void }
+  sig { params(user: User).void }
   def delete(user)
     @permission_service.check_user_permission_for('delete') unless own_user?(user)
 
