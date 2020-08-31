@@ -9,14 +9,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :person
-
-  has_many :role_assignments
-
-  has_many :roles, through: :role_assignments
-
-  sig { returns(User) }
-  def self.admin
-    # tried as constant but didn't work in test env
-    T.must(User.find_by(email: 'admin@pocket.com'))
-  end
 end

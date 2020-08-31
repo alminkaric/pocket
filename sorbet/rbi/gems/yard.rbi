@@ -111,10 +111,10 @@ class Insertion
   def insertion(val, rel, recursive = nil, list = nil); end
 end
 class File < IO
-  def self.open!(file, *args, &block); end
+  def self.cleanpath(path, rel_root = nil); end
+  def self.join(*arg0); end
   def self.read_binary(file); end
   def self.relative_path(from, to); end
-  def self.split(arg0); end
 end
 class Module
   def class_name; end

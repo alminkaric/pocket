@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/reverse_markdown/all/reverse_markdown.rbi
 #
-# reverse_markdown-1.4.0
+# reverse_markdown-2.0.0
 
 module ReverseMarkdown
   def self.cleaner; end
@@ -81,6 +81,11 @@ class ReverseMarkdown::Converters::Div < ReverseMarkdown::Converters::Base
 end
 class ReverseMarkdown::Converters::Drop < ReverseMarkdown::Converters::Base
   def convert(node, state = nil); end
+end
+class ReverseMarkdown::Converters::Details < ReverseMarkdown::Converters::Base
+  def convert(node, state = nil); end
+  def disabled?; end
+  def enabled?; end
 end
 class ReverseMarkdown::Converters::Em < ReverseMarkdown::Converters::Base
   def convert(node, state = nil); end

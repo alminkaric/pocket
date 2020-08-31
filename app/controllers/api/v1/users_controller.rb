@@ -8,17 +8,8 @@ module Api
 
       sig(:final) { void }
       def index
-        service = ServiceFactory.get_service(TempUserService, ECrud::LOAD_ALL)
-        users = service.call(nil)
+        users = User.all
         render_json(users)
-      end
-
-      private
-
-      sig(:final) { returns(IServiceFactory) }
-      def user_service_factory
-        @user_service_factory = T.let(@user_service_factory, T.nilable(TempUserService::ServiceFactory))
-        @user_service_factory ||= TempUserService::ServiceFactory.new(current_user)
       end
     end
   end

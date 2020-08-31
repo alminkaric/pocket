@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/activesupport/all/activesupport.rbi
 #
-# activesupport-6.0.3.1
+# activesupport-6.0.3.2
 
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
@@ -2178,7 +2178,7 @@ module SecureRandom
 end
 class File < IO
   def self.empty?(arg0); end
-  def self.probe_stat_in(dir); end
+  def self.split(arg0); end
 end
 module ActiveSupport::RangeWithFormat
   def to_default_s(format = nil); end

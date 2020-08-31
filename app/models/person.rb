@@ -3,8 +3,5 @@
 
 class Person < ApplicationRecord
   belongs_to :client
-
-  # @!method user
-  #   @return [User]
   belongs_to :user
 end

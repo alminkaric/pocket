@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/solargraph/all/solargraph.rbi
 #
-# solargraph-0.39.7
+# solargraph-0.39.11
 
 module Solargraph
   def self.logger; end

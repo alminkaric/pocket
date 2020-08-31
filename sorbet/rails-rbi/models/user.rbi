@@ -87,24 +87,6 @@ module User::GeneratedAssociationMethods
 
   sig { params(value: T.nilable(::Person)).void }
   def person=(value); end
-
-  sig { returns(::RoleAssignment::ActiveRecord_Associations_CollectionProxy) }
-  def role_assignments; end
-
-  sig { returns(T::Array[Integer]) }
-  def role_assignment_ids; end
-
-  sig { params(value: T::Enumerable[::RoleAssignment]).void }
-  def role_assignments=(value); end
-
-  sig { returns(::Role::ActiveRecord_Associations_CollectionProxy) }
-  def roles; end
-
-  sig { returns(T::Array[Integer]) }
-  def role_ids; end
-
-  sig { params(value: T::Enumerable[::Role]).void }
-  def roles=(value); end
 end
 
 module User::CustomFinderMethods
